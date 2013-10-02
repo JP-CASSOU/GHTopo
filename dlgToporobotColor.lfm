@@ -1,0 +1,71 @@
+object DialogSelTopoColor: TDialogSelTopoColor
+  Left = 621
+  Height = 282
+  Top = 333
+  Width = 245
+  ActiveControl = GP
+  Caption = 'Toporobot Colors'
+  ClientHeight = 282
+  ClientWidth = 245
+  OnDestroy = FormDestroy
+  LCLVersion = '0.9.31'
+  object GP: TPanel
+    Left = 2
+    Height = 250
+    Top = 2
+    Width = 243
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ClientHeight = 250
+    ClientWidth = 243
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 0
+    object pbxPalette: TPaintBox
+      Left = 1
+      Height = 248
+      Top = 1
+      Width = 241
+      Align = alClient
+      Color = 12045001
+      ParentColor = False
+      OnMouseDown = pbxPaletteMouseDown
+      OnMouseMove = pbxPaletteMouseMove
+      OnPaint = pbxPalettePaint
+    end
+  end
+  object lblIndex: TStaticText
+    Left = 4
+    Height = 16
+    Top = 256
+    Width = 40
+    Anchors = [akLeft, akBottom]
+    AutoSize = True
+    BorderStyle = sbsSunken
+    Caption = 'lblIndex'
+    TabOrder = 1
+  end
+  object BitBtn1: TBitBtn
+    Left = 56
+    Height = 22
+    Top = 256
+    Width = 91
+    Anchors = [akRight, akBottom]
+    Caption = '&OK'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 2
+  end
+  object BitBtn2: TBitBtn
+    Left = 152
+    Height = 22
+    Top = 256
+    Width = 91
+    Anchors = [akRight, akBottom]
+    Cancel = True
+    Caption = 'Annuler'
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 3
+  end
+end

@@ -1,0 +1,181 @@
+object dlgBacASable: TdlgBacASable
+  Left = 335
+  Height = 692
+  Top = 153
+  Width = 1097
+  Caption = 'Bac à sable pour test de fonctionnalités'
+  ClientHeight = 692
+  ClientWidth = 1097
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.0.1.3'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 692
+    Top = 0
+    Width = 1097
+    ActivePage = TabSheet3
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object TabSheet3: TTabSheet
+      Caption = 'TabSheet3'
+      ClientHeight = 663
+      ClientWidth = 1089
+      object btnSelectAttrTexte: TButton
+        Left = 72
+        Height = 25
+        Top = 28
+        Width = 143
+        Caption = 'btnSelectAttrTexte'
+        OnClick = btnSelectAttrTexteClick
+        TabOrder = 0
+      end
+      object btnDeclimag: TButton
+        Left = 72
+        Height = 25
+        Top = 91
+        Width = 175
+        Caption = 'btnDeclimag'
+        TabOrder = 1
+      end
+      object btnCoordonneesIsolees: TButton
+        Left = 372
+        Height = 25
+        Top = 83
+        Width = 223
+        Caption = 'btnCoordonneesIsolees'
+        TabOrder = 2
+      end
+      object editCoordX: TCurrencyEdit
+        Left = 16
+        Height = 24
+        Top = 199
+        Width = 108
+        Alignment = taRightJustify
+        MaxValue = 0
+        MinValue = 0
+        TabOrder = 3
+        Value = 0
+      end
+      object editCoordY: TCurrencyEdit
+        Left = 132
+        Height = 24
+        Top = 199
+        Width = 108
+        Alignment = taRightJustify
+        MaxValue = 0
+        MinValue = 0
+        TabOrder = 4
+        Value = 0
+      end
+      object editEPSG: TCurrencyEdit
+        Left = 264
+        Height = 24
+        Top = 199
+        Width = 60
+        Alignment = taRightJustify
+        DecimalPlaces = 0
+        DisplayFormat = '0'
+        MaxValue = 0
+        MinValue = 0
+        TabOrder = 5
+        Value = 2154
+      end
+      object btnConvertTableauCoords: TButton
+        Left = 340
+        Height = 25
+        Top = 231
+        Width = 223
+        Caption = 'Coords isolees (tableau)'
+        TabOrder = 6
+      end
+      object btnCalculDeclimags: TButton
+        Left = 340
+        Height = 25
+        Top = 150
+        Width = 223
+        Caption = 'Calculer déclimags'
+        TabOrder = 7
+      end
+      object GroupBox1: TGroupBox
+        Left = 24
+        Height = 177
+        Top = 287
+        Width = 278
+        Caption = 'GroupBox1'
+        ClientHeight = 159
+        ClientWidth = 274
+        TabOrder = 8
+        inline CdrTriedreThetaPhi1: TCdrTriedreThetaPhi
+          Height = 159
+          Width = 274
+          Align = alClient
+          ClientHeight = 159
+          ClientWidth = 274
+          inherited Button1: TButton
+            OnClick = nil
+          end
+          inherited Label1: TLabel
+            Top = 140
+            Width = 239
+          end
+          inherited Panel1: TPanel
+            OnExit = nil
+            inherited Vue: TPaintBox
+              OnClick = nil
+            end
+          end
+        end
+      end
+      object Button15: TButton
+        Left = 353
+        Height = 25
+        Top = 323
+        Width = 75
+        Caption = 'Button15'
+        OnClick = Button15Click
+        TabOrder = 9
+      end
+      object editTheta: TCurrencyEdit
+        Left = 456
+        Height = 24
+        Top = 323
+        Width = 80
+        Alignment = taRightJustify
+        DisplayFormat = '0'
+        MaxValue = 0
+        MinValue = 0
+        TabOrder = 10
+        Value = 0
+      end
+      object editPhi: TCurrencyEdit
+        Left = 456
+        Height = 24
+        Top = 351
+        Width = 80
+        Alignment = taRightJustify
+        MaxValue = 0
+        MinValue = 0
+        TabOrder = 11
+        Value = 0
+      end
+      object Button16: TButton
+        Left = 28
+        Height = 25
+        Top = 251
+        Width = 75
+        Caption = 'Button16'
+        OnClick = Button16Click
+        TabOrder = 12
+      end
+    end
+  end
+end

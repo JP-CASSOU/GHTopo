@@ -1,0 +1,23 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TDialogSelTopoColor','FORMDATA',[
+  'TPF0'#19'TDialogSelTopoColor'#18'DialogSelTopoColor'#4'Left'#3'm'#2#6'Height'
+  +#3#26#1#3'Top'#3'M'#1#5'Width'#3#245#0#13'ActiveControl'#7#2'GP'#7'Caption'#6
+  +#16'Toporobot Colors'#12'ClientHeight'#3#26#1#11'ClientWidth'#3#245#0#9'OnDe'
+  +'stroy'#7#11'FormDestroy'#10'LCLVersion'#6#6'0.9.31'#0#6'TPanel'#2'GP'#4'Lef'
+  +'t'#2#2#6'Height'#3#250#0#3'Top'#2#2#5'Width'#3#243#0#7'Anchors'#11#5'akTop'
+  +#6'akLeft'#7'akRight'#8'akBottom'#0#12'ClientHeight'#3#250#0#11'ClientWidth'
+  +#3#243#0#5'Color'#7#7'clWhite'#11'ParentColor'#8#8'TabOrder'#2#0#0#9'TPaintB'
+  +'ox'#10'pbxPalette'#4'Left'#2#1#6'Height'#3#248#0#3'Top'#2#1#5'Width'#3#241#0
+  +#5'Align'#7#8'alClient'#5'Color'#4#201#202#183#0#11'ParentColor'#8#11'OnMous'
+  +'eDown'#7#19'pbxPaletteMouseDown'#11'OnMouseMove'#7#19'pbxPaletteMouseMove'#7
+  +'OnPaint'#7#15'pbxPalettePaint'#0#0#0#11'TStaticText'#8'lblIndex'#4'Left'#2#4
+  +#6'Height'#2#16#3'Top'#3#0#1#5'Width'#2'('#7'Anchors'#11#6'akLeft'#8'akBotto'
+  +'m'#0#8'AutoSize'#9#11'BorderStyle'#7#9'sbsSunken'#7'Caption'#6#8'lblIndex'#8
+  +'TabOrder'#2#1#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#2'8'#6'Height'#2#22#3'Top'#3
+  +#0#1#5'Width'#2'['#7'Anchors'#11#7'akRight'#8'akBottom'#0#7'Caption'#6#3'&OK'
+  +#7'Default'#9#4'Kind'#7#4'bkOK'#11'ModalResult'#2#1#8'TabOrder'#2#2#0#0#7'TB'
+  +'itBtn'#7'BitBtn2'#4'Left'#3#152#0#6'Height'#2#22#3'Top'#3#0#1#5'Width'#2'['
+  +#7'Anchors'#11#7'akRight'#8'akBottom'#0#6'Cancel'#9#7'Caption'#6#7'Annuler'#4
+  +'Kind'#7#8'bkCancel'#11'ModalResult'#2#2#8'TabOrder'#2#3#0#0#0
+]);

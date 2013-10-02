@@ -1,0 +1,684 @@
+object dlgProjectManagerStd: TdlgProjectManagerStd
+  Left = 442
+  Height = 635
+  Top = 198
+  Width = 880
+  Caption = 'dlgProjectManagerStd'
+  ClientHeight = 635
+  ClientWidth = 880
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  LCLVersion = '1.0.8.0'
+  object PageControl1: TPageControl
+    Left = 4
+    Height = 627
+    Top = 4
+    Width = 874
+    ActivePage = tabshtSeries
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabIndex = 5
+    TabOrder = 0
+    object tabshtGeneral: TTabSheet
+      Caption = 'tabshtGeneral'
+      ClientHeight = 598
+      ClientWidth = 870
+      object editCodeEPSG: TCurrencyEdit
+        Left = 410
+        Height = 24
+        Top = 196
+        Width = 80
+        Alignment = taRightJustify
+        DecimalPlaces = 0
+        DisplayFormat = '0'
+        MaxValue = 0
+        MinValue = 0
+        TabOrder = 0
+        Value = 0
+      end
+      object btnSelectEPSG: TButton
+        Left = 494
+        Height = 25
+        Top = 195
+        Width = 184
+        Caption = 'btnSelectEPSG'
+        OnClick = btnSelectEPSGClick
+        TabOrder = 1
+      end
+      object lbCommentaireEtude: TLabel
+        Left = 4
+        Height = 17
+        Top = 59
+        Width = 135
+        Caption = 'lbCommentaireEtude'
+        ParentColor = False
+      end
+      object editCommentaireEtude: TMemo
+        Left = 4
+        Height = 113
+        Top = 75
+        Width = 674
+        Lines.Strings = (
+          'editCommentaireEtude'
+        )
+        TabOrder = 2
+      end
+      object editNomEtude: TEdit
+        Left = 4
+        Height = 24
+        Top = 27
+        Width = 674
+        TabOrder = 3
+        Text = 'editNomEtude'
+      end
+      object lbNomEtude: TLabel
+        Left = 4
+        Height = 17
+        Top = 7
+        Width = 78
+        Caption = 'lbNomEtude'
+        ParentColor = False
+      end
+      object Button3: TButton
+        Left = 4
+        Height = 25
+        Top = 243
+        Width = 120
+        Caption = 'Implémenter'
+        OnClick = Button3Click
+        TabOrder = 4
+      end
+      object lbCodeEPSG: TLabel
+        Left = 4
+        Height = 17
+        Top = 195
+        Width = 82
+        Caption = 'lbCodeEPSG'
+        ParentColor = False
+      end
+    end
+    object tabshtEntrees: TTabSheet
+      Caption = 'tabshtEntrees'
+      ClientHeight = 598
+      ClientWidth = 870
+      object Panel3: TPanel
+        Left = 2
+        Height = 298
+        Top = 51
+        Width = 862
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BevelOuter = bvLowered
+        ClientHeight = 298
+        ClientWidth = 862
+        TabOrder = 0
+        inline CdrEntreeCavites1: TCdrEntreeCavites
+          Left = 4
+          Height = 263
+          Top = 5
+          Width = 814
+          ClientHeight = 263
+          ClientWidth = 814
+        end
+      end
+      object Panel6: TPanel
+        Left = 2
+        Height = 44
+        Top = 3
+        Width = 862
+        Anchors = [akTop, akLeft, akRight]
+        BevelOuter = bvLowered
+        ClientHeight = 44
+        ClientWidth = 862
+        TabOrder = 1
+        inline CdrNavigateurDBEntrees: TCdrNavigateurDB
+          Left = 8
+          Top = 4
+          inherited SpeedButton1: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton2: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton3: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton5: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton6: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton7: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton8: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton9: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton10: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton11: TSpeedButton
+            Flat = False
+          end
+          inherited chkConfirmMove: TCheckBox
+            Left = 462
+          end
+          inherited SpeedButton12: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton4: TSpeedButton
+            Flat = False
+          end
+        end
+      end
+    end
+    object tabshtReseaux: TTabSheet
+      Caption = 'tabshtReseaux'
+      ClientHeight = 598
+      ClientWidth = 870
+      object Panel9: TPanel
+        Left = 0
+        Height = 57
+        Top = 3
+        Width = 865
+        Anchors = [akTop, akLeft, akRight]
+        BevelOuter = bvLowered
+        ClientHeight = 57
+        ClientWidth = 865
+        TabOrder = 0
+        inline CdrNavigateurDBReseaux: TCdrNavigateurDB
+          Left = 4
+          Top = 4
+          inherited SpeedButton1: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton2: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton3: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton5: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton6: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton7: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton8: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton9: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton10: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton11: TSpeedButton
+            Flat = False
+          end
+          inherited chkConfirmMove: TCheckBox
+            Left = 464
+          end
+          inherited SpeedButton12: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton4: TSpeedButton
+            Flat = False
+          end
+        end
+      end
+      object Panel10: TPanel
+        Left = 0
+        Height = 257
+        Top = 67
+        Width = 865
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BevelOuter = bvLowered
+        ClientHeight = 257
+        ClientWidth = 865
+        TabOrder = 1
+        inline CdrReseaux1: TCdrReseaux
+          Left = 8
+          Height = 128
+          Top = 8
+          ClientHeight = 128
+          DesignLeft = 525
+          DesignTop = 196
+          inherited cmbTypeReseau: TComboBox
+            ItemHeight = 0
+          end
+        end
+      end
+    end
+    object tabshtCodes: TTabSheet
+      Caption = 'tabshtCodes'
+      ClientHeight = 598
+      ClientWidth = 870
+      object Panel1: TPanel
+        Left = 0
+        Height = 234
+        Top = 63
+        Width = 864
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BevelOuter = bvLowered
+        ClientHeight = 234
+        ClientWidth = 864
+        TabOrder = 0
+        inline CdrCode1: TCdrCode
+          Left = 8
+          Height = 203
+          Top = 4
+          ClientHeight = 203
+          inherited cmbUB: TComboBox
+            ItemHeight = 0
+          end
+          inherited cmbUC: TComboBox
+            ItemHeight = 0
+          end
+          inherited cmbAzimutDirecte: TComboBox
+            ItemHeight = 0
+          end
+          inherited cmbPenteDirecte: TComboBox
+            ItemHeight = 0
+          end
+          inherited cmbPosZero: TComboBox
+            ItemHeight = 0
+          end
+        end
+      end
+      object Panel7: TPanel
+        Left = 0
+        Height = 57
+        Top = 3
+        Width = 864
+        Anchors = [akTop, akLeft, akRight]
+        BevelOuter = bvLowered
+        ClientHeight = 57
+        ClientWidth = 864
+        TabOrder = 1
+        inline CdrNavigateurDBCodes: TCdrNavigateurDB
+          Left = 8
+          Top = 8
+          inherited SpeedButton1: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton2: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton3: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton5: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton6: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton7: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton8: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton9: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton10: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton11: TSpeedButton
+            Flat = False
+          end
+          inherited chkConfirmMove: TCheckBox
+            Left = 464
+          end
+          inherited SpeedButton12: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton4: TSpeedButton
+            Flat = False
+          end
+        end
+      end
+    end
+    object tabshtExpes: TTabSheet
+      Caption = 'tabshtExpes'
+      ClientHeight = 598
+      ClientWidth = 870
+      object Panel2: TPanel
+        Left = 0
+        Height = 322
+        Top = 51
+        Width = 864
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BevelOuter = bvLowered
+        ClientHeight = 322
+        ClientWidth = 864
+        TabOrder = 0
+        inline CdrExpe1: TCdrExpe
+          Left = 8
+          Top = 12
+          inherited cmbModeDecl: TComboBox
+            ItemHeight = 0
+          end
+        end
+      end
+      object Panel8: TPanel
+        Left = 0
+        Height = 44
+        Top = 3
+        Width = 864
+        Anchors = [akTop, akLeft, akRight]
+        BevelOuter = bvLowered
+        ClientHeight = 44
+        ClientWidth = 864
+        TabOrder = 1
+        inline CdrNavigateurDBExpes: TCdrNavigateurDB
+          Left = 8
+          Top = 4
+          inherited SpeedButton1: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton2: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton3: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton5: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton6: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton7: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton8: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton9: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton10: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton11: TSpeedButton
+            Flat = False
+          end
+          inherited chkConfirmMove: TCheckBox
+            Left = 464
+          end
+          inherited SpeedButton12: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton4: TSpeedButton
+            Flat = False
+          end
+        end
+      end
+    end
+    object tabshtSeries: TTabSheet
+      Caption = 'Serie'
+      ClientHeight = 598
+      ClientWidth = 870
+      object pnlCdrSerie: TPanel
+        Left = 0
+        Height = 541
+        Top = 51
+        Width = 867
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BevelOuter = bvLowered
+        ClientHeight = 541
+        ClientWidth = 867
+        TabOrder = 0
+        inline CdrSerieIndependant1: TCdrSerieIndependant
+          Left = 1
+          Height = 539
+          Top = 1
+          Width = 865
+          Align = alClient
+          ClientHeight = 539
+          ClientWidth = 865
+          inherited Panel1: TPanel
+            Width = 857
+            ClientWidth = 857
+            inherited cmbChance: TComboBox
+              Height = 31
+              Width = 308
+              ItemHeight = 0
+            end
+            inherited cmbObstacle: TComboBox
+              Height = 31
+              Width = 308
+              ItemHeight = 0
+            end
+            inherited lblChances: TLabel
+              Height = 16
+            end
+            inherited lblObstacles: TLabel
+              Height = 16
+            end
+            inherited lblSerie: TLabel
+              Height = 16
+            end
+            inherited lblSerieName: TLabel
+              Height = 16
+            end
+            inherited lblDepart: TLabel
+              Height = 16
+            end
+            inherited lblArrivee: TLabel
+              Height = 16
+            end
+            inherited editNomSerie: TEdit
+              Height = 25
+              Width = 762
+            end
+            inherited editSerieDepart: TCurrencyEdit
+              Height = 25
+            end
+            inherited editSerieArrivee: TCurrencyEdit
+              Height = 25
+            end
+            inherited editPointDepart: TCurrencyEdit
+              Height = 25
+            end
+            inherited editPointArrivee: TCurrencyEdit
+              Height = 25
+            end
+            inherited editNumeroSerie: TCurrencyEdit
+              Height = 25
+            end
+            inherited lblReseau: TLabel
+              Height = 16
+            end
+            inherited editNumeroReseau: TCurrencyEdit
+              Height = 25
+            end
+            inherited chkLocked: TCheckBox
+              Height = 24
+              Width = 93
+            end
+            inherited Label1: TLabel
+              Height = 16
+            end
+            inherited editCommentaire: TEdit
+              Height = 25
+              Width = 762
+            end
+            inherited Label2: TLabel
+              Height = 16
+            end
+            inherited editRaideur: TCurrencyEdit
+              Height = 25
+            end
+            inherited Button1: TButton
+              Left = 822
+            end
+          end
+          inherited pnlTableur: TPanel
+            Height = 380
+            Width = 857
+            ClientHeight = 380
+            ClientWidth = 857
+            inherited grdStations: TStringGrid
+              Height = 323
+              Width = 846
+            end
+            inherited lbNbStations: TLabel
+              Height = 16
+              Top = 357
+            end
+            inherited btnCopyGrid: TButton
+              Left = 729
+              Top = 354
+            end
+          end
+        end
+      end
+      object Panel5: TPanel
+        Left = 0
+        Height = 45
+        Top = 2
+        Width = 867
+        Anchors = [akTop, akLeft, akRight]
+        BevelOuter = bvLowered
+        ClientHeight = 45
+        ClientWidth = 867
+        TabOrder = 1
+        inline CdrNavigateurDBSeries: TCdrNavigateurDB
+          Left = 8
+          Top = 5
+          Width = 840
+          ClientWidth = 840
+          inherited SpeedButton1: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton2: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton3: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton5: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton6: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton7: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton8: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton9: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton10: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton11: TSpeedButton
+            Flat = False
+          end
+          inherited chkConfirmMove: TCheckBox
+            Left = 456
+            Height = 24
+            Width = 193
+          end
+          inherited SpeedButton12: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton4: TSpeedButton
+            Flat = False
+          end
+          inherited editPositionRecord: TCurrencyEdit
+            Height = 25
+          end
+          inherited lbNbreElements: TStaticText
+            Height = 28
+            Width = 49
+            Alignment = taLeftJustify
+            Caption = ''
+          end
+        end
+      end
+    end
+    object tabshtAntennes: TTabSheet
+      Caption = 'tabshtAntennes'
+      ClientHeight = 598
+      ClientWidth = 870
+      object Panel4: TPanel
+        Left = 0
+        Height = 591
+        Top = 3
+        Width = 860
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BevelOuter = bvLowered
+        ClientHeight = 591
+        ClientWidth = 860
+        TabOrder = 0
+        inline CdrAntennes1: TCdrAntennes
+          Left = 1
+          Height = 589
+          Top = 1
+          Width = 858
+          Align = alClient
+          ClientHeight = 589
+          ClientWidth = 858
+          inherited grdViseesEnAntenne: TStringGrid
+            Height = 557
+            Top = 4
+            Width = 848
+          end
+          inherited lbCurrentCell: TLabel
+            Height = 17
+            Top = 561
+            Width = 85
+          end
+          inherited SpeedButton1: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton2: TSpeedButton
+            Flat = False
+          end
+          inherited SpeedButton3: TSpeedButton
+            Flat = False
+          end
+          inherited CdrAntennesActionList: TActionList
+            inherited acSauvegrd: TAction
+              OnExecute = nil
+            end
+          end
+        end
+      end
+    end
+    object tabshtMaintenance: TTabSheet
+      Caption = 'tabshtMaintenance'
+      ClientHeight = 598
+      ClientWidth = 870
+      object btnCalcAllDeclimags: TButton
+        Left = 248
+        Height = 25
+        Top = 323
+        Width = 256
+        Caption = 'btnCalcAllDeclimags'
+        OnClick = btnCalcAllDeclimagsClick
+        TabOrder = 0
+      end
+    end
+  end
+end

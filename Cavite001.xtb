@@ -1,0 +1,35 @@
+-20	07/09/2012	10:39:42	Topographie1.Tab
+-19	bidon
+-18	editCommentaireEtude
+
+#### Main coordinates system
+
+-10	0	0	EPSG	0	Local UCS
+
+#### Antenna-shots list
+
+
+#### Networks list
+
+
+#### Entrances list
+
+-6	1	Entree principale
+-5	1	403400.00	3088120.00	666.00	1	0	editCommentaireEntree
+
+#### Trips list
+
+-2	1	7	9	2012	cassou		0	0.00	0	72	
+
+#### Instruments codes list
+
+-1	1	360.00	360.00	0.01	1.00	1.00	0.01	0.00		0
+
+
+#### Series and stations
+
+
+1	-1	1	0	1	2	2	0	0	Serie principale	miou miou	0	0.01
+1	0	1	1	0.00	0.00	0.00	0.00	0.00	0.00	0.00	Station 1/0		0
+1	1	1	1	6.66	125.00	-14.00	0.20	1.00	1.00	1.00			0
+1	2	1	1	14.25	114.00	-18.00	1.00	1.00	0.00	2.00			0

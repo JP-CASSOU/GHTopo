@@ -1,0 +1,587 @@
+<Section>
+  <Index>00</Index>
+  <Topics>0</Topics>
+  <Title>GHTopo Help system</Title>
+  <Texte>
+     Version 1.90
+  </Texte>
+</Section>
+<Section>
+  <Index>01</Index>
+  <Topics>METAFILTRE</Topics>
+  <Title>The METAFILTRE utility</Title>
+  <Texte>
+    The METAFILTRE functionnality is an innovation of GHTopo's software.
+
+
+    This filter is available for following tools:
+
+    - Plan viewer
+
+    - 3D GDI viewer
+
+    - OpenGL viewer
+
+    - Graphical export utility.
+
+
+
+    The METAFILTRE receives and parses a string expression as parameter for marking parts of network to display (puts as True or False each station flag).
+
+
+    The METAFILTRE's expression can be entrered in text box or componed with dialog box.
+
+
+    USABLES EXPRESSIONS:
+
+    1. Expressions as type 'filter=value':
+
+    DATE=01/01/89        Display parts surveyed at 01/01/99. The '01/01/1999' notation is permitted.
+
+    COLOR=$RRGGBB        Display parts with color as RRGGBB. '$' character is required.
+
+    Z<-211.00                Display network parts with altitud less than -211.00 m. GHTopo uses only the international metric system. Length values are always exprimed in meters.
+
+    Z>55.00                Display parts with altitud great than 55.00 meters.
+
+
+    2. Expressions as type 'filter=(intervalle)'
+
+    GISEMENT=(30, 50)        Display shots with azimuth great than (30° modulo 180°) and less than (50° modulo 180°). These values and always exprimed in DEGREES. This filter can be used for put in obvious relations between plan and Rose diagram. GISEMENT is a French word for Azimuth.
+
+    PENTE=(-20,20)        Display shots with inclinations included in specified values, exprimed in DEGREES.
+
+    Z=(1350.00, 1652.00)        Display parts localized between 1350.00 and 1650.00 altitudes.
+
+    DATE=(22/05/99, 24/08/20)        Display parts surveyed between theses dates included.
+
+
+    3. Expressions as type 'filter=[flags]'
+
+
+    COLORS=[00011001] (8 colors defined)        Display parts as colors #4, #5 and #8
+
+    COLORS=[01100] (8 colors defined)        Display colors #2 and #3. Omitted flags are marked a zero.
+
+    COLORS=[110000000000] (8 colors)        Display two first colors. Exceeded flags are ignored.
+
+    DATES=[0011000]        Same principle for the dates.
+
+
+    4. Négation of expression
+
+    In all expressions with '=' character, is sufficient to put '!' character backside the '=' character or at end of filter's expression to reverse the filter's result: the METAFILTRE will change the display flag of each shot.
+
+    Examples: Z=!(-20,25); DATES=[0011000110]!
+
+    Nota: The '!' character must be putted after the '='character.
+
+
+    5. Tricks:
+
+    To display pits and subvertical parts:
+
+    Use inclinations interval filter. Specify limits angles (lower and upper). Next reverse the filter with '!' character.
+
+    Example: PENTE=(-60, 60)! display all shots with inclination great than +60 degrees and  less than -60 degrees
+
+  </Texte>
+</Section>
+<Section>
+  <Index>02</Index>
+  <Topics>DECLINATION</Topics>
+  <Title>Calculating magnetic declinations</Title>
+  <Texte>
+    Magnetic declinations are exprimed in GRADES (or GON; 400 gon in a full circle) in all cases. 
+  </Texte>
+</Section>
+<Section>
+  <Index>03</Index>
+  <Topics>ENTREES</Topics>
+  <Title>Define cave entrances</Title>
+  <Texte>
+     Uses 'Entrances' tabsheet in Database window.
+
+
+     You must input the following data:
+
+- Entrance name
+
+- Entrance coordinates
+
+- ID entrance station: TOPOROBOT's serie and point
+
+- Optionnal entrance comment.
+
+
+For ID entrance, use preferably the following method:
+
+- Define any serie number (preferably 10, 20, 50 or 100 multiples)
+
+- Define '0' as point number (ex: 100.0)
+
+For conduit starting a this entrance, use same serie's number.
+
+(ex: Entrance 'CHATIERE' at 100.0; for his serie, use '100' number)
+La série qui partira de cette entrée prendra comme numéro de série celui spécifié pour l'entrée (ex: Les puits de l'entrée Chatière [définie comme 100.0]: Série 100).
+
+If entrance is reached from the network, use of course the serie/station of the conduit.
+  </Texte>
+</Section>
+<Section>
+  <Index>04</Index>
+  <Topics>CHANCE</Topics>
+  <Title>Chances combobox</Title>
+  <Texte>
+     This combobox permit to specify continuation perspectives at end of the serie:
+
+     0 - None        No chance, without object, or not specified
+
+     1 - Low        Low chances of continuation
+
+     2 - Good        Good chances of continuation (with snorlelling or works)
+
+     3 - Excellent        To be continued 
+
+  </Texte>
+</Section>
+<Section>
+  <Index>05</Index>
+  <Topics>OBSTACLE</Topics>
+  <Title>Obstacles combobox</Title>
+  <Texte>
+     You can specify here the obstacles at end of serie
+
+     0 - None        No obstacle or not specified
+
+     1 - Pit        Stopping at pit
+
+     2 - Chimney        Stopping at chimney
+
+     3 - Squeeze        Stop at squeeze
+
+     4 - Lac        You must cross a Lake
+
+     5 - Siphon        You must snorkel Sump
+ 
+     6 - Collapse        Stopped by collapse
+
+     7 - Speleothems        Very good for eyes, but very bad for progression !
+
+     8 - Sediments        Good for geological study, but very bad for progression !
+
+     9 - Other        Unspecified obstacle.
+  </Texte>
+</Section>
+<Section>
+  <Index>06</Index>
+  <Topics>ANGUNIT</Topics>
+  <Title>UAngular units</Title>
+  <Texte>
+    
+    Use following Angular units for azimuths
+
+    - Grads (or gon) (code 400)
+
+    - Degrees (code 360)
+
+
+    Use following Angular units for inclinations:
+
+    - Grads (gon); zero at horizontal (code 400)
+
+    - Degrees; zero at horizontal (code 360)
+
+    - Grads; zero zenithal (code 401)
+
+    - Degrees; zero zénithal (code 361)
+
+    - Grads; zero nadiral (code 399)
+
+    - Degrees; zero nadiral (code 359)
+
+    - Percentages (code 370)
+
+    - Depths from water surface (code 380)
+
+    All other angular units (e.g. 'Milliemes d'arc', French military angular Unit) are converted in degrees
+  </Texte>
+</Section>
+
+<Section>
+  <Index>07</Index>
+  <Topics>PALETTES</Topics>
+  <Title>Palettes de couleurs</Title>
+  <Texte>
+     GHTopo uses 3 palettes with 256 couleurs, generated by algorithm. 
+
+
+     1. TOPOROBOT Palette
+
+     2. Websafe 216+40 Netscape
+
+     3. AutoCAD Palette
+
+  </Texte>
+</Section>
+<Section>
+  <Index>08</Index>
+  <Topics>COPYPASTE</Topics>
+  <Title>Copier-coller dans le tableau des stations</Title>
+  <Texte>
+
+Le copier/coller dans le tableau des stations suit des règles précises; celles-ci sont les suivantes:
+
+1. Une ligne équivaut à une station,
+
+2. Le séparateur de colonnes est toujours la Tabulation,
+
+3. Les deux premières colonnes, requises, contiennent le numéro de code et le numéro de séance topo
+
+4. Les trois colonnes suivantes, requises, contiennent la longueur, l'azimut et la pente de la visée
+
+5. Les quatres colonnes suivantes, optionnelles, contiennent les largeurs et hauteurs de galerie
+
+Si une de ces conditions n'est pas remplie, le collage ne se fait pas
+
+Le collage démarre au niveau de la ligne courante
+
+
+Exemple de collage depuis Excel:
+
+1. Sélectionner une plage de cellules respectant le conditions ci-dessus
+
+2. Copier cette sélection dans le presse papiers
+
+3. Se positionner au bon endroit dans le tableau des stations
+
+4. Cliquer sur <Coller>
+  </Texte>
+</Section>
+<Section>
+  <Index>09</Index>
+  <Topics>CONSOLE</Topics>
+  <Title>Console de suivi</Title>
+  <Texte>
+    GHTopo utilise une console texte pour afficher des résultats intermédiaires, des informations de position, des erreurs et diverses informations.
+
+    Sous Windows, une fenêtre de contrôle est lancée au démarrage du programme. Cette fenêtre peut être redimensionnée et mise en avant-plan, mais ne peut être fermée.
+
+    Sous Linux, il n'existe pas de fenêtre spécifique, mais GHTopo envoie les informations destinées à la console de suivi sur la sortie standard. C'est pour cette raison qu'il est conseillé de lancer GHTopo dans un terminal.
+  </Texte>
+</Section>
+<Section>
+  <Index>10</Index>
+  <Topics>PRJMANAGER</Topics>
+  <Title>Le Gestionnaire de Cavité</Title>
+  <Texte>
+Le Gestionnaire de Cavité est le frontal de saisie et d'édition des données de la cavité.
+
+Il consiste en un dialogue à onglets, chacun destiné à la gestion d'une section du fichier XTB correspondant.
+  </Texte>
+</Section>
+<Section>
+  <Index>11</Index>
+  <Topics>NEWS</Topics>
+  <Title>News (in French language only)</Title>
+  <Texte>
+     27/09/2005: (Windows): Mise à jour du dialogue d'exportation.
+
+     27/09/2005: (Windows): Export DXF en plan.
+
+     27/09/2005: (Windows): Mise en place des fonctions d'ajout dans le Gestionnaire de Cavité
+
+     24/09/2005: (Windows): Reconfiguration de l'Assistant nouvelle cavité.
+
+     24/09/2005: (Windows): Découplage de l'objet CadreSerie par rapport au reste du code. (remplacement du lien vers la variable globale FDocumentToporobot par une propriété var de type TToporobotStructure)
+
+     24/09/2005: (Windows et Linux): Implémentation du Navigateur dans le gestionnaire de cavités. Remplacement de tous les systèmes de parcours des tables. Harmonisation du gestionnaire de cavités.
+
+     23/09/2005: (Windows et Linux): Raccourcis SHIFT et CTRL dans la vue 2D.
+  
+     31/08/2005: (Windows): Dialogue du MétaFiltre
+
+     31/08/2005: (Windows et Linux): Prise en compte de la nature des stations (entrées et conduits) dans les visualisateurs.
+
+     31/08/2005: (Windows): La palette TOPOROBOT est calculée par GHTopo. Le fichier Toporobot.Palette devient inutile.
+
+     30/08/2005: (Windows): Fonction Recharger le document - Corrections diverses
+
+     30/08/2005: (Windows): Fonction GetAzimut
+
+     30/08/2005: (Windows): Correction du MétaFiltre
+
+     26/08/2005: (Linux): Fonction Recharger le document: Recharge le document après confirmation. Très utile en débogage à l'éditeur de texte.
+
+     24/08/2005: (Linux): Correction de bugs dans le MétaFiltre
+
+     24/08/2005: (Linux): Mise au point de la fonction GetAzimut() et implantation dans les routines effectuant un calcul d'azimut (calcul de distances, MétaFiltre, histogrammes)
+
+     24/08/2005: (Linux): Ajout de la gestion des filtres personnalisés dans le dialogue du MétaFiltre
+
+     16/08/2005: (Linux) La palette TOPOROBOT est calculée par GHTopo. Le fichier Toporobot.Palette devient inutile.
+
+     14/08/2005: (Linux) Refonte complète du système d'aide. Le format du fichier d'aide est un sous-ensemble d'XML.
+
+     14/08/2005: (Linux): Correction de bugs dans le visualisateur OpenGL - Ajout d'un outil d'animation
+
+     14/08/2005: (Linux): Modification du dialogue du MétaFiltre
+
+     13/08/2005: (Windows): Mise à jour de la version Windows d'après les travaux sur la version Linux.
+
+     10/08/2005: (Linux): Implantation du visualisateur OpenGL avec volumes lissés.
+
+     20/07/2005: (Windows et Linux): Remplacement de la liste déroulante des séries par un navigateur type magnétoscope.
+  </Texte>
+</Section>
+<Section>
+  <Index>12</Index>
+  <Topics>LICENSE</Topics>
+  <Title>GNU General Public Licence pour GHTopo</Title>
+  <Texte>
+    Le logiciel GHTopo est distribué sous licence publique générale GNU, version 2 de juin 1991.
+
+
+    Voir le fichier License.txt pour plus d'information (le texte de la licence est long).
+  </Texte>
+</Section>
+<Section>
+  <Index>13</Index>
+  <Topics>STATISTIQUES</Topics>
+  <Title>Statistiques du réseau</Title>
+  <Texte>
+     La fenêtre Statistiques affiche de nombreuses informations statistiques sur le dossier étudié.
+
+     Ces informations sont présentées dans un dialogue à onglets.
+
+
+     Trois tableaux présentent une ventilation de la spéléométrie:
+
+     - Spéléométrie par dates (une ligne par date)
+
+     - Spéléométrie par couleurs (une ligne par couleur)
+
+     - Spéléométrie par réseaux (une ligne par réseau)
+
+     avec la répartition par type de visée (une colonne par type de visée)
+
+     - Visées dans des conduits naturels (fossiles, actifs, ennoyables et noyés)
+
+     - Visées dans des conduits artificiels (tunnels et galeries de mines)
+
+     - Visées spéciales (tours de salles, topos de surface, raccordements divers)
+
+
+     Une page présente des méta-informations comme des indices et un tableau d'étendue:
+
+     - Indices spéléométriques
+
+     - Développement total des parties naturelles (avec le développement par type de conduits)
+
+     - Développement total des tunnels artificiels
+
+     - Développement total des galeries minières
+
+     - Cumul des cheminements spéciaux
+
+
+     Le tableau d'étendue affiche pour chaque axe de coordonnées (Est, Nord et Altitude):
+
+     - La valeur minimale et la station correspondante
+
+     - La valeur maximale et la station correspondante
+
+
+     Une page permet de visualiser l'histogramme des directions, qui est paramétrable (nombre de pétales, couleurs)
+
+     Il est possible d'exporter ce diagramme en format graphique.
+  </Texte>
+</Section>
+<Section>
+  <Index>14</Index>
+  <Topics>VUE2D</Topics>
+  <Title>Visualisateur 2D</Title>
+  <Texte>
+     Astuces pour accélérer les commandes de pan et de zoom:
+
+     Au lieu d'utiliser les bouttons correspondants, il est possible de passer par un raccourci en maintenant enfoncé une touche en même temps que l'on trace le rectangle de zoom (zoom) ou la ligne de déplacement (pan). Ces touches sont:
+
+     MAJ pour le zoom
+
+     CTRL pour le déplacement de la vue (pan)
+ 
+ 
+  </Texte>
+</Section>
+<Section>
+  <Index>15</Index>
+  <Topics>NAVIGATEUR</Topics>
+  <Title>Le Panneau de Navigation</Title>
+  <Texte>
+     Dans le Gestionnaire de Cavité, la navigation parmi les éléments des différentes tables (entrées, codes, séances et séries) se fait par le biais d'un outil courant (panneau de type magnétoscope / navigateur de base de données), mais dont la programmation est originale: cet outil est en fait un routeur de fonctions; l'objet appelant implémente les fonctions de positionnement d'enregistrement, ajout, modification, suppression. 
+
+Lors de la mise en oeuvre du navigateur, on lui passe en paramètre le début et la fin de la plage des valeurs d'index et des pointeurs sur les fonctions précitées. Le navigateur comporte des boutons qui appellent les fonctions avec le paramètre adéquat. 
+
+Il s'agit d'une application des pointeurs sur fonctions. 
+
+La conséquence principale est la simplification et la réduction considérable du nombre de lignes de code.  
+  </Texte>
+</Section>
+<Section>
+  <Index>16</Index>
+  <Topics>ASSISTANT</Topics>
+  <Title>L'Assistant Nouvelle Cavité</Title>
+  <Texte>
+     L'Assistant Nouvelle Cavité est un outil de saisie permettant de démarrer l'entrée des données d'une cavité et d'initialiser correctement la base de données.
+
+Il a été originellement prévu pour éviter de compliquer le développement du Gestionnaire de Cavité.
+
+Lorsque la phase finale de l'initialisation (la sauvegarde) est achevée, le document est rechargé et l'on passe alors dans le mode de travail normal.
+
+  </Texte>
+</Section>
+<Section>
+  <Index>17</Index>
+  <Topics>DXFQUADR</Topics>
+  <Title>Export graphique: Quadrillage</Title>
+  <Texte>
+     Cet onglet permet de paramétrer le quadrillage.
+
+     L'espacement de la grille est paramétrable dans la zone d'édition correspondante
+
+     La liste déroulante est inactive pour l'instant.
+
+     Couleur: Pour l'export SVG et PostScript, elle correspond à la couleur du bouton. Pour l'export AutoCAD, c'est la couleur de la couche QUADRILLES qui entre en ligne de compte.
+  </Texte>
+</Section>
+<Section>
+  <Index>18</Index>
+  <Topics>DXFLAYERS</Topics>
+  <Title>Export graphique: Couches</Title>
+  <Texte>
+    Cet onglet comporte une liste et un formulaire d'édition.
+
+    Les couches permettent de répartir le dessin graphique sur plusieurs calques.
+
+    Les noms de couches sont explicites.
+
+    Il est possible de modifier les couches via le petit formulaire.
+
+    Nom de couche: Texte sans espaces ni ponctuation ni accentués
+
+    Exporté: Si coché, les graphiques de la couche sont exportés (PS et SVG); exportés et désactivés (DXF).
+
+    Couleur: Toute couleur 24 bits (PS et SVG)
+
+    Couleur AutoCAD: Index de 0 à 255 correspondant à une couleur AutoCAD.
+
+    Remarque: Lorsque on sélectionne une couleur par le bouton, GHTopo calcule la couleur AutoCAD la plus proche.
+
+    Inversement, lorsque on valide par ENTREE la zone de saisie de l'index AutoCAD, la couleur du bouton est mise à jour d'après l'index AutoCAD.
+
+    Le bouton OK implémente les modifications dans la table des couches.
+
+    Les réglages par défaut sont utilisables.  
+  </Texte>
+</Section>
+
+<Section>
+  <Index>19</Index>
+  <Topics>DXFDRAW</Topics>
+  <Title>Export graphique: Dessin</Title>
+  <Texte>
+    Cet onglet comporte peu d'options.
+    
+    Pour les entrées et les stations, il est possible de définir la façon dont sont dessinés les points:
+
+    - Cercle de rayon Taille
+
+    - Carré de côté Taille
+ 
+    - Triangle équilatéral inscrit dans le cercle de rayon Taille (cercle non représenté)
+
+    La case à cocher 'Niveaux de Gris': Si elle est activée, les entités exportées sont converties en niveaux de gris (pour PostScript et SVG)
+
+    La case à cocher 'Parties ignorées par le MétaFiltre': Si cochée, les parties ignorées par le MétaFiltre sont exportées avec la couleur spécifiée dans le bouton correspondant.
+  </Texte>
+</Section>
+<Section>
+  <Index>20</Index>
+  <Topics>DXFTEXTES</Topics>
+  <Title>Export graphique: Textes</Title>
+  <Texte>
+     En cours. 
+  </Texte>
+</Section>
+<Section>
+  <Index>21</Index>
+  <Topics>DXFPS</Topics>
+  <Title>Export graphique: PostScript</Title>
+  <Texte>
+     Cet onglet permet d'ajouter des instructions complémentaires pour l'export en PostScript.
+     
+     
+     PostScript est un langage structuré de description de pages avec variables, calculs, tests, etc ...
+
+     
+     Une zone d'édition contient les instructions PS à exécuter entre le header du fichier et la description des entités.
+
+     Typiquement, cette fonctionnalité est prévue pour spécifier des transformations d'ensemble:
+ 
+ 
+     400 200 translate
+     
+     3 3 scale
+
+
+     Pour l'aide de PostScript: voir doc PS ;)
+
+  </Texte>
+</Section>
+
+<Section>
+  <Index>1000</Index>
+  <Topics>HANDICAP_AUTHOR</Topics>
+  <Title>Handicaps of the GHTopo's author</Title>
+  <Texte>
+     GHTopo's author is affected by following handicaps and diseases, described by "International Classification of Diseases" codifications (ICD 10 / CIM 10)
+	 
+	 
+	 1. Neurology:
+	 
+	 
+	 Surgical intervention (drying subcranian hematom) in 1971
+	 
+	 Generalized central epilepsy: G40 and G41
+	 
+	 Sleeping troubleshooting: F51
+	 
+	 
+	 
+	 2. Psychiatry:
+	 
+	 
+	 Persistent psycho-affective stress, and depression from 1993.
+	 
+	 F32 - F33 - F40 - F48 - F90 - F99
+	 
+	 Socio-professional handicap
+	 
+	 Z55 to Z65
+	 
+	 
+	 3. Actual medications:
+	 
+
+     TRILEPTAL (Trileptal) 600 mg, 2 cp/jour
+	 
+	 ATHYMIL (Mianserine) 10 mg, 1 * 10 mg matin + 3 * 10 mg le soir
+	 
+	 URBANYL 10 mg, 1 * 10 mg matin + 1 * 10 mg midi + 1 * 10 mg soir
+
+
+  </Texte>
+</Section>
+
+
+

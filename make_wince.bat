@@ -1,0 +1,1 @@
+C:\lazarus\fpc\2.2.4\bin\i386-win32\ppcrossarm.exe -MDelphi -Sgh -CX -TWinCE -Parm -Xs -XX -vewnhi -l -Fu..\..\lcl\units\arm-wince\wince\ -Fu..\..\lcl\units\arm-wince\ -Fu..\..\components\custom\ -Fu..\..\packager\units\arm-wince\ -Fu. -oproject1.exe -dLCL -dLCLwince project1.lpr

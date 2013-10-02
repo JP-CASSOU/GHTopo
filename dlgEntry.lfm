@@ -1,0 +1,74 @@
+object DialogEntry: TDialogEntry
+  Left = 674
+  Height = 307
+  Top = 248
+  Width = 206
+  ActiveControl = editValeur
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'DialogEntry'
+  ClientHeight = 307
+  ClientWidth = 206
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnDestroy = FormDestroy
+  LCLVersion = '0.9.28.2'
+  object lbCaption: TLabel
+    Left = 4
+    Height = 20
+    Top = 4
+    Width = 87
+    AutoSize = False
+    Caption = 'lbCaption'
+    ParentColor = False
+  end
+  object editValeur: TEdit
+    Left = 92
+    Height = 29
+    Top = 4
+    Width = 112
+    TabOrder = 0
+    Text = 'editValeur'
+  end
+  object lbStdKeybd: TStaticText
+    Left = 4
+    Height = 38
+    Top = 40
+    Width = 200
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    BorderStyle = sbsSingle
+    Caption = 'Activate integrated '#13#10'input system'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object lbBounds: TStaticText
+    Left = 4
+    Height = 17
+    Top = 288
+    Width = 201
+    Anchors = [akLeft, akRight]
+    BorderStyle = sbsSunken
+    Caption = 'lbBounds'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 2
+  end
+end

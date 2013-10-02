@@ -1,0 +1,86 @@
+object DlgProjections: TDlgProjections
+  Left = 745
+  Height = 623
+  Top = 188
+  Width = 782
+  Caption = 'DlgProjections'
+  ClientHeight = 623
+  ClientWidth = 782
+  LCLVersion = '1.0.1.3'
+  object Button1: TButton
+    Left = 16
+    Height = 25
+    Top = 200
+    Width = 75
+    Caption = 'Button1'
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 20
+    Height = 25
+    Top = 28
+    Width = 75
+    Caption = 'Button2'
+    TabOrder = 1
+  end
+  object GridParametre: TStringGrid
+    Left = 120
+    Height = 352
+    Top = 180
+    Width = 427
+    TabOrder = 2
+  end
+  object ComboNature: TComboBox
+    Left = 112
+    Height = 21
+    Top = 8
+    Width = 144
+    ItemHeight = 13
+    OnChange = ComboNatureChange
+    TabOrder = 3
+    Text = 'ComboNature'
+  end
+  object Label5: TLabel
+    Left = 284
+    Height = 14
+    Top = 8
+    Width = 32
+    Caption = 'Label5'
+    ParentColor = False
+  end
+  object ComboDatum: TComboBox
+    Left = 112
+    Height = 21
+    Top = 36
+    Width = 144
+    ItemHeight = 13
+    OnChange = ComboDatumChange
+    TabOrder = 4
+    Text = 'ComboDatum'
+  end
+  object editNom: TEdit
+    Left = 128
+    Height = 21
+    Top = 80
+    Width = 372
+    TabOrder = 5
+    Text = 'editNom'
+  end
+  object editDescription: TEdit
+    Left = 128
+    Height = 21
+    Top = 104
+    Width = 372
+    TabOrder = 6
+    Text = 'editDescription'
+  end
+  object btnOK: TButton
+    Left = 8
+    Height = 25
+    Top = 316
+    Width = 75
+    Caption = 'OK'
+    OnClick = btnOKClick
+    TabOrder = 7
+  end
+end

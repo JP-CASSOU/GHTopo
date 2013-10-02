@@ -1,0 +1,61 @@
+object dlgEditeur: TdlgEditeur
+  Left = 419
+  Height = 560
+  Top = 212
+  Width = 852
+  Caption = 'dlgEditeur'
+  ClientHeight = 541
+  ClientWidth = 852
+  Menu = MainMenu1
+  OnCloseQuery = FormCloseQuery
+  OnShow = FormShow
+  LCLVersion = '0.9.30.4'
+  object EditorText: TMemo
+    Left = 0
+    Height = 541
+    Top = 0
+    Width = 852
+    Align = alClient
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Lines.Strings = (
+      'EditorText'
+    )
+    ParentFont = False
+    TabOrder = 0
+  end
+  object ActionList1: TActionList
+    left = 620
+    top = 68
+    object acSaveAs: TAction
+      Category = 'Fichier'
+      Caption = 'acSaveAs'
+    end
+    object acQuit: TAction
+      Category = 'Fichier'
+      Caption = 'acQuit'
+      OnExecute = acQuitExecute
+      ShortCut = 16465
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 620
+    top = 20
+    object mnuFile: TMenuItem
+      Caption = 'New Item1'
+      object MenuItem1: TMenuItem
+        Action = acSaveAs
+      end
+      object MenuItem2: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem3: TMenuItem
+        Action = acQuit
+      end
+    end
+  end
+end

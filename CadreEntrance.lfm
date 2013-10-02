@@ -1,0 +1,150 @@
+object CdrEntreeCavites: TCdrEntreeCavites
+  Left = 0
+  Height = 116
+  Top = 0
+  Width = 507
+  ClientHeight = 116
+  ClientWidth = 507
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnEnter = FrameEnter
+  ParentFont = False
+  TabOrder = 0
+  DesignLeft = 593
+  DesignTop = 473
+  object lbEntrance: TLabel
+    Left = 4
+    Height = 17
+    Top = 4
+    Width = 69
+    Caption = 'lbEntrance'
+    ParentColor = False
+  end
+  object lbCaveName: TLabel
+    Left = 4
+    Height = 17
+    Top = 32
+    Width = 82
+    Caption = 'lbCaveName'
+    ParentColor = False
+  end
+  object lbComments: TLabel
+    Left = 4
+    Height = 17
+    Top = 88
+    Width = 80
+    Caption = 'lbComments'
+    ParentColor = False
+  end
+  object editNumEntree: TCurrencyEdit
+    Left = 156
+    Height = 24
+    Top = 4
+    Width = 80
+    Alignment = taRightJustify
+    DecimalPlaces = 0
+    DisplayFormat = '0'
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 0
+    Value = 0
+  end
+  object editNomEntree: TEdit
+    Left = 156
+    Height = 24
+    Top = 32
+    Width = 348
+    TabOrder = 3
+    Text = 'Entrée principale'
+  end
+  object editCommentaires: TEdit
+    Left = 156
+    Height = 24
+    Top = 88
+    Width = 348
+    TabOrder = 7
+  end
+  object editSerie: TCurrencyEdit
+    Left = 404
+    Height = 24
+    Top = 4
+    Width = 44
+    Alignment = taRightJustify
+    DecimalPlaces = 0
+    DisplayFormat = '0'
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 1
+    Value = 1
+  end
+  object editPoint: TCurrencyEdit
+    Left = 460
+    Height = 24
+    Top = 4
+    Width = 44
+    Alignment = taRightJustify
+    DecimalPlaces = 0
+    DisplayFormat = '0'
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 2
+    Value = 0
+  end
+  object editXEntree: TCurrencyEdit
+    Left = 156
+    Height = 24
+    Top = 60
+    Width = 108
+    Alignment = taRightJustify
+    DisplayFormat = '0.00;-0.00 '
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 4
+    Value = 0
+  end
+  object editYEntree: TCurrencyEdit
+    Left = 268
+    Height = 24
+    Top = 60
+    Width = 100
+    Alignment = taRightJustify
+    DisplayFormat = '0.00;-0.00 '
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 5
+    Value = 0
+  end
+  object editZEntree: TCurrencyEdit
+    Left = 380
+    Height = 24
+    Top = 60
+    Width = 76
+    Alignment = taRightJustify
+    DisplayFormat = '0.00;-0.00 '
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 6
+    Value = 0
+  end
+  object lbEntranceCoordinates: TLabel
+    Left = 4
+    Height = 17
+    Top = 60
+    Width = 145
+    Caption = 'lbEntranceCoordinates'
+    ParentColor = False
+  end
+  object lbStationOfEntrance: TLabel
+    Left = 252
+    Height = 17
+    Top = 4
+    Width = 128
+    Caption = 'lbStationOfEntrance'
+    ParentColor = False
+  end
+end

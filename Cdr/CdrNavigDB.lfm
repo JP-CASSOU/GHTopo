@@ -1,0 +1,128 @@
+object CadreNavigDB: TCadreNavigDB
+  Left = 0
+  Height = 21
+  Top = 0
+  Width = 322
+  ClientHeight = 21
+  ClientWidth = 322
+  TabOrder = 0
+  DesignLeft = 596
+  DesignTop = 247
+  object Button6: TButton
+    Left = 0
+    Height = 18
+    Top = 0
+    Width = 19
+    Action = acFirst
+    TabOrder = 0
+  end
+  object Button5: TButton
+    Left = 19
+    Height = 18
+    Top = 0
+    Width = 19
+    Action = ac10Prev
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 38
+    Height = 18
+    Top = 0
+    Width = 19
+    Action = acPrev
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 57
+    Height = 18
+    Top = 0
+    Width = 19
+    Action = acNext
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 76
+    Height = 18
+    Top = 0
+    Width = 19
+    Action = ac10Next
+    TabOrder = 4
+  end
+  object Button4: TButton
+    Left = 95
+    Height = 18
+    Top = 0
+    Width = 19
+    Action = acLast
+    TabOrder = 5
+  end
+  object chkConfirm: TCheckBox
+    Left = 298
+    Height = 20
+    Top = 1
+    Width = 22
+    Anchors = [akTop, akRight]
+    TabOrder = 6
+  end
+  object lbTotal: TStaticText
+    Left = 160
+    Height = 17
+    Top = 0
+    Width = 32
+    BorderStyle = sbsSunken
+    Caption = '999'
+    TabOrder = 7
+  end
+  object Button7: TButton
+    Left = 137
+    Height = 18
+    Top = 0
+    Width = 20
+    Action = acNewItem
+    TabOrder = 8
+  end
+  object Button8: TButton
+    Left = 116
+    Height = 18
+    Top = 0
+    Width = 19
+    Action = acValidate
+    TabOrder = 9
+  end
+  object ActionList1: TActionList
+    left = 284
+    top = 65529
+    object acFirst: TAction
+      Caption = '|<'
+      OnExecute = acFirstExecute
+    end
+    object ac10Prev: TAction
+      Caption = '<<'
+      OnExecute = ac10PrevExecute
+    end
+    object acPrev: TAction
+      Caption = '<'
+      OnExecute = acPrevExecute
+    end
+    object acNext: TAction
+      Caption = '>'
+      OnExecute = acNextExecute
+    end
+    object ac10Next: TAction
+      Caption = '>>'
+      OnExecute = ac10NextExecute
+    end
+    object acLast: TAction
+      Caption = '>|'
+      OnExecute = acLastExecute
+    end
+    object acNewItem: TAction
+      Caption = '+'
+      OnExecute = acNewItemExecute
+    end
+    object acValidate: TAction
+      Caption = 'V'
+      OnExecute = acValidateExecute
+    end
+  end
+end

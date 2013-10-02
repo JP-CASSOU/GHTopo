@@ -1,0 +1,390 @@
+object Form1: TForm1
+  Left = 426
+  Height = 511
+  Top = 221
+  Width = 472
+  ActiveControl = PageControl1
+  Caption = 'PocketGHTopo'
+  ClientHeight = 484
+  ClientWidth = 472
+  Menu = MainMenu1
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '0.9.28.2'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 484
+    Top = 0
+    Width = 472
+    ActivePage = TabSheet6
+    Align = alClient
+    TabIndex = 3
+    TabOrder = 0
+    OnChange = PageControl1Change
+    object TabSheet1: TTabSheet
+      Caption = 'General'
+      ClientHeight = 453
+      ClientWidth = 468
+      object memoInfosCavite: TMemo
+        Left = 0
+        Height = 164
+        Top = 2
+        Width = 459
+        Anchors = [akTop, akLeft, akRight]
+        Lines.Strings = (
+          ''
+        )
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object lbProcessing: TStaticText
+        Left = 4
+        Height = 17
+        Top = 178
+        Width = 460
+        Alignment = taCenter
+        Anchors = [akTop, akLeft, akRight]
+        BorderStyle = sbsSunken
+        Caption = 'lbProcessing'
+        TabOrder = 1
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Expes'
+      ClientHeight = 453
+      ClientWidth = 468
+      inline CadreExpes1: TCadreExpes
+        Left = 4
+        Height = 431
+        Top = 22
+        Width = 459
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        ClientHeight = 431
+        ClientWidth = 459
+        inherited Label7: TLabel
+          Left = 401
+        end
+        inherited editSpeleometre: TEdit
+          Width = 393
+        end
+        inherited editSpeleographe: TEdit
+          Width = 393
+        end
+        inherited editObserv: TEdit
+          Width = 409
+        end
+        inherited editDeclination: TEdit
+          Left = 409
+        end
+        inherited cmbModeDecl: TComboBox
+          Width = 333
+        end
+      end
+      inline CdrNavgExpes: TCadreNavigDB
+        Top = 2
+        Width = 465
+        Anchors = [akTop, akLeft, akRight]
+        ClientWidth = 465
+        TabOrder = 1
+        inherited Button6: TButton
+          Action = CdrNavgExpes.acFirst
+        end
+        inherited Button5: TButton
+          Action = CdrNavgExpes.ac10Prev
+        end
+        inherited Button1: TButton
+          Action = CdrNavgExpes.acPrev
+        end
+        inherited Button2: TButton
+          Action = CdrNavgExpes.acNext
+        end
+        inherited Button3: TButton
+          Action = CdrNavgExpes.ac10Next
+        end
+        inherited Button4: TButton
+          Action = CdrNavgExpes.acLast
+        end
+        inherited chkConfirm: TCheckBox
+          Left = 437
+        end
+        inherited Button7: TButton
+          Action = CdrNavgExpes.acNewItem
+        end
+        inherited Button8: TButton
+          Action = CdrNavgExpes.acValidate
+        end
+      end
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'Codes'
+      ClientHeight = 453
+      ClientWidth = 468
+      inline CadreCodes1: TCadreCodes
+        Height = 431
+        Top = 22
+        Width = 465
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        ClientHeight = 431
+        ClientWidth = 465
+        inherited Label1: TLabel
+          Height = 15
+        end
+        inherited Label2: TLabel
+          Height = 15
+        end
+        inherited editIDCode: TEdit
+          Height = 22
+        end
+        inherited editObsCode: TEdit
+          Height = 22
+          Width = 414
+        end
+        inherited editWL: TEdit
+          Height = 22
+        end
+        inherited editWAz: TEdit
+          Height = 22
+        end
+        inherited editWP: TEdit
+          Height = 22
+        end
+        inherited cmbUB: TComboBox
+          Height = 22
+          Width = 337
+        end
+        inherited cmbAzimutDirecte: TComboBox
+          Left = 390
+          Height = 22
+        end
+        inherited cmbPenteDirecte: TComboBox
+          Left = 390
+          Height = 22
+        end
+        inherited cmbUC: TComboBox
+          Height = 22
+          Width = 337
+        end
+        inherited cmbPosZero: TComboBox
+          Height = 22
+        end
+      end
+      inline CdrNavgCodes: TCadreNavigDB
+        Top = 2
+        Width = 467
+        Anchors = [akTop, akLeft, akRight]
+        ClientWidth = 467
+        TabOrder = 1
+        inherited Button6: TButton
+          Action = CdrNavgCodes.acFirst
+        end
+        inherited Button5: TButton
+          Action = CdrNavgCodes.ac10Prev
+        end
+        inherited Button1: TButton
+          Action = CdrNavgCodes.acPrev
+        end
+        inherited Button2: TButton
+          Action = CdrNavgCodes.acNext
+        end
+        inherited Button3: TButton
+          Action = CdrNavgCodes.ac10Next
+        end
+        inherited Button4: TButton
+          Action = CdrNavgCodes.acLast
+        end
+        inherited chkConfirm: TCheckBox
+          Left = 445
+          Height = 17
+          Width = 20
+        end
+        inherited Button7: TButton
+          Action = CdrNavgCodes.acNewItem
+        end
+        inherited Button8: TButton
+          Action = CdrNavgCodes.acValidate
+        end
+      end
+    end
+    object TabSheet6: TTabSheet
+      Caption = 'Series'
+      ClientHeight = 453
+      ClientWidth = 468
+      inline CdrNavgSeries: TCadreNavigDB
+        Top = 2
+        Width = 465
+        Anchors = [akTop, akLeft, akRight]
+        ClientWidth = 465
+        inherited Button6: TButton
+          Action = CdrNavgSeries.acFirst
+        end
+        inherited Button5: TButton
+          Action = CdrNavgSeries.ac10Prev
+        end
+        inherited Button1: TButton
+          Action = CdrNavgSeries.acPrev
+        end
+        inherited Button2: TButton
+          Action = CdrNavgSeries.acNext
+        end
+        inherited Button3: TButton
+          Action = CdrNavgSeries.ac10Next
+        end
+        inherited Button4: TButton
+          Action = CdrNavgSeries.acLast
+        end
+        inherited chkConfirm: TCheckBox
+          Left = 441
+        end
+        inherited Button7: TButton
+          Action = CdrNavgSeries.acNewItem
+        end
+        inherited Button8: TButton
+          Action = CdrNavgSeries.acValidate
+        end
+      end
+      object Panel1: TPanel
+        Left = 0
+        Height = 424
+        Top = 23
+        Width = 465
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        Caption = 'Panel1'
+        ClientHeight = 424
+        ClientWidth = 465
+        TabOrder = 1
+        inline CadreSerie1: TCadreSerie
+          Left = 1
+          Height = 422
+          Top = 1
+          Width = 463
+          Align = alClient
+          ClientHeight = 422
+          ClientWidth = 463
+          inherited PageControl1: TPageControl
+            Height = 422
+            Width = 463
+            ActivePage = CadreSerie1.TabSheet2
+            inherited TabSheet1: TTabSheet
+              ClientHeight = 391
+              ClientWidth = 459
+              inherited editNomSerie: TEdit
+                Width = 410
+              end
+              inherited editSerieObserv: TEdit
+                Width = 389
+              end
+            end
+            inherited TabSheet2: TTabSheet
+              ClientHeight = 391
+              ClientWidth = 459
+              inherited editStObservations: TEdit
+                Width = 419
+              end
+              inherited sclStation: TScrollBar
+                Width = 427
+              end
+              inherited btnAddStation: TButton
+                Left = 436
+                OnClick = nil
+              end
+            end
+          end
+        end
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Plan'
+      ClientHeight = 453
+      ClientWidth = 468
+      inline CadreDessin2D1: TCadreDessin2D
+        Height = 453
+        Width = 468
+        Align = alClient
+        ClientHeight = 453
+        ClientWidth = 468
+        inherited Panel1: TPanel
+          Height = 432
+          Width = 468
+          ClientHeight = 432
+          ClientWidth = 468
+          inherited Vue: TPaintBox
+            Height = 430
+            Width = 466
+          end
+        end
+        inherited lbInfos: TStaticText
+          Width = 354
+        end
+      end
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 148
+    top = 400
+    object MenuItem1: TMenuItem
+      Caption = 'Fichier'
+      object MenuItem3: TMenuItem
+        Action = acOpen
+        OnClick = acOpenExecute
+      end
+      object MenuItem2: TMenuItem
+        Action = acSaveAs
+        OnClick = acSaveAsExecute
+      end
+      object MenuItem4: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem10: TMenuItem
+        Action = acRecalc
+        OnClick = acRecalcExecute
+      end
+      object MenuItem11: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem5: TMenuItem
+        Action = acVTopo
+        OnClick = acVTopoExecute
+      end
+      object MenuItem6: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem12: TMenuItem
+        Action = acQuit
+        OnClick = acQuitExecute
+      end
+    end
+  end
+  object ActionList1: TActionList
+    left = 100
+    top = 400
+    object acOpen: TAction
+      Caption = 'Ouvrir'
+      OnExecute = acOpenExecute
+    end
+    object acOpenTOP: TAction
+      Caption = 'Ouvrir TOP'
+      OnExecute = acOpenTOPExecute
+    end
+    object acQuit: TAction
+      Caption = 'Quitter'
+      OnExecute = acQuitExecute
+    end
+    object acSetFiltre: TAction
+      Caption = 'Filtres'
+      OnExecute = acSetFiltreExecute
+    end
+    object acRecalc: TAction
+      Caption = 'Recalculer'
+      OnExecute = acRecalcExecute
+    end
+    object acSaveAs: TAction
+      Caption = 'Sauver ...'
+      OnExecute = acSaveAsExecute
+    end
+    object acVTopo: TAction
+      Caption = 'Export VTopo'
+      OnExecute = acVTopoExecute
+    end
+  end
+end

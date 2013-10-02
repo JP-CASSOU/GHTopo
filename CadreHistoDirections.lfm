@@ -1,0 +1,51 @@
+object CdrHistogrammes: TCdrHistogrammes
+  Left = 0
+  Height = 438
+  Top = 0
+  Width = 405
+  ClientHeight = 438
+  ClientWidth = 405
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  ParentFont = False
+  TabOrder = 0
+  DesignLeft = 525
+  DesignTop = 196
+  object Panel1: TPanel
+    Left = 2
+    Height = 400
+    Top = 34
+    Width = 400
+    Caption = 'Panel1'
+    ClientHeight = 400
+    ClientWidth = 400
+    TabOrder = 0
+    object imgHistogrammes: TImage
+      Left = 1
+      Height = 398
+      Top = 1
+      Width = 398
+      Align = alClient
+    end
+  end
+  object lbFiltres: TLabel
+    Left = 2
+    Height = 17
+    Top = 4
+    Width = 48
+    Caption = 'Filtres: '
+    ParentColor = False
+  end
+  object editFiltres: TEdit
+    Left = 56
+    Height = 24
+    Top = 4
+    Width = 124
+    TabOrder = 1
+  end
+end

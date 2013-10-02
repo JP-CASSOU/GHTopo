@@ -1,0 +1,38 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TDialogVTopo','FORMDATA',[
+  'TPF0'#12'TDialogVTopo'#11'DialogVTopo'#4'Left'#3'L'#2#6'Height'#3''''#1#3'To'
+  +'p'#3#11#1#5'Width'#3#245#0#13'ActiveControl'#7#16'editMainEntrance'#7'Capti'
+  +'on'#6#12'Export VTopo'#12'ClientHeight'#3''''#1#11'ClientWidth'#3#245#0#10
+  +'LCLVersion'#6#7'1.0.1.3'#0#6'TLabel'#6'Label1'#4'Left'#2#4#6'Height'#2#14#3
+  +'Top'#2'0'#5'Width'#2#29#7'Caption'#6#6'Prefix'#11'ParentColor'#8#0#0#6'TLab'
+  +'el'#6'Label2'#4'Left'#2#4#6'Height'#2#14#3'Top'#2'H'#5'Width'#2#18#7'Captio'
+  +'n'#6#3'X ='#11'ParentColor'#8#0#0#6'TLabel'#6'Label3'#4'Left'#2#4#6'Height'
+  +#2#14#3'Top'#2'`'#5'Width'#2#18#7'Caption'#6#3'Y ='#11'ParentColor'#8#0#0#6
+  +'TLabel'#6'Label4'#4'Left'#2#4#6'Height'#2#14#3'Top'#2'x'#5'Width'#2#18#7'Ca'
+  +'ption'#6#3'Z ='#11'ParentColor'#8#0#0#6'TLabel'#6'Label5'#4'Left'#2#4#6'Hei'
+  +'ght'#2#14#3'Top'#2#24#5'Width'#2'!'#7'Caption'#6#6'Entree'#11'ParentColor'#8
+  +#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#2#20#6'Height'#2#22#3'Top'#3#180#0#5'Widt'
+  +'h'#2'['#7'Anchors'#11#7'akRight'#8'akBottom'#0#7'Caption'#6#3'&OK'#7'Defaul'
+  +'t'#9#4'Kind'#7#4'bkOK'#11'ModalResult'#2#1#7'OnClick'#7#12'BitBtn1Click'#8
+  +'TabOrder'#2#0#0#0#7'TBitBtn'#7'BitBtn2'#4'Left'#2's'#6'Height'#2#22#3'Top'#3
+  +#180#0#5'Width'#2'['#7'Anchors'#11#7'akRight'#8'akBottom'#0#6'Cancel'#9#7'Ca'
+  +'ption'#6#7'Annuler'#4'Kind'#7#8'bkCancel'#11'ModalResult'#2#2#8'TabOrder'#2
+  +#1#0#0#11'TStaticText'#10'lbFileName'#4'Left'#2#4#6'Height'#2#16#3'Top'#2#4#5
+  +'Width'#3#240#0#7'Anchors'#11#5'akTop'#6'akLeft'#7'akRight'#0#11'BorderStyle'
+  +#7#9'sbsSunken'#7'Caption'#6#10'lbFileName'#8'TabOrder'#2#2#0#0#5'TEdit'#12
+  +'editStPrefix'#4'Left'#2'0'#6'Height'#2#21#3'Top'#2'0'#5'Width'#2'P'#8'TabOr'
+  +'der'#2#3#0#0#5'TEdit'#10'editXCoord'#4'Left'#2'0'#6'Height'#2#21#3'Top'#2'H'
+  +#5'Width'#2'd'#8'TabOrder'#2#4#4'Text'#6#4'0.00'#0#0#5'TEdit'#10'editYCoord'
+  +#4'Left'#2'0'#6'Height'#2#21#3'Top'#2'`'#5'Width'#2'd'#8'TabOrder'#2#5#4'Tex'
+  +'t'#6#4'0.00'#0#0#5'TEdit'#10'editZCoord'#4'Left'#2'0'#6'Height'#2#21#3'Top'
+  +#2'x'#5'Width'#2'P'#8'TabOrder'#2#6#4'Text'#6#4'0.00'#0#0#5'TEdit'#16'editMa'
+  +'inEntrance'#4'Left'#2'0'#6'Height'#2#21#3'Top'#2#24#5'Width'#3#196#0#8'TabO'
+  +'rder'#2#7#0#0#11'TStaticText'#9'lbProcess'#4'Left'#2#4#6'Height'#2#17#3'Top'
+  +#3#208#0#5'Width'#3#240#0#9'Alignment'#7#8'taCenter'#7'Anchors'#11#5'akTop'#6
+  +'akLeft'#7'akRight'#0#11'BorderStyle'#7#9'sbsSunken'#7'Caption'#6#9'lbProces'
+  +'s'#8'TabOrder'#2#8#0#0#12'TProgressBar'#11'ProgressBar'#4'Left'#2#4#6'Heigh'
+  +'t'#2#20#3'Top'#3#228#0#5'Width'#3#240#0#6'Smooth'#9#8'TabOrder'#2#9#0#0#9'T'
+  +'CheckBox'#12'chkNotUseIDs'#4'Left'#2'0'#6'Height'#2#17#3'Top'#3#148#0#5'Wid'
+  +'th'#2'~'#7'Caption'#6#23'ID litteraux desactives'#8'TabOrder'#2#10#0#0#0
+]);

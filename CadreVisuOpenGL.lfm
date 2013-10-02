@@ -1,0 +1,192 @@
+object CdrVueOpenGL: TCdrVueOpenGL
+  Left = 0
+  Height = 541
+  Top = 0
+  Width = 790
+  ClientHeight = 541
+  ClientWidth = 790
+  TabOrder = 0
+  DesignLeft = 744
+  DesignTop = 344
+  object OpenGLControl1: TOpenGLControl
+    Left = 4
+    Height = 533
+    Top = 4
+    Width = 783
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    OnPaint = OpenGLControl1Paint
+  end
+  object Panel1: TPanel
+    Left = 4
+    Height = 94
+    Top = 4
+    Width = 300
+    BevelOuter = bvLowered
+    ClientHeight = 94
+    ClientWidth = 300
+    TabOrder = 1
+    object sclFOV: TScrollBar
+      Left = 44
+      Height = 17
+      Top = 72
+      Width = 250
+      Anchors = [akTop, akLeft, akRight]
+      Max = 180
+      Min = 1
+      PageSize = 0
+      Position = 60
+      TabOrder = 0
+      OnChange = sclFOVChange
+    end
+    object sclTheta: TScrollBar
+      Left = 44
+      Height = 17
+      Top = 32
+      Width = 250
+      Anchors = [akTop, akLeft, akRight]
+      Max = 360
+      PageSize = 0
+      TabOrder = 1
+      OnChange = sclThetaChange
+    end
+    object sclPhi: TScrollBar
+      Left = 44
+      Height = 17
+      Top = 52
+      Width = 250
+      Anchors = [akTop, akLeft, akRight]
+      Max = 90
+      PageSize = 0
+      TabOrder = 2
+      OnChange = sclPhiChange
+    end
+    object editFiltres: TEdit
+      Left = 44
+      Height = 21
+      Top = 4
+      Width = 202
+      OnKeyPress = editFiltresKeyPress
+      TabOrder = 3
+    end
+    object Label1: TLabel
+      Left = 4
+      Height = 14
+      Top = 32
+      Width = 29
+      Caption = 'Theta'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 4
+      Height = 14
+      Top = 52
+      Width = 15
+      Caption = 'Phi'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 4
+      Height = 14
+      Top = 72
+      Width = 27
+      Caption = 'Zoom'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 4
+      Height = 14
+      Top = 4
+      Width = 30
+      Caption = 'Filtres'
+      ParentColor = False
+    end
+    object btnOK: TButton
+      Left = 244
+      Height = 23
+      Top = 3
+      Width = 28
+      Caption = 'OK'
+      OnClick = btnOKClick
+      TabOrder = 4
+    end
+    object btnMoreOptions: TButton
+      Left = 272
+      Height = 23
+      Top = 3
+      Width = 27
+      Caption = '>>'
+      OnClick = btnMoreOptionsClick
+      TabOrder = 5
+    end
+  end
+  object pnlMoreOptions: TPanel
+    Left = 308
+    Height = 84
+    Top = 4
+    Width = 168
+    ClientHeight = 84
+    ClientWidth = 168
+    TabOrder = 2
+    Visible = False
+    object editMagnification: TCurrencyEdit
+      Left = 80
+      Height = 21
+      Top = 57
+      Width = 83
+      Alignment = taRightJustify
+      DisplayFormat = ',0.00;-,0.00'
+      MaxValue = 0
+      MinValue = 0
+      TabOrder = 0
+      Value = 1
+    end
+    object btnColorBackGrnd: TStaticText
+      Left = 80
+      Height = 22
+      Top = 4
+      Width = 83
+      BorderStyle = sbsSingle
+      Color = clBlack
+      OnClick = btnColorBackGrndClick
+      ParentColor = False
+      TabOrder = 1
+      Transparent = False
+    end
+    object btnColorCube: TStaticText
+      Left = 80
+      Height = 22
+      Top = 28
+      Width = 83
+      BorderStyle = sbsSingle
+      Color = clBlue
+      OnClick = btnColorCubeClick
+      ParentColor = False
+      TabOrder = 2
+      Transparent = False
+    end
+    object Label5: TLabel
+      Left = 4
+      Height = 14
+      Top = 4
+      Width = 32
+      Caption = 'Label5'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 4
+      Height = 14
+      Top = 28
+      Width = 32
+      Caption = 'Label6'
+      ParentColor = False
+    end
+    object Label7: TLabel
+      Left = 4
+      Height = 14
+      Top = 57
+      Width = 32
+      Caption = 'Label7'
+      ParentColor = False
+    end
+  end
+end

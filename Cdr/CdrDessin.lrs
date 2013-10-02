@@ -1,0 +1,24 @@
+LazarusResources.Add('TCadreDessin2D','FORMDATA',[
+  'TPF0'#14'TCadreDessin2D'#13'CadreDessin2D'#4'Left'#2#0#6'Height'#3#229#1#3'T'
+  +'op'#2#0#5'Width'#3#188#1#12'ClientHeight'#3#229#1#11'ClientWidth'#3#188#1#8
+  +'TabOrder'#2#0#10'DesignLeft'#3#165#2#9'DesignTop'#3#218#0#0#6'TPanel'#6'Pan'
+  +'el1'#4'Left'#2#0#6'Height'#3#208#1#3'Top'#2#18#5'Width'#3#188#1#7'Anchors'
+  +#11#5'akTop'#6'akLeft'#7'akRight'#8'akBottom'#0#10'BevelOuter'#7#9'bvLowered'
+  +#12'ClientHeight'#3#208#1#11'ClientWidth'#3#188#1#8'TabOrder'#2#0#0#9'TPaint'
+  +'Box'#3'Vue'#4'Left'#2#1#6'Height'#3#206#1#3'Top'#2#1#5'Width'#3#186#1#5'Ali'
+  +'gn'#7#8'alClient'#7'OnClick'#7#8'VueClick'#11'OnMouseDown'#7#12'VueMouseDow'
+  +'n'#11'OnMouseMove'#7#12'VueMouseMove'#9'OnMouseUp'#7#10'VueMouseUp'#7'OnPai'
+  +'nt'#7#8'VuePaint'#0#0#0#7'TButton'#10'btnZoomAll'#4'Left'#2#0#6'Height'#2#17
+  +#3'Top'#2#0#5'Width'#2#20#7'Caption'#6#1'0'#7'OnClick'#7#15'btnZoomAllClick'
+  +#8'TabOrder'#2#1#0#0#7'TButton'#8'btnZoomW'#4'Left'#2#20#6'Height'#2#17#3'To'
+  +'p'#2#0#5'Width'#2#20#7'Caption'#6#1'+'#7'OnClick'#7#13'btnZoomWClick'#8'Tab'
+  +'Order'#2#2#0#0#7'TButton'#6'btnPan'#4'Left'#2'('#6'Height'#2#17#3'Top'#2#0#5
+  +'Width'#2#20#7'Caption'#6#1'P'#7'OnClick'#7#11'btnPanClick'#8'TabOrder'#2#3#0
+  +#0#7'TButton'#11'btnSettings'#4'Left'#2'X'#6'Height'#2#17#3'Top'#2#0#5'Width'
+  +#2#20#7'Caption'#6#3'...'#7'OnClick'#7#16'btnSettingsClick'#8'TabOrder'#2#4#0
+  +#0#11'TStaticText'#7'lbInfos'#4'Left'#2'p'#6'Height'#2#17#3'Top'#2#0#5'Width'
+  +#3'J'#1#7'Anchors'#11#5'akTop'#6'akLeft'#7'akRight'#0#11'BorderStyle'#7#9'sb'
+  +'sSunken'#7'Caption'#6#7'lbInfos'#8'TabOrder'#2#5#0#0#7'TButton'#11'btnDista'
+  +'nce'#4'Left'#2'@'#6'Height'#2#17#3'Top'#2#0#5'Width'#2#19#7'Caption'#6#1'D'
+  +#7'OnClick'#7#16'btnDistanceClick'#8'TabOrder'#2#6#0#0#0
+]);

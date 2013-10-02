@@ -1,0 +1,31 @@
+LazarusResources.Add('TCadreNavigDB','FORMDATA',[
+  'TPF0'#13'TCadreNavigDB'#12'CadreNavigDB'#4'Left'#2#0#6'Height'#2#21#3'Top'#2
+  +#0#5'Width'#3'B'#1#12'ClientHeight'#2#21#11'ClientWidth'#3'B'#1#8'TabOrder'#2
+  +#0#10'DesignLeft'#3'T'#2#9'DesignTop'#3#247#0#0#7'TButton'#7'Button6'#4'Left'
+  +#2#0#6'Height'#2#18#3'Top'#2#0#5'Width'#2#19#6'Action'#7#7'acFirst'#8'TabOrd'
+  +'er'#2#0#0#0#7'TButton'#7'Button5'#4'Left'#2#19#6'Height'#2#18#3'Top'#2#0#5
+  +'Width'#2#19#6'Action'#7#8'ac10Prev'#8'TabOrder'#2#1#0#0#7'TButton'#7'Button'
+  +'1'#4'Left'#2'&'#6'Height'#2#18#3'Top'#2#0#5'Width'#2#19#6'Action'#7#6'acPre'
+  +'v'#8'TabOrder'#2#2#0#0#7'TButton'#7'Button2'#4'Left'#2'9'#6'Height'#2#18#3
+  +'Top'#2#0#5'Width'#2#19#6'Action'#7#6'acNext'#8'TabOrder'#2#3#0#0#7'TButton'
+  +#7'Button3'#4'Left'#2'L'#6'Height'#2#18#3'Top'#2#0#5'Width'#2#19#6'Action'#7
+  +#8'ac10Next'#8'TabOrder'#2#4#0#0#7'TButton'#7'Button4'#4'Left'#2'_'#6'Height'
+  +#2#18#3'Top'#2#0#5'Width'#2#19#6'Action'#7#6'acLast'#8'TabOrder'#2#5#0#0#9'T'
+  +'CheckBox'#10'chkConfirm'#4'Left'#3'*'#1#6'Height'#2#20#3'Top'#2#1#5'Width'#2
+  +#22#7'Anchors'#11#5'akTop'#7'akRight'#0#8'TabOrder'#2#6#0#0#11'TStaticText'#7
+  +'lbTotal'#4'Left'#3#160#0#6'Height'#2#17#3'Top'#2#0#5'Width'#2' '#11'BorderS'
+  +'tyle'#7#9'sbsSunken'#7'Caption'#6#3'999'#8'TabOrder'#2#7#0#0#7'TButton'#7'B'
+  +'utton7'#4'Left'#3#137#0#6'Height'#2#18#3'Top'#2#0#5'Width'#2#20#6'Action'#7
+  +#9'acNewItem'#8'TabOrder'#2#8#0#0#7'TButton'#7'Button8'#4'Left'#2't'#6'Heigh'
+  +'t'#2#18#3'Top'#2#0#5'Width'#2#19#6'Action'#7#10'acValidate'#8'TabOrder'#2#9
+  +#0#0#11'TActionList'#11'ActionList1'#4'left'#3#28#1#3'top'#4#249#255#0#0#0#7
+  +'TAction'#7'acFirst'#7'Caption'#6#2'|<'#9'OnExecute'#7#14'acFirstExecute'#0#0
+  +#7'TAction'#8'ac10Prev'#7'Caption'#6#2'<<'#9'OnExecute'#7#15'ac10PrevExecute'
+  +#0#0#7'TAction'#6'acPrev'#7'Caption'#6#1'<'#9'OnExecute'#7#13'acPrevExecute'
+  +#0#0#7'TAction'#6'acNext'#7'Caption'#6#1'>'#9'OnExecute'#7#13'acNextExecute'
+  +#0#0#7'TAction'#8'ac10Next'#7'Caption'#6#2'>>'#9'OnExecute'#7#15'ac10NextExe'
+  +'cute'#0#0#7'TAction'#6'acLast'#7'Caption'#6#2'>|'#9'OnExecute'#7#13'acLastE'
+  +'xecute'#0#0#7'TAction'#9'acNewItem'#7'Caption'#6#1'+'#9'OnExecute'#7#16'acN'
+  +'ewItemExecute'#0#0#7'TAction'#10'acValidate'#7'Caption'#6#1'V'#9'OnExecute'
+  +#7#17'acValidateExecute'#0#0#0#0
+]);

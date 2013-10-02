@@ -1,0 +1,67 @@
+object CdrMetaFiltre: TCdrMetaFiltre
+  Left = 0
+  Height = 33
+  Top = 0
+  Width = 405
+  ClientHeight = 33
+  ClientWidth = 405
+  Color = 13041663
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  ParentColor = False
+  ParentFont = False
+  TabOrder = 0
+  DesignLeft = 941
+  DesignTop = 67
+  object Panel1: TPanel
+    Left = 0
+    Height = 33
+    Top = 0
+    Width = 405
+    Align = alClient
+    ClientHeight = 33
+    ClientWidth = 405
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 8
+      Height = 17
+      Top = 5
+      Width = 44
+      Caption = 'Filtres:'
+      ParentColor = False
+    end
+    object editFiltres: TEdit
+      Left = 56
+      Height = 24
+      Top = 4
+      Width = 288
+      Anchors = [akTop, akLeft, akRight]
+      OnKeyPress = editFiltresKeyPress
+      TabOrder = 0
+    end
+    object btnHelpFiltres: TButton
+      Left = 374
+      Height = 25
+      Top = 3
+      Width = 29
+      Anchors = [akTop, akRight]
+      Caption = '?'
+      OnClick = btnHelpFiltresClick
+      TabOrder = 1
+    end
+    object btnApply: TButton
+      Left = 344
+      Height = 25
+      Top = 3
+      Width = 31
+      Anchors = [akTop, akRight]
+      Caption = 'OK'
+      OnClick = btnApplyClick
+      TabOrder = 2
+    end
+  end
+end

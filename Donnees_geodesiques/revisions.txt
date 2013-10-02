@@ -1,0 +1,46 @@
+Version 1.5.0.1
+31 octobre 2010
+
+- Correction d'un bug (plantage) avec les projections Lambert définies dans l'hémisphère sud
+- Correction de l'ordre de tabulation des contrôles dans les fenêtres
+- Correction de défauts d'affichage
+- Inclusion de la projection Mercator par défaut
+- Ajout des paramètres pour l'Île Maurice
+
+Version 1.5.0.0
+24 février 2010
+
+- Inclusion de la grille IGN de conversion précise pour la France métropolitaine
+- Ajout de la projection Mercator
+- Ajout de la projection latitude/longitude
+- Ajout des paramètres pour la Tunisie
+- Correction d'un bug dans la gestion des grilles de conversion précise (n'affecte pas les résultats)
+- Correction des problèmes d'appel à la DLL dans les feuilles Excel
+- Résolution d'un problème de fonctionnement dans le fichier mercator.xls
+- Mise à jour de la documentation
+- Arrêt de la version Linux
+- Adaptation du code de calcul à FPC (http://www.freepascal.org/)
+
+Version 1.4.0.2
+3 avril 2006
+
+- Ajout du support des grilles précises pour la Nouvelle-Calédonie.
+- Correction d'une erreur pour la prise en charge de la grille précise gr3df97a.mnt pour la France.
+- Correction d'un problème d'affiche sur les angles proches de 0.
+- Correction d'une faute de frappe pour le système géodésique Ste-Anne à la Guadeloupe (merci Philippe Bondet-Laborie)
+- Ajout (livré avec le code source) du fichier d'entête pour le C++ LibConv.h (merci Francis Tourneur)
+- Ajout des 9 projections coniques conformes associées à RGF93 pour la France.
+- Complément/mise à jour des données pour les dom-tom.
+- Passage de la librairie en licence lgpl.
+- Mise à jour de la doc.
+
+Version 1.4.0.1
+21 mars 2006
+
+- Correction d'un bug sur le changement de datum à 7 paramètres.(merci à Jean-Claude Repetto). Pour cette même conversion, passage aux formules sans approximation pour mieux traiter le cas de la Réunion.
+- Ajout du calcul de l'altértaion linéaire
+- Dans la feuille excel convertir.xls (conversion de coordonnées dans excel en utilisant la librairie fournie avec le logiciel), ajout de macros pour lire directement les fichiers GPSTrack et les enregistrements sur carte SD des Magellan Meridian (s'applique sans doute à tous les Magellan, y compris lors de la lecture des fichiers par port USB).
+- Nouvelle feuille de calcul excel Mercator.xls permettant de calculer la projection mercator transverse équivalente à une projection quelconque en un point donné. Utile quand un GPS ne supporte pas une projection locale.
+- De nombreux ajouts dans la base de données des systèmes géodésiques/projections de différents pays. Avec des gros efforts pour l'Europe. Mais aussi quelques autres pays comme le Maroc et l'Algérie.
+- Correction d'une erreur de signe sur les paramètres du système géodésique Ste-Anne à la Guadeloupe (merci Michel Wurtz).
+- Mise à jour de la doc.

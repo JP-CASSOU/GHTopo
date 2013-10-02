@@ -1,0 +1,47 @@
+object CdrHistoAltitudes: TCdrHistoAltitudes
+  Left = 0
+  Height = 274
+  Top = 0
+  Width = 381
+  ClientHeight = 274
+  ClientWidth = 381
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  ParentFont = False
+  TabOrder = 0
+  DesignLeft = 537
+  DesignTop = 395
+  object Panel1: TPanel
+    Left = 4
+    Height = 249
+    Top = 4
+    Width = 373
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ClientHeight = 249
+    ClientWidth = 373
+    TabOrder = 0
+    object imgHistoAltitudes: TImage
+      Left = 1
+      Height = 247
+      Top = 1
+      Width = 371
+      Align = alClient
+      OnMouseDown = imgHistoAltitudesMouseDown
+    end
+  end
+  object lbAltitude: TLabel
+    Left = 4
+    Height = 17
+    Top = 253
+    Width = 294
+    Anchors = [akLeft, akBottom]
+    AutoSize = False
+    Caption = 'lbAltitude'
+    ParentColor = False
+  end
+end

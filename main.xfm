@@ -1,0 +1,301 @@
+object Form1: TForm1
+  Left = 296
+  Top = 244
+  Width = 499
+  Height = 341
+  VertScrollBar.Range = 337
+  HorzScrollBar.Range = 489
+  ActiveControl = Button1
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = fbsSingle
+  Caption = 'Convertisseur de coordonn'#233'es'
+  Color = clBackground
+  Font.Color = clBlack
+  Font.Height = 11
+  Font.Name = 'Tahoma'
+  Font.Pitch = fpVariable
+  Font.Style = []
+  Font.Weight = 40
+  ParentFont = False
+  Position = poScreenCenter
+  Scaled = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  object Button1: TButton
+    Left = 400
+    Top = 16
+    Width = 89
+    Height = 25
+    Caption = 'Param'#232'tres ...'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 400
+    Top = 56
+    Width = 89
+    Height = 25
+    Caption = 'Convertir'
+    Default = True
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 377
+    Height = 137
+    Caption = 'D'#233'part'
+    TabOrder = 2
+    object Label9: TLabel
+      Left = 16
+      Top = 16
+      Width = 21
+      Height = 13
+      Caption = '&Nom'
+      FocusControl = ComboSource
+    end
+    object ComboSource: TComboBox
+      Left = 11
+      Top = 32
+      Width = 102
+      Height = 21
+      Style = csOwnerDrawFixed
+      ItemHeight = 15
+      TabOrder = 1
+      OnChange = ComboSourceChange
+      OnDrawItem = ComboSourceDrawItem
+      OnExit = ComboSourceExit
+    end
+    object Label10: TLabel
+      Left = 128
+      Top = 16
+      Width = 53
+      Height = 13
+      Caption = 'Description'
+    end
+    object EditDescription1: TEdit
+      Left = 120
+      Top = 32
+      Width = 249
+      Height = 21
+      TabOrder = 3
+    end
+    object Label2: TLabel
+      Left = 8
+      Top = 68
+      Width = 7
+      Height = 13
+      Alignment = taCenter
+      Caption = 'X'
+      FocusControl = EditXSource
+    end
+    object Label3: TLabel
+      Left = 6
+      Top = 100
+      Width = 7
+      Height = 13
+      Alignment = taCenter
+      Caption = 'Y'
+      FocusControl = EditYSource
+    end
+    object EditXSource: TEdit
+      Left = 78
+      Top = 64
+      Width = 100
+      Height = 21
+      TabOrder = 6
+      Text = '0'
+    end
+    object EditYSource: TEdit
+      Left = 78
+      Top = 96
+      Width = 100
+      Height = 21
+      TabOrder = 7
+      Text = '0'
+    end
+    object Label7: TLabel
+      Left = 237
+      Top = 68
+      Width = 35
+      Height = 13
+      Caption = 'Fuseau'
+    end
+    object EditFuseauSource: TEdit
+      Left = 294
+      Top = 64
+      Width = 49
+      Height = 21
+      TabOrder = 9
+      Text = '1'
+    end
+    object CheckSourceParis: TCheckBox
+      Left = 187
+      Top = 93
+      Width = 100
+      Height = 30
+      Caption = 'Paris'
+      TabOrder = 10
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Top = 152
+    Width = 481
+    Height = 185
+    Caption = 'Arriv'#233'e'
+    TabOrder = 3
+    object Label1: TLabel
+      Left = 16
+      Top = 16
+      Width = 21
+      Height = 13
+      Caption = 'N&om'
+    end
+    object ComboDestination: TComboBox
+      Left = 11
+      Top = 32
+      Width = 102
+      Height = 21
+      Style = csOwnerDrawFixed
+      ItemHeight = 15
+      TabOrder = 1
+      OnChange = ComboDestinationChange
+      OnDrawItem = ComboSourceDrawItem
+      OnExit = ComboSourceExit
+    end
+    object Label11: TLabel
+      Left = 128
+      Top = 16
+      Width = 53
+      Height = 13
+      Caption = 'Description'
+    end
+    object EditDescription2: TEdit
+      Left = 120
+      Top = 32
+      Width = 249
+      Height = 21
+      TabOrder = 3
+    end
+    object Label12: TLabel
+      Left = 8
+      Top = 68
+      Width = 7
+      Height = 13
+      Caption = 'X'
+      FocusControl = EditXDest
+    end
+    object Label13: TLabel
+      Left = 6
+      Top = 100
+      Width = 7
+      Height = 13
+      Caption = 'Y'
+      FocusControl = EditYDest
+    end
+    object EditXDest: TEdit
+      Left = 78
+      Top = 64
+      Width = 100
+      Height = 21
+      TabOrder = 6
+      Text = '0'
+    end
+    object EditYDest: TEdit
+      Left = 78
+      Top = 96
+      Width = 100
+      Height = 21
+      TabOrder = 7
+      Text = '0'
+    end
+    object Label14: TLabel
+      Left = 189
+      Top = 60
+      Width = 35
+      Height = 13
+      Caption = 'Fuseau'
+    end
+    object EditFuseauDest: TEdit
+      Left = 238
+      Top = 56
+      Width = 49
+      Height = 21
+      TabOrder = 9
+      Text = '1'
+    end
+    object CheckDestParis: TCheckBox
+      Left = 187
+      Top = 93
+      Width = 65
+      Height = 30
+      Caption = 'Paris'
+      TabOrder = 10
+    end
+    object RadioUnite: TRadioGroup
+      Left = 296
+      Top = 53
+      Width = 177
+      Height = 103
+      Items.Strings = (
+        'degr'#233's d'#233'cimaux'
+        'degr'#233's minutes'
+        'degr'#233's minutes secondes'
+        'grades')
+      Caption = '&Unit'#233
+      ItemIndex = 0
+      TabOrder = 11
+    end
+    object EditConvergence: TEdit
+      Left = 144
+      Top = 128
+      Width = 101
+      Height = 21
+      TabOrder = 12
+    end
+    object Label4: TLabel
+      Left = 16
+      Top = 132
+      Width = 64
+      Height = 13
+      Caption = 'Convergence'
+    end
+    object EditAlteration: TEdit
+      Left = 144
+      Top = 152
+      Width = 101
+      Height = 21
+      TabOrder = 14
+    end
+    object Label5: TLabel
+      Left = 16
+      Top = 156
+      Width = 84
+      Height = 13
+      Caption = 'Alt'#233'ration lin'#233'aire'
+    end
+  end
+  object Button3: TButton
+    Left = 400
+    Top = 104
+    Width = 89
+    Height = 25
+    Caption = 'Quitter'
+    TabOrder = 4
+    OnClick = Button3Click
+  end
+  object OpenDialog1: TOpenDialog
+    Height = 0
+    Width = 0
+    DefaultExt = '*.txt'
+    FileName = '*.txt'
+    Filter = 'Fichier d'#39'informations (*.txt)'
+    FilterIndex = 0
+    Title = 'Ouvrir'
+    Left = 8
+    Top = 432
+  end
+end

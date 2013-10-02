@@ -1,0 +1,553 @@
+object CadreSerie: TCadreSerie
+  Left = 0
+  Height = 316
+  Top = 0
+  Width = 300
+  ClientHeight = 316
+  ClientWidth = 300
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  ParentFont = False
+  TabOrder = 0
+  DesignLeft = 78
+  DesignTop = 108
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 316
+    Top = 0
+    Width = 300
+    ActivePage = TabSheet1
+    Align = alClient
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabIndex = 0
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'En-tete'
+      ClientHeight = 289
+      ClientWidth = 292
+      object Label9: TLabel
+        Left = 0
+        Height = 15
+        Top = 1
+        Width = 26
+        Caption = 'Serie'
+        ParentColor = False
+      end
+      object Label10: TLabel
+        Left = 0
+        Height = 15
+        Top = 49
+        Width = 33
+        Caption = 'Depart'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label11: TLabel
+        Left = 0
+        Height = 15
+        Top = 73
+        Width = 37
+        Caption = 'Arrivee'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label12: TLabel
+        Left = 0
+        Height = 15
+        Top = 25
+        Width = 22
+        Caption = 'Nom'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label13: TLabel
+        Left = 96
+        Height = 15
+        Top = 1
+        Width = 38
+        Caption = 'Reseau'
+        ParentColor = False
+      end
+      object Label14: TLabel
+        Left = 0
+        Height = 15
+        Top = 97
+        Width = 44
+        Caption = 'Obstacle'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label15: TLabel
+        Left = 0
+        Height = 15
+        Top = 121
+        Width = 38
+        Caption = 'Chance'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label16: TLabel
+        Left = 0
+        Height = 15
+        Top = 145
+        Width = 38
+        Caption = 'Raideur'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label17: TLabel
+        Left = 0
+        Height = 15
+        Top = 169
+        Width = 40
+        Caption = 'Observ.'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object editIDSerie: TEdit
+        Left = 44
+        Height = 22
+        Top = 1
+        Width = 44
+        OnDblClick = editIDSerieDblClick
+        TabOrder = 0
+        Text = '0'
+      end
+      object editSerDep: TEdit
+        Left = 44
+        Height = 22
+        Top = 49
+        Width = 44
+        TabOrder = 1
+        Text = '0'
+      end
+      object editStDep: TEdit
+        Left = 92
+        Height = 22
+        Top = 49
+        Width = 44
+        TabOrder = 2
+        Text = '0'
+      end
+      object editSerArr: TEdit
+        Left = 44
+        Height = 22
+        Top = 73
+        Width = 44
+        TabOrder = 3
+        Text = '0'
+      end
+      object editStArr: TEdit
+        Left = 92
+        Height = 22
+        Top = 73
+        Width = 44
+        TabOrder = 4
+        Text = '0'
+      end
+      object editNomSerie: TEdit
+        Left = 44
+        Height = 22
+        Top = 25
+        Width = 243
+        Anchors = [akTop, akLeft, akRight]
+        TabOrder = 5
+      end
+      object lbColorSerie: TStaticText
+        Left = 168
+        Height = 20
+        Top = 49
+        Width = 41
+        Alignment = taCenter
+        BorderStyle = sbsSingle
+        Caption = '0'
+        Color = 11664290
+        ParentColor = False
+        TabOrder = 6
+      end
+      object editIDReseau: TEdit
+        Left = 140
+        Height = 22
+        Top = 1
+        Width = 44
+        OnDblClick = editIDReseauDblClick
+        TabOrder = 7
+        Text = '0'
+      end
+      object cmbObstacle: TComboBox
+        Left = 65
+        Height = 22
+        Top = 97
+        Width = 128
+        ItemHeight = 14
+        ItemIndex = 0
+        Items.Strings = (
+          'Aucun'
+          'Puits'
+          'Cheminée'
+          'Etroiture'
+          'Siphon'
+          'Remplissage'
+          'Concretions'
+          'Autre'
+          'Gaz toxiques'
+          'Oies agressives'
+          'Animaux dangereux'
+          'Baisodrome'
+        )
+        Style = csDropDownList
+        TabOrder = 8
+        Text = 'Aucun'
+      end
+      object cmbChance: TComboBox
+        Left = 64
+        Height = 22
+        Top = 121
+        Width = 128
+        ItemHeight = 14
+        ItemIndex = 0
+        Items.Strings = (
+          'Aucune'
+          'Faible'
+          'Bonne'
+          'Excellente'
+        )
+        Style = csDropDownList
+        TabOrder = 9
+        Text = 'Aucune'
+      end
+      object editRaideur: TEdit
+        Left = 64
+        Height = 22
+        Top = 145
+        Width = 80
+        TabOrder = 10
+        Text = '1.000'
+      end
+      object editSerieObserv: TEdit
+        Left = 65
+        Height = 22
+        Top = 169
+        Width = 222
+        Anchors = [akTop, akLeft, akRight]
+        TabOrder = 11
+        Text = '0'
+      end
+      object Button13: TButton
+        Left = 136
+        Height = 22
+        Top = 49
+        Width = 24
+        Caption = '...'
+        OnClick = Button13Click
+        TabOrder = 12
+      end
+      object Button14: TButton
+        Left = 136
+        Height = 22
+        Top = 73
+        Width = 24
+        Caption = '...'
+        OnClick = Button14Click
+        TabOrder = 13
+      end
+      object chkLocked: TCheckBox
+        Left = 168
+        Height = 18
+        Top = 73
+        Width = 55
+        Caption = 'Locked'
+        TabOrder = 14
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Stations'
+      ClientHeight = 289
+      ClientWidth = 292
+      object Label8: TLabel
+        Left = 0
+        Height = 15
+        Top = 25
+        Width = 10
+        Caption = 'ID'
+        ParentColor = False
+      end
+      object Label7: TLabel
+        Left = 0
+        Height = 15
+        Top = 49
+        Width = 25
+        Caption = 'Type'
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 0
+        Height = 15
+        Top = 73
+        Width = 26
+        Caption = 'Code'
+        ParentColor = False
+      end
+      object Label6: TLabel
+        Left = 100
+        Height = 15
+        Top = 73
+        Width = 25
+        Caption = 'Expe'
+        ParentColor = False
+      end
+      object Label1: TLabel
+        Left = 0
+        Height = 15
+        Top = 97
+        Width = 28
+        Caption = 'Long.'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 0
+        Height = 15
+        Top = 121
+        Width = 15
+        Caption = 'Az'
+        ParentColor = False
+      end
+      object Label3: TLabel
+        Left = 0
+        Height = 15
+        Top = 145
+        Width = 28
+        Caption = 'Pente'
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 0
+        Height = 15
+        Top = 169
+        Width = 24
+        Caption = 'Obs.'
+        ParentColor = False
+      end
+      object editIDStation: TEdit
+        Left = 80
+        Height = 22
+        Top = 25
+        Width = 78
+        OnDblClick = editIDStationDblClick
+        TabOrder = 0
+      end
+      object cmbTypeVisee: TComboBox
+        Left = 36
+        Height = 22
+        Top = 49
+        Width = 144
+        ItemHeight = 14
+        ItemIndex = 0
+        Items.Strings = (
+          'Defaut'
+          'Entree'
+          'Fossile'
+          'Vadose'
+          'Siphon'
+          'Ennoyable'
+          'Point fixe'
+          'Topo de surface'
+          'Tunnel artificiel'
+          'Filon minier'
+        )
+        Style = csDropDownList
+        TabOrder = 1
+        Text = 'Defaut'
+      end
+      object editCode: TEdit
+        Left = 36
+        Height = 22
+        Top = 73
+        Width = 56
+        Alignment = taRightJustify
+        OnDblClick = editCodeDblClick
+        TabOrder = 2
+        Text = '0'
+      end
+      object editExpe: TEdit
+        Left = 132
+        Height = 22
+        Top = 73
+        Width = 48
+        Alignment = taRightJustify
+        OnDblClick = editExpeDblClick
+        TabOrder = 3
+        Text = '0'
+      end
+      object editLongueur: TEdit
+        Left = 36
+        Height = 22
+        Top = 97
+        Width = 56
+        Alignment = taRightJustify
+        OnDblClick = editLongueurDblClick
+        TabOrder = 4
+        Text = '0'
+      end
+      object editHZ: TEdit
+        Left = 132
+        Height = 22
+        Top = 97
+        Width = 48
+        Alignment = taRightJustify
+        OnDblClick = editHZDblClick
+        TabOrder = 5
+        Text = '0'
+      end
+      object editAzimut: TEdit
+        Left = 36
+        Height = 22
+        Top = 121
+        Width = 56
+        Alignment = taRightJustify
+        OnDblClick = editAzimutDblClick
+        TabOrder = 6
+        Text = '0'
+      end
+      object editLG: TEdit
+        Left = 100
+        Height = 22
+        Top = 121
+        Width = 48
+        Alignment = taRightJustify
+        OnDblClick = editLGDblClick
+        TabOrder = 7
+        Text = '0'
+      end
+      object editLD: TEdit
+        Left = 164
+        Height = 22
+        Top = 121
+        Width = 48
+        Alignment = taRightJustify
+        OnDblClick = editLDDblClick
+        TabOrder = 8
+        Text = '0'
+      end
+      object editPente: TEdit
+        Left = 36
+        Height = 22
+        Top = 145
+        Width = 56
+        Alignment = taRightJustify
+        OnDblClick = editPenteDblClick
+        TabOrder = 9
+        Text = '0'
+      end
+      object editHN: TEdit
+        Left = 132
+        Height = 22
+        Top = 145
+        Width = 48
+        Alignment = taRightJustify
+        OnDblClick = editHNDblClick
+        TabOrder = 10
+        Text = '0'
+      end
+      object editStObservations: TEdit
+        Left = 36
+        Height = 22
+        Top = 169
+        Width = 252
+        Anchors = [akTop, akLeft, akRight]
+        TabOrder = 11
+      end
+      object lbNbVisees: TStaticText
+        Left = 160
+        Height = 20
+        Top = 25
+        Width = 52
+        Alignment = taCenter
+        BorderStyle = sbsSingle
+        Caption = '0'
+        TabOrder = 12
+      end
+      object lbCurrentSerie: TStaticText
+        Left = 36
+        Height = 20
+        Top = 25
+        Width = 40
+        BorderStyle = sbsSingle
+        Caption = '0'
+        TabOrder = 13
+      end
+      object sclStation: TScrollBar
+        Left = 2
+        Height = 19
+        Top = -1
+        Width = 264
+        Anchors = [akTop, akLeft, akRight]
+        PageSize = 0
+        TabOrder = 14
+        OnChange = sclStationChange
+      end
+      object btnAddStation: TButton
+        Left = 269
+        Height = 17
+        Top = 1
+        Width = 20
+        Anchors = [akTop, akRight]
+        Caption = '+'
+        OnClick = btnAddStationClick
+        TabOrder = 15
+      end
+    end
+  end
+end

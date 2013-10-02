@@ -1,0 +1,60 @@
+object CdrTriedreThetaPhi: TCdrTriedreThetaPhi
+  Left = 0
+  Height = 183
+  Top = 0
+  Width = 267
+  ClientHeight = 183
+  ClientWidth = 267
+  OnMouseDown = FrameMouseDown
+  TabOrder = 0
+  DesignLeft = 673
+  DesignTop = 365
+  object Button1: TButton
+    Left = 4
+    Height = 25
+    Top = 4
+    Width = 32
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 4
+    Height = 25
+    Top = 32
+    Width = 30
+    Caption = 'Button2'
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 36
+    Height = 14
+    Top = 164
+    Width = 232
+    Anchors = [akLeft, akRight, akBottom]
+    AutoSize = False
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object Panel1: TPanel
+    Left = 35
+    Height = 154
+    Top = 5
+    Width = 231
+    Caption = 'Panel1'
+    ClientHeight = 154
+    ClientWidth = 231
+    TabOrder = 2
+    OnExit = Panel1Exit
+    object Vue: TPaintBox
+      Left = 1
+      Height = 152
+      Top = 1
+      Width = 229
+      Align = alClient
+      OnClick = VueClick
+      OnMouseMove = VueMouseMove
+      OnPaint = VuePaint
+    end
+  end
+end

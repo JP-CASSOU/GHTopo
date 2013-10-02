@@ -1,0 +1,269 @@
+object frmParametrerOngletVue2D: TfrmParametrerOngletVue2D
+  Left = 539
+  Height = 227
+  Top = 271
+  Width = 448
+  BorderStyle = bsDialog
+  Caption = 'Settings vue 2D'
+  ClientHeight = 227
+  ClientWidth = 448
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  Position = poScreenCenter
+  LCLVersion = '0.9.31'
+  object GroupBox1: TGroupBox
+    Left = 280
+    Height = 183
+    Top = 5
+    Width = 162
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Couches affichées'
+    ClientHeight = 165
+    ClientWidth = 158
+    TabOrder = 0
+    object chkPolygonales: TCheckBox
+      Left = 5
+      Height = 20
+      Top = 0
+      Width = 96
+      Caption = 'Polygonales'
+      TabOrder = 0
+    end
+    object chkStations: TCheckBox
+      Left = 5
+      Height = 20
+      Top = 20
+      Width = 69
+      Caption = 'Stations'
+      TabOrder = 1
+    end
+    object chkIDStations: TCheckBox
+      Left = 5
+      Height = 20
+      Top = 40
+      Width = 82
+      Caption = 'IDStations'
+      TabOrder = 2
+    end
+    object chkCotation: TCheckBox
+      Left = 5
+      Height = 20
+      Top = 60
+      Width = 71
+      Caption = 'Cotation'
+      TabOrder = 3
+    end
+    object chkParois: TCheckBox
+      Left = 5
+      Height = 20
+      Top = 80
+      Width = 58
+      Caption = 'Parois'
+      TabOrder = 4
+    end
+    object chkSections: TCheckBox
+      Left = 6
+      Height = 20
+      Top = 100
+      Width = 72
+      Caption = 'Sections'
+      TabOrder = 5
+    end
+    object chkRemplissage: TCheckBox
+      Left = 5
+      Height = 20
+      Top = 120
+      Width = 99
+      Caption = 'Remplissage'
+      TabOrder = 6
+    end
+    object chkEntrances: TCheckBox
+      Left = 5
+      Height = 20
+      Top = 140
+      Width = 65
+      Caption = 'Entrées'
+      TabOrder = 7
+    end
+  end
+  object BitBtn1: TBitBtn
+    Left = 226
+    Height = 30
+    Top = 194
+    Width = 107
+    Anchors = [akRight, akBottom]
+    Default = True
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 1
+  end
+  object BitBtn2: TBitBtn
+    Left = 338
+    Height = 30
+    Top = 194
+    Width = 107
+    Anchors = [akRight, akBottom]
+    Cancel = True
+    DefaultCaption = True
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 2
+  end
+  object GroupBox2: TGroupBox
+    Left = 4
+    Height = 135
+    Top = 8
+    Width = 268
+    Caption = 'Fond et quadrillage'
+    ClientHeight = 117
+    ClientWidth = 264
+    TabOrder = 3
+    object btnBGColor: TStaticText
+      Left = 159
+      Height = 25
+      Top = 3
+      Width = 100
+      Anchors = [akTop, akRight]
+      BorderStyle = sbsSingle
+      Color = clGradientActiveCaption
+      OnClick = btnBGColorClick
+      ParentColor = False
+      TabOrder = 0
+      Transparent = False
+    end
+    object chkQuadrillage: TCheckBox
+      Left = 5
+      Height = 20
+      Top = 31
+      Width = 145
+      Align = alCustom
+      AutoSize = False
+      Caption = 'Quadrillage: Esp:'
+      TabOrder = 1
+    end
+    object editQdrSpc: TComboBox
+      Left = 159
+      Height = 24
+      Top = 31
+      Width = 100
+      Anchors = [akTop, akRight]
+      ItemHeight = 16
+      ItemIndex = 0
+      Items.Strings = (
+        '10'
+        '20'
+        '25'
+        '40'
+        '50'
+        '100'
+        '200'
+        '250'
+        '400'
+        '500'
+        '1000'
+        '2000'
+        '4000'
+        '5000'
+        '10000'
+      )
+      TabOrder = 2
+      Text = '10'
+    end
+    object btnQdrColor: TStaticText
+      Left = 159
+      Height = 24
+      Top = 85
+      Width = 100
+      Anchors = [akTop, akRight]
+      BorderStyle = sbsSingle
+      Color = clGradientActiveCaption
+      OnClick = btnQdrColorClick
+      ParentColor = False
+      TabOrder = 3
+      Transparent = False
+    end
+    object cmbTypeQuadrillage: TComboBox
+      Left = 159
+      Height = 24
+      Top = 58
+      Width = 100
+      Anchors = [akTop, akRight]
+      ItemHeight = 16
+      ItemIndex = 0
+      Items.Strings = (
+        'Grille'
+        'Croix'
+      )
+      TabOrder = 4
+      Text = 'Grille'
+    end
+    object Label1: TLabel
+      Left = 6
+      Height = 17
+      Top = 7
+      Width = 146
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = False
+      Caption = 'Couleur de fond: '
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 6
+      Height = 17
+      Top = 63
+      Width = 146
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = False
+      Caption = 'Type de quadrillage:'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 49
+      Height = 17
+      Top = 88
+      Width = 102
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = False
+      Caption = 'Couleur: '
+      ParentColor = False
+    end
+  end
+  object lbX1Y1: TStaticText
+    Left = 4
+    Height = 17
+    Top = 151
+    Width = 267
+    BorderStyle = sbsSunken
+    Caption = 'lbX1Y1'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 4
+  end
+  object lbX2Y2: TStaticText
+    Left = 4
+    Height = 17
+    Top = 171
+    Width = 267
+    BorderStyle = sbsSunken
+    Caption = 'lbX2Y2'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 5
+  end
+end

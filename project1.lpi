@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <MainUnit Value="0"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <Language Value=""/>
+      <CharSet Value=""/>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T 'Lazarus Run Output' -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="34">
+      <Unit0>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="project1"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="67" Y="9"/>
+        <UsageCount Value="160"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="544"/>
+        <CursorPos X="11" Y="555"/>
+        <UsageCount Value="160"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lcl\lclclasses.pp"/>
+        <UnitName Value="LCLClasses"/>
+        <TopLine Value="15"/>
+        <CursorPos X="10" Y="32"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="CdrDessin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadreDessin2D"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="CdrDessin"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="77"/>
+        <CursorPos X="35" Y="106"/>
+        <UsageCount Value="160"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="StructuresDonnees.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="StructuresDonnees"/>
+        <EditorIndex Value="18"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="63"/>
+        <CursorPos X="156" Y="110"/>
+        <UsageCount Value="160"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\fpc\2.2.4\source\rtl\inc\systemh.inc"/>
+        <TopLine Value="573"/>
+        <CursorPos X="11" Y="590"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="Common.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Common"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="17"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="163"/>
+        <CursorPos X="67" Y="212"/>
+        <UsageCount Value="159"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="GHTopoDeclarations.pas"/>
+        <UnitName Value="GHTopoDeclarations"/>
+        <TopLine Value="10"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="UnitEntites.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitEntites"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="465"/>
+        <CursorPos X="88" Y="496"/>
+        <UsageCount Value="157"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="CallDialogs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CallDialogs"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="104"/>
+        <CursorPos X="18" Y="135"/>
+        <UsageCount Value="132"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="dlgSelectElementsDrawn.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSelectElementsDrawn"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgSelectElementsDrawn"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="120"/>
+        <CursorPos X="28" Y="131"/>
+        <UsageCount Value="131"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <TopLine Value="33"/>
+        <CursorPos X="3" Y="50"/>
+        <UsageCount Value="3"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lcl\buttons.pp"/>
+        <UnitName Value="Buttons"/>
+        <TopLine Value="122"/>
+        <CursorPos X="25" Y="141"/>
+        <UsageCount Value="4"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="dlgColorDialog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmColorDialog"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgColorDialog"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="128"/>
+        <CursorPos X="5" Y="159"/>
+        <UsageCount Value="126"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="ToporobotClasses.pas"/>
+        <UnitName Value="ToporobotClasses"/>
+        <EditorIndex Value="15"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3842"/>
+        <CursorPos X="37" Y="3865"/>
+        <FoldState Value=" TM HJ04V"/>
+        <UsageCount Value="58"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="UnitClassPalette.pas"/>
+        <UnitName Value="UnitClassPalette"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="9"/>
+        <CursorPos X="100" Y="9"/>
+        <UsageCount Value="50"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="CdrExpes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadreExpes"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="CdrExpes"/>
+        <EditorIndex Value="11"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="61"/>
+        <CursorPos X="1" Y="96"/>
+        <UsageCount Value="105"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="CdrCodes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadreCodes"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="CdrCodes"/>
+        <EditorIndex Value="12"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="78"/>
+        <CursorPos X="43" Y="82"/>
+        <UsageCount Value="103"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="UnitMessages_fr.pas"/>
+        <UnitName Value="UnitMessages_fr"/>
+        <TopLine Value="39"/>
+        <CursorPos X="79" Y="73"/>
+        <UsageCount Value="18"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="CdrSerie.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadreSerie"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="CdrSerie"/>
+        <EditorIndex Value="13"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="448"/>
+        <CursorPos X="6" Y="460"/>
+        <UsageCount Value="102"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="CdrDessinFrame.pas"/>
+        <ComponentName Value="CadreDessinFrame"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="CdrDessinFrame"/>
+        <TopLine Value="10"/>
+        <CursorPos X="36" Y="27"/>
+        <UsageCount Value="16"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="CdrDessin.lfm"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="15"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="dlgEntry.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DialogEntry"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgEntry"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="136"/>
+        <CursorPos X="46" Y="159"/>
+        <UsageCount Value="75"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="CdrExpes.lfm"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="C:\fpc\2.2.4\source\rtl\objpas\classes\classesh.inc"/>
+        <TopLine Value="103"/>
+        <CursorPos X="61" Y="109"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="C:\lcl\stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <TopLine Value="813"/>
+        <CursorPos X="3" Y="830"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="dlgChooseReseau.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DialogChooseReseau"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgChooseReseau"/>
+        <EditorIndex Value="14"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="48"/>
+        <CursorPos X="56" Y="82"/>
+        <UsageCount Value="63"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="dlgToporobotColor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DialogSelTopoColor"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgToporobotColor"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="170"/>
+        <CursorPos X="76" Y="172"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="dlgExportVTopo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DialogVTopo"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgExportVTopo"/>
+        <EditorIndex Value="16"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="45" Y="13"/>
+        <UsageCount Value="56"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="C:\fpc\2.2.4\source\rtl\objpas\math.pp"/>
+        <UnitName Value="math"/>
+        <TopLine Value="173"/>
+        <CursorPos X="10" Y="197"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="CdrNavigDB.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadreNavigDB"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="CdrNavigDB"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="197"/>
+        <CursorPos X="1" Y="238"/>
+        <UsageCount Value="38"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="CdrCodes.lfm"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="C:\fpc\2.2.4\source\rtl\objpas\sysutils\datih.inc"/>
+        <TopLine Value="88"/>
+        <CursorPos X="59" Y="112"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="C:\usr\lib\lazarus\0.9.28.2\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <TopLine Value="24"/>
+        <CursorPos X="48" Y="31"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit33>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="CdrSerie.pas"/>
+        <Caret Line="243" Column="20" TopLine="220"/>
+      </Position1>
+      <Position2>
+        <Filename Value="CdrSerie.pas"/>
+        <Caret Line="371" Column="41" TopLine="315"/>
+      </Position2>
+      <Position3>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="9" Column="56" TopLine="1"/>
+      </Position3>
+      <Position4>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="11" Column="54" TopLine="1"/>
+      </Position4>
+      <Position5>
+        <Filename Value="StructuresDonnees.pas"/>
+        <Caret Line="39" Column="118" TopLine="27"/>
+      </Position5>
+      <Position6>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="68" Column="151" TopLine="56"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="38" Column="5" TopLine="1"/>
+      </Position7>
+      <Position8>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="6" Column="145" TopLine="1"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="27" Column="2" TopLine="1"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="2745" Column="15" TopLine="2715"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="30" Column="3" TopLine="1"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="2185" Column="62" TopLine="2169"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="2221" Column="51" TopLine="2193"/>
+      </Position13>
+      <Position14>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="2236" Column="23" TopLine="2195"/>
+      </Position14>
+      <Position15>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="4683" Column="31" TopLine="4669"/>
+      </Position15>
+      <Position16>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position16>
+      <Position17>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="165" Column="37" TopLine="121"/>
+      </Position17>
+      <Position18>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="2224" Column="25" TopLine="2197"/>
+      </Position18>
+      <Position19>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="4722" Column="43" TopLine="4682"/>
+      </Position19>
+      <Position20>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="4721" Column="42" TopLine="4677"/>
+      </Position20>
+      <Position21>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="213" Column="29" TopLine="194"/>
+      </Position21>
+      <Position22>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="302" Column="57" TopLine="256"/>
+      </Position22>
+      <Position23>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="3800" Column="73" TopLine="3754"/>
+      </Position23>
+      <Position24>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="3831" Column="20" TopLine="3785"/>
+      </Position24>
+      <Position25>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="3871" Column="1" TopLine="3825"/>
+      </Position25>
+      <Position26>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="3838" Column="8" TopLine="3810"/>
+      </Position26>
+      <Position27>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="3865" Column="29" TopLine="3842"/>
+      </Position27>
+      <Position28>
+        <Filename Value="ToporobotClasses.pas"/>
+        <Caret Line="217" Column="15" TopLine="190"/>
+      </Position28>
+      <Position29>
+        <Filename Value="Common.pas"/>
+        <Caret Line="15" Column="69" TopLine="1"/>
+      </Position29>
+      <Position30>
+        <Filename Value="Common.pas"/>
+        <Caret Line="1079" Column="1" TopLine="1064"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="$(LazarusDir)\lcl\units\$(TargetCPU)-$(TargetOS)\$(LCLWidgetType);$(LazarusDir)\lcl\units\$(TargetCPU)-$(TargetOS);$(LazarusDir)\components\codetools\units\$(TargetCPU)-$(TargetOS);$(LazarusDir)\components\custom;$(LazarusDir)\packager\units\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+        <CStyleOperator Value="False"/>
+        <CPPInline Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <SmartLinkUnit Value="True"/>
+      <TargetCPU Value="i386"/>
+      <Optimizations>
+        <OptimizationLevel Value="0"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <UseLineInfoUnit Value="False"/>
+        <StripSymbols Value="True"/>
+      </Debugging>
+      <LinkSmart Value="True"/>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <UseMsgFile Value="True"/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="4">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="ERangeError"/>
+      </Item4>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

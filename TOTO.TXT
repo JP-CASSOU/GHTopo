@@ -1,0 +1,856 @@
+<Section>
+  <Index>00</Index>
+  <Topics>0</Topics>
+  <Title>Système d'aide de GHTopo</Title>
+  <Texte>
+     Version 2.00
+  </Texte>
+</Section>
+<Section>
+  <Index>01</Index>
+  <Topics>METAFILTRE</Topics>
+  <Title>Le MétaFiltre de GHTopo</Title>
+  <Texte>
+    Le MétaFiltre de GHTopo est une des principales innovations du logiciel.
+
+    Ce filtre est opérationnel pour les outils suivants:
+
+    - Vue en plan
+
+    - Vue en 3D
+
+    - Rendu 3D OpenGL
+
+    - Export graphique PostScript et SVG   
+
+    - Centre d'impression
+
+
+    Il reçoit en paramètre une expression texte et marque ensuite les parties à représenter en fonction de l'interprétation de cette expression, en mettant à Vrai (affiché) ou Faux (masqué) le flag d'affichage de chaque visée.
+
+    Cette expression peut être saisie dans une zone d'édition ou bien composée par le biais d'une boîte de dialogue.
+    
+    
+    DICTIONNAIRE DE FILTRES               
+
+
+    Le symbole <=> signifie: inférieur, égal ou supérieur (< ou = ou >)
+
+    Lae symbole <> signifie: inférieur ou supérieur (< ou >)
+
+    Le symbole # signifie 0 ou 1 dans les filtres de type drapeaux
+
+    Un littéral est une chaîne de caractères
+    
+    Lors de l'analyse de l'expression, le MétaFiltre utilise un dictionnaire de filtres dont les entrées sont les suivantes:
+    
+
+    Filtres commandes: Ces filtres n'attendent pas de paramètres
+
+
+    RIEN: Masque tout
+    
+    TOUT ou filtre vide: Affiche tout
+
+
+    Filtres paramètres: Ces filtres attendent un opérateur et une valeur
+
+
+    ID=littéral: Affiche la visée dont le nom est 'littéral' 
+
+    LONGUEUR<>valeur: Filtre sur la longueur de visée
+
+    GISEMENT<>valeur: Filtre sur les azimuts
+
+    PENTE<>valeur: Filtre sur les azimuts 
+
+    DATE<=>JJ/MM/AA: Filtre sur les dates (formats JJ/MM/AA, JJ.MM.AA, JJ/MM/AAAA, JJ.MM.AA et format date standard)
+
+    COORD_X<>valeur, COORD_Y<>valeur, COORD_Z<>valeur: Filtres sur les coordonnées
+
+    LARGEUR<>valeur, HAUTEUR<>valeur: Filtres sur les hauteurs et largeurs
+
+    SERIE<=>entier: Filtre sur les séries 
+
+    RESEAU<=>entier: Filtre sur les réseaux 
+
+    EXPE<=>entier: Filtre sur les séances
+
+    CODE<=>entier: Filtre sur les codes                                             
+
+    COULEUR=$RRGGBB: Filtre sur couleur
+
+    
+    TYPE_VISEE=entier: Type de visée. Les valeurs sont les suivantes:
+
+    0 =  défaut = galerie fossile sans circulation d'eau connue
+    
+    1 = entrée
+
+    2 = galerie fossile sans circulation d'eau
+
+    3 = galerie à circulation d'eau sans mise en charge complète connue
+
+    4 = galerie pouvant se mettre en charge complètement, avec ou sans circulation permanente
+
+    5 = Siphon permanent
+
+    6 = Point fixe
+
+    7 = Cheminement de surface, visée de raccordement, tour de salle et autre visée non comptabilisée pour le développement
+
+    8 = Tunnel artificiel
+
+    9 = Filon minier
+
+                
+
+    Filtres intervalles: Ces filtres attendent un intervalle entre ValeurMini et ValeurMaxi, ces deux valeurs incluses
+
+
+    Tous les filtres paramètres acceptent une spécification d'intervalle, sauf les filtres ID, COULEUR et TYPE_VISEE pour lesquels un intervalle ou une inégalité n'ont pas de sens.
+
+
+    Filtres 'champs de bits': Ces filtres de type filtre=[xxxx...] avec x = 0 ou 1 sont typiquement composés à l'aide d'une boite de dialogue.
+
+
+    EXPRESSIONS UTILISABLES:
+
+
+    1. Expressions de type filtre=valeur:
+
+
+    DATE=01/01/89        Affiche les parties topographiées le 01/01/99 - La notation 01/01/1999 est admise.
+
+    COULEUR=$RRGGBB        Affiche les parties dont la couleur est RRGGBB - Le signe $ est requis
+
+    COORD_Z<-211.00                Affiche les parties du réseau dont la cote est inférieure à -211.00 m
+
+    COORD_Z>55.00                Affiche les parties du réseau situées à une altitude supérieure à 55 m. 
+
+
+    2. Expressions de type filtre=(intervalle)
+
+
+    GISEMENT=(30, 50)        Affiche les visées dont l'azimut est compris entre 30 et 50°, ainsi que celles comprises entre 210 et 230°. Ce filtre est utile pour mettre en évidence la relation entre le plan et le diagramme des directions.
+
+    PENTE=(-20,20)        Affiche les visées dont les pentes sont comprises entre ces valeurs (valeurs en degrés)
+
+    COORD_Z=(1350.00, 1652.00)        Les parties situées entre les altitudes 1350.00 et 1650.00 sont affichées
+
+    DATE=(22/05/99, 24/08/20)        Affiche les parties topographiées entre ces deux dates incluses.  
+
+    
+
+
+    3. Expressions de type filtre=[flags]
+
+
+    COULEURS=[00011001] (8 couleurs définies)        Affiche les zones de couleurs n°4,5 et 8
+
+    COULEURS=[01100] (8 couleurs définies)        Affiche les couleurs 2 et 3. Les flags manquants sont complétés à zéro.
+
+    COULEURS=[110000000000] (8 couleurs)        Affiche les deux premières couleurs. Les flags excédentaires sont ignorés.
+
+    DATES=[0011000]        Même principe mais pour les dates cette fois.
+
+
+
+    NEGATION D'UNE EXPRESSION
+
+
+    Dans toutes les expressions où figure le signe égal, il suffit de mettre le signe ! en fin de filtre pour forcer l'inversion du filtre: lors d'une deuxième passe, le MétaFiltre basculera le flag d'affichage des visées.
+
+    Exemples: Z=(-20,25)!; DATES=[0011000110]!
+
+    Note: Le point d'exclamation doit se situer impérativement après le signe égal.
+
+
+    COMBINAISON DE FILTRES
+
+
+    Il est possible de spécifier plusieurs filtres. Les séparateurs admis sont les suivants:
+
+    Séparateur ';' ou '|': Liaison de type OR (ou) avec le filtre précédent
+
+    Séparateur &: Liaison de type AND (et) avec le filtre précédent
+
+    Exemples:
+
+    COORD_X=(225000, 226000) ; COORD_Y=(1722000, 1723000)
+    DATE=12/05/2001 & COULEUR=$FF66CC 
+
+
+    TRUCS ET ASTUCES
+
+
+    Afficher les visées subverticales:
+    Pour afficher les puits et autres visées fortement inclinées, utiliser le filtre sur intervalle pour les pentes. Spécifier l'angle limite en plus et moins, puis inverser le filtre en mettant '!' derrière.
+
+    Exemple: PENTE=(-60, 60)! affichera toutes les visées de pente supérieure à +60 degrés ou inférieure à -60 degrés
+  </Texte>
+</Section>
+<Section>
+  <Index>02</Index>
+  <Topics>DECLINATION</Topics>
+  <Title>Calcul des déclinaisons magnétiques</Title>
+  <Texte>
+     Les déclinaisons magnétiques sont exprimées en GRADES dans tous les cas.
+
+
+     Il convient donc de faire les conversions nécessaires.
+  </Texte>
+</Section>
+<Section>
+  <Index>03</Index>
+  <Topics>ENTREES</Topics>
+  <Title>Définition d'entrées de cavités</Title>
+  <Texte>
+     La définition de nouvelles entrées dans GHTopo se fait via l'onglet Entrées de la fenêtre Base de Données.
+
+Les informations demandées sont les suivantes:
+
+- Nom de l'entrée
+
+- Coordonnées de l'entrée
+
+- ID de station: série et point
+
+- Un commentaire sur l'entrée
+
+
+Pour l'ID de station, bien que GHTopo accepte tout couple série/station non défini par ailleurs, il est fortement recommandé (sous peine d'incompatibilité avec TOPOROBOT), de spécifier un code de série/station de la manière suivante:
+
+- Définir un numéro de série quelconque, de préférence un multiple de 10, 20, 50 ou 100.
+
+- Définir un numéro de point égal à zéro. (ex: 100.0)
+
+La série qui partira de cette entrée prendra comme numéro de série celui spécifié pour l'entrée (ex: Les puits de l'entrée Chatière [définie comme 100.0]: Série 100).
+
+Lorsque une entrée est atteinte depuis le réseau, cette entrée sera bien entendu rattachée à la série/station de fin de la galerie qui aboutit à cette entrée.
+  </Texte>
+</Section>
+<Section>
+  <Index>04</Index>
+  <Topics>CHANCE</Topics>
+  <Title>Liste déroulante Chances</Title>
+  <Texte>
+     Cette liste déroulante permet de spécifier les perspectives de continuation à l'extrémité de la série:
+
+     0 - Aucune        Aucune chance, sans objet, arrêt sur rien ou non précisé
+
+     1 - Faible        Chance de continuation faible
+
+     2 - Bonne        Bonnes chances de continuation (après plongée ou désobstruction)
+
+     3 - Excellente        A spécifier lorsqu'on est arrêté sur rien
+
+  </Texte>
+</Section>
+<Section>
+  <Index>05</Index>
+  <Topics>OBSTACLE</Topics>
+  <Title>Liste déroulante Obstacles</Title>
+  <Texte>
+     Cette liste déroulante permet de préciser les obstacles à l'extrémité de la série:
+
+     Remarque: Si le champ Chances est à zéro, cette liste fait une suggestion              
+
+     Les items suivants sont communs à GHTopo et TOPOROBOT
+
+     0 - Aucun        Aucun obstacle ou non précisé - Pas de suggestion
+
+     1 - Puits        Arrêt sur puits - Suggestion: Chance excellente
+
+     2 - Cheminée        Arrêt sur cheminée - Suggestion: Bonnes perspectives
+
+     3 - Etroiture        Arrêt sur étroiture - Suggestion: Bonnes perspectives
+
+     4 - Lac        Arrêt sur lac à traverser - Suggestion: Excellentes perspectives
+
+     5 - Siphon        Arrêt sur siphon - Suggestion: Bonnes perspectives
+
+     6 - Trémie        Arrêt sur trémie - Suggestion: Faibles perspectives
+
+     7 - Concrétions        Arrêt sur concrétionnement - Suggestion: Faibles perspectives
+
+     8 - Sédiments        Arrêt sur remplissage - Suggestion: Faibles perspectives
+
+     9 - Autre        Autre obstacle non précisé - Pas de suggestion                             
+
+     D'autres types d'obstacles peuvent être définis sur demande, mais lors de l'exportation vers TOPOROBOT (enregistrement au format Tab), ces numéros sont automatiquement passés à 9 (Autres).
+
+     Ces items ont été rajoutés car ils correspondent à des possibilités réelles
+
+     10 - Gaz toxiques          La galerie continue mais une nappe de gaz toxiques interdit la progression - Suggestion: Excellentes perspectives
+
+     Ces items sont humoristiques et constituent des clins d'oeil à des situations vécues lors de séances de topographie.
+
+     11 - Oies agressives       En référence à des oies agressives qui ont empêché les membres de Guizhou 2005 de poursuivre leur progression - Suggestion: Excellentes perspectives
+
+     12 - Animaux dangereux     En référence à une expé de Luc-Henri Fage qui a rencontré des animaux dangereux (scuttigeres, serpents) dans une grotte - Suggestion: Excellentes perspectives
+
+     13 - Baisodrome            Un travail de topographie traité avec GHTopo concernait officiellement un réseau de sentiers de VTT dans un massif forestier. Il s'avère que le site est aussi un endroit de rencontres.
+
+
+
+  </Texte>
+</Section>
+<Section>
+  <Index>06</Index>
+  <Topics>ANGUNIT</Topics>
+  <Title>Unités angulaires</Title>
+  <Texte>
+    Les unités angulaires pour les azimuts sont les suivantes:
+
+
+    - Grades (code 400)
+
+    - Degrés (code 360)
+
+
+    Les unités angulaires supportées pour les pentes sont les suivantes:
+
+
+    - Grades; zéro horizontal (code 400)
+
+    - Degrés; zéro horizontal (code 360)
+
+    - Grades; zéro zénithal (code 401)
+
+    - Degrés; zéro zénithal (code 361)
+
+    - Grades; zéro nadiral (code 399)
+
+    - Degrés; zéro nadiral (code 359)
+
+    - Pourcentages (code 370)
+
+    - Profondeurs (code 380)
+
+
+    Toutes les autres unités, notamment les Millièmes d'arc supportés par HADES -2000 Classic, sont converties en degrés
+  </Texte>
+</Section>
+
+<Section>
+  <Index>07</Index>
+  <Topics>PALETTES</Topics>
+  <Title>Palettes de couleurs</Title>
+  <Texte>
+     GHTopo utilise 4 palettes de 256 couleurs. Elles sont générées par calcul.
+
+
+     1. Palette TOPOROBOT:
+
+     Cette palette standard de Toporobot est calculée par GHTopo.
+
+
+     2. Palette Netscape Websafe 216 + 40:
+
+     Cette palette orientée Web est calculée par GHTopo.
+
+
+     3. Palette AutoCAD:
+
+     Cette palette est destinée aux utilisateurs d'AutoCAD. Elle est calculée par GHTopo. Lors de l'exportation en format DXF, les couleurs des visées sont converties dans cette palette.
+
+
+     4. Palette Grayscale 256:
+
+     Cette palette est calculée par GHTopo.
+
+
+  </Texte>
+</Section>
+<Section>
+  <Index>08</Index>
+  <Topics>COPYPASTE</Topics>
+  <Title>Copier-coller dans le tableau des stations</Title>
+  <Texte>
+
+Le copier/coller dans le tableau des stations suit des règles précises; celles-ci sont les suivantes:
+
+1. Une ligne équivaut à une station,
+
+2. Le séparateur de colonnes est toujours la Tabulation,
+
+3. Les deux premières colonnes, requises, contiennent le numéro de code et le numéro de séance topo
+
+4. Les trois colonnes suivantes, requises, contiennent la longueur, l'azimut et la pente de la visée
+
+5. Les quatres colonnes suivantes, optionnelles, contiennent les largeurs et hauteurs de galerie
+
+Si une de ces conditions n'est pas remplie, le collage ne se fait pas
+
+Le collage démarre au niveau de la ligne courante
+
+
+Exemple de collage depuis Excel:
+
+1. Sélectionner une plage de cellules respectant les conditions ci-dessus
+
+2. Copier cette sélection dans le presse papiers
+
+3. Se positionner au bon endroit dans le tableau des stations
+
+4. Cliquer sur <Coller>
+  </Texte>
+</Section>
+<Section>
+  <Index>09</Index>
+  <Topics>CONSOLE</Topics>
+  <Title>Console de suivi</Title>
+  <Texte>
+    GHTopo utilise une console texte pour afficher des résultats intermédiaires, des informations de position, des erreurs et diverses informations.
+
+    Sous Windows, une fenêtre de contrôle est lancée au démarrage du programme. Cette fenêtre peut être redimensionnée et mise en avant-plan, mais ne peut être fermée.
+
+    Sous Linux, il n'existe pas de fenêtre spécifique, mais GHTopo envoie les informations destinées à la console de suivi sur la sortie standard. C'est pour cette raison qu'il est conseillé de lancer GHTopo dans un terminal.
+  </Texte>
+</Section>
+<Section>
+  <Index>10</Index>
+  <Topics>PRJMANAGER</Topics>
+  <Title>Le Gestionnaire de Cavité</Title>
+  <Texte>
+Le Gestionnaire de Cavité est le frontal de saisie et d'édition des données de la cavité.
+
+Il consiste en un dialogue à onglets, chacun destiné à la gestion d'une section du fichier XTB correspondant.
+  </Texte>
+</Section>
+<Section>
+  <Index>11</Index>
+  <Topics>NEWS</Topics>
+  <Title>Nouveautés et corrections de bugs</Title>
+  <Texte>                                                                  
+     10/02/07
+
+      - Implémentation du support des types de galeries
+
+      - Possibilité d'affecter une pondération aux séries
+
+      - Vue 3D OpenGL métafiltrée     
+
+      - Quadrillage pseudo-infini sur la vue 2D (non limité à la cavité)
+      
+  
+  </Texte>
+</Section>
+<Section>
+  <Index>12</Index>
+  <Topics>LICENSE</Topics>
+  <Title>GNU General Public Licence pour GHTopo</Title>
+  <Texte>
+    Le logiciel GHTopo est distribué sous licence publique générale GNU, version 2 de juin 1991.
+
+
+    Voir le fichier License.txt pour plus d'information (le texte de la licence est long).
+  </Texte>
+</Section>
+<Section>
+  <Index>13</Index>
+  <Topics>STATISTIQUES</Topics>
+  <Title>Statistiques du réseau</Title>
+  <Texte>
+     La fenêtre Statistiques affiche de nombreuses informations statistiques sur le dossier étudié.
+
+     Ces informations sont présentées dans un dialogue à onglets.
+
+
+     Trois tableaux présentent une ventilation de la spéléométrie:
+
+     - Spéléométrie par dates (une ligne par date)
+
+     - Spéléométrie par couleurs (une ligne par couleur)
+
+     - Spéléométrie par réseaux (une ligne par réseau)
+
+     avec la répartition par type de visée (une colonne par type de visée)
+
+     - Visées dans des conduits naturels (fossiles, actifs, ennoyables et noyés)
+
+     - Visées dans des conduits artificiels (tunnels et galeries de mines)
+
+     - Visées spéciales (tours de salles, topos de surface, raccordements divers)
+
+
+     Une page présente des méta-informations comme des indices et un tableau d'étendue:
+
+     - Indices spéléométriques
+
+     - Développement total des parties naturelles (avec le développement par type de conduits)
+
+     - Développement total des tunnels artificiels
+
+     - Développement total des galeries minières
+
+     - Cumul des cheminements spéciaux
+
+
+     Le tableau d'étendue affiche pour chaque axe de coordonnées (Est, Nord et Altitude):
+
+     - La valeur minimale et la station correspondante
+
+     - La valeur maximale et la station correspondante
+
+
+     Une page permet de visualiser l'histogramme des directions, qui est paramétrable (nombre de pétales, couleurs)
+
+     Il est possible d'exporter ce diagramme en format graphique.
+  </Texte>
+</Section>
+<Section>
+  <Index>14</Index>
+  <Topics>VUE2D</Topics>
+  <Title>Visualisateur 2D</Title>
+  <Texte>
+     Astuces pour accélérer les commandes de pan et de zoom:
+
+     Au lieu d'utiliser les bouttons correspondants, il est possible de passer par un raccourci en maintenant enfoncé une touche en même temps que l'on trace le rectangle de zoom (zoom) ou la ligne de déplacement (pan). Ces touches sont:
+
+     MAJ pour le zoom
+
+     CTRL pour le déplacement de la vue (pan)
+ 
+ 
+  </Texte>
+</Section>
+<Section>
+  <Index>15</Index>
+  <Topics>NAVIGATEUR</Topics>
+  <Title>Le Panneau de Navigation</Title>
+  <Texte>
+     Dans le Gestionnaire de Cavité, la navigation parmi les éléments des différentes tables (entrées, réseaux, codes, séances et séries) se fait par le biais d'un outil courant (panneau de type magnétoscope ou navigateur de base de données), mais dont la programmation est originale: cet outil est en fait un routeur de fonctions; l'objet appelant implémente les fonctions de positionnement d'enregistrement, ajout, modification, suppression. 
+
+Lors de la mise en oeuvre du navigateur, on lui passe en paramètre le début et la fin de la plage des valeurs d'index et des pointeurs sur les fonctions précitées. Le navigateur comporte des boutons qui appellent les fonctions avec le paramètre adéquat. 
+
+Il s'agit d'une application des pointeurs sur fonctions. 
+
+La conséquence principale est la simplification et la réduction considérable du nombre de lignes de code.  
+  </Texte>
+</Section>
+<Section>
+  <Index>16</Index>
+  <Topics>ASSISTANT</Topics>
+  <Title>L'Assistant Nouvelle Cavité</Title>
+  <Texte>
+     L'Assistant Nouvelle Cavité est un outil de saisie permettant de démarrer l'entrée des données d'une cavité et d'initialiser correctement la base de données.
+
+Il a été originellement prévu pour éviter de compliquer le développement du Gestionnaire de Cavité.
+
+Lorsque la phase finale de l'initialisation (la sauvegarde) est achevée, le document est rechargé et l'on passe alors dans le mode de travail normal.
+
+  </Texte>
+</Section>
+<Section>
+  <Index>17</Index>
+  <Topics>DXFQUADR</Topics>
+  <Title>Export graphique: Quadrillage</Title>
+  <Texte>
+     Cet onglet permet de paramétrer le quadrillage.
+
+     L'espacement de la grille est paramétrable dans la zone d'édition correspondante
+
+     La liste déroulante est inactive pour l'instant.
+
+     Couleur: Pour l'export SVG et PostScript, elle correspond à la couleur du bouton. Pour l'export AutoCAD, c'est la couleur de la couche QUADRILLES qui entre en ligne de compte.
+  </Texte>
+</Section>
+<Section>
+  <Index>18</Index>
+  <Topics>DXFLAYERS</Topics>
+  <Title>Export graphique: Couches</Title>
+  <Texte>
+    Cet onglet comporte une liste et un formulaire d'édition.
+
+    Les couches permettent de répartir le dessin graphique sur plusieurs calques.
+
+    Les noms de couches sont explicites.
+
+    Il est possible de modifier les couches via le petit formulaire.
+
+    Nom de couche: Texte sans espaces ni ponctuation ni accentués
+
+    Exporté: Si coché, les graphiques de la couche sont exportés (PS et SVG); exportés et désactivés (DXF).
+
+    Couleur: Toute couleur 24 bits (PS et SVG)
+
+    Couleur AutoCAD: Index de 0 à 255 correspondant à une couleur AutoCAD.
+
+    Remarque: Lorsque on sélectionne une couleur par le bouton, GHTopo calcule la couleur AutoCAD la plus proche.
+
+    Inversement, lorsque on valide par ENTREE la zone de saisie de l'index AutoCAD, la couleur du bouton est mise à jour d'après l'index AutoCAD.
+
+    Le bouton OK implémente les modifications dans la table des couches.
+
+    Les réglages par défaut sont utilisables.  
+  </Texte>
+</Section>
+
+<Section>
+  <Index>19</Index>
+  <Topics>DXFDRAW</Topics>
+  <Title>Export graphique: Dessin</Title>
+  <Texte>
+    Cet onglet comporte peu d'options.
+    
+    Pour les entrées et les stations, il est possible de définir la façon dont sont dessinés les points:
+
+    - Cercle de rayon Taille
+
+    - Carré de côté Taille
+ 
+    - Triangle équilatéral inscrit dans le cercle de rayon Taille (cercle non représenté)
+
+    La case à cocher 'Niveaux de Gris': Si elle est activée, les entités exportées sont converties en niveaux de gris (pour PostScript et SVG)
+
+    La case à cocher 'Parties ignorées par le MétaFiltre': Si cochée, les parties ignorées par le MétaFiltre sont exportées avec la couleur spécifiée dans le bouton correspondant.
+  </Texte>
+</Section>
+<Section>
+  <Index>20</Index>
+  <Topics>DXFTEXTES</Topics>
+  <Title>Export graphique: Textes</Title>
+  <Texte>
+     En cours. 
+  </Texte>
+</Section>
+<Section>
+  <Index>22</Index>
+  <Topics>SERIEAUTO</Topics>
+  <Title>Bouton Auto pour le couple série/station d'arrivée</Title>
+  <Texte>
+     Ce bouton permet, dans le cas d'une branche dont l'extrémité d'arrivée n'est pas connectée au réseau, de calculer le numéro de série et de station du point d'arrivée. Ce couple est déterminé à partir du nombre de stations déjà saisies et du numéro de série de départ (extraction des valeurs de la zone d'édition correspondante).
+
+     Si la case 'Lock' est cochée, le bouton [Auto] est inopérant.
+  </Texte>
+</Section>
+<Section>
+  <Index>23</Index>
+  <Topics>INCLINAISON</Topics>
+  <Title>Champ Inclinaison</Title>
+  <Texte>
+     Ce champ contient la valeur de la correction à apporter aux mesures de pentes. Elle est exprimée en Décigrades. Cette unité est imposée par TOPOROBOT (peut pas faire les choses comme les autres, ce blaireau ...)
+  </Texte>
+</Section>
+
+<Section>
+  <Index>24</Index>
+  <Topics>FAQ</Topics>
+  <Title>Foire aux Questions</Title>
+  <Texte>
+     Q: Le plan ne semble pas s'afficher bien que le calcul se passe très bien
+
+     R1: Vérifier si les entrées sont bien géoréférencées. Dans ce cas, le plan n'apparaît pas car il est très petit. Exemple: Si une entrée reste à (0.00, 0.00, 0.00) alors que les autres entrées sont au voisinage de (440000,3089000,540), l'étendue du réseau sera énorme ;)
+     
+     R2: Recharger le document
+
+     Diagnostic: Afficher les statistiques du réseau et consulter le tableau des coordonnées des points extrêmes. Une entrée non géoréférencée se traduit typiquement par des coordonnées minimales égales à zéro.
+
+
+     Q: La liste des documents récemment ouverts est trop longue, inadaptée ou ne me convient pas
+
+     R: Effacer le fichier texte DocsRecents.txt
+
+
+     Q: Où sont sauvegardés les filtres personnalisés que j'ai défini ?
+
+     R: Dans un fichier texte portant le nom du document courant, avec l'extension changée en '.gtf'. Ex: les filtres de 'mondocument.xtb' sont dans 'mondocument.gtf'
+
+    
+     Q: Où sont sauvegardées les annotations ?
+
+     R: Dans un fichier texte portant le nom du document courant, avec l'extension changée en '.not'. Ex: les annotations de 'mondocument.xtb' sont dans 'mondocument.not'
+
+    
+     Q: Dans la vue 3D, je ne veux garder que les polygonales
+
+     R: Utiliser l'expression de MétaFiltre suivante: "NIL" (sans guillemets). Ce filtre masque tout.
+
+
+     Q: Pourquoi l'image dans la boîte de dialogue 'A propos' ?
+
+     R: L'auteur de GHTopo respecte la famille traditionnelle et est farouchement opposé au Pacte Civil de Solidarité et milite pour son abrogation. Un grand nombre de ses amis, dont certains connus depuis des années, l'a laissé tomber une fois le PaCS conclu.
+
+  </Texte>
+</Section>         
+<Section>
+  <Index>25</Index>
+  <Topics>TOPOGRAPHES</Topics>
+  <Title>Boîte de sélection d'opérateurs topo</Title>
+  <Texte>        
+     Au fil des saisies de données topo, on s'est aperçu du caractère fastidieux du remplissage des champs 'Spéléomètre' et 'Spéléographe'. Comme ce sont souvent les mêmes noms qui reviennent, cette fonction très pratique de sélection a été implantée.
+
+     Elle permet de sélectionner un topographe ou une équipe dans une liste que l'on constitue peu à peu. 
+
+     La liste des topographes est sauvegardée dans le fichier texte Liste_Topographes.txt du dossier de GHTopo. Ce fichier est recréé s'il n'existe pas.
+
+     Fonctionnalités: Ajout, suppression et sélection.
+
+     Ajout d'un topographe: Entrer un nom dans la zone d'édition puis cliquer sur [ + ]. La liste est réactualisée.
+
+     Suppression: Sélectionner un nom dans la liste et cliquer sur [ - ]. L'item est supprimé de la liste. 
+
+     La valeur de retour de cette fonction est le nom du topographe et s'inscrit dans le champ appelant.
+
+     Lors de la fermeture de la boîte de dialogue, la liste courante est sauvegardée.
+  </Texte>
+</Section>         
+<Section>
+  <Index>26</Index>
+  <Topics>PLOTTING</Topics>
+  <Title>Dessin sur traceurs à plumes</Title>
+  <Texte>
+     GHTopo possède un utilitaire de tracés de vues en plan sur traceurs à plumes, qui sont des machines à commande numérique pilotées par un langage.
+
+     L'usage typique de cette fonctionnalité est le report de polygonales sur feuilles pré-imprimées (cartes, images).
+
+     Le langage de commande supporté est le HPGL de niveau 1.
+
+     Le module de tracé utilise un fichier rscom.dll qui gère le port RS232C. En l'absence de ce fichier, la fonctionnalité est désactivée mais, comme pour tous les outils requérant une librairie externe, ne gêne pas le fonctionnement de GHTopo.
+
+     Le fichier RSCOM.DLL n'est démarré et utilisé que lorsque l'ordre de traçage est donné. Toutefois, si cette librairie est absente, le tracé se fera dans un fichier PLT portant le nom de la cavité.
+  </Texte>
+</Section>
+<Section>
+  <Index>26</Index>
+  <Topics>RAIDEUR</Topics>
+  <Title>Pondération des compensations au niveau de la série</Title>
+  <Texte>                                                   
+     Dans GHTopo, la méthode de calcul par défaut est la compensation forfaitaire: un module de raideur (compris entre 0.001 et 1000) est affecté à chaque visée. Cette valeur est de 1.00 par défaut. Pour une entrée, cette valeur est de 100.00.
+
+     On peut agir sur ce coefficient, typiquement si une série doit être moins déformée que d'autres, en modifiant le paramètre 'Raideur' de la série.
+
+     Plus ce coefficient est élevé, moins la série sera sujette à déformation.
+
+     On pondèrera plus fortement les séries mesurées dans de bonnes conditions (grandes galeries, mesures aiséaes) que des parcours malcommodes (boyaux, réseau boueux).
+  </Texte>
+</Section>
+
+
+<Section>
+  <Index>90</Index>
+  <Topics>EXTRNMODS</Topics>
+  <Title>Fonctionnalités de GHTopo utilisant des modules</Title>
+  <Texte>
+     Certaines fonctionnalités de GHTopo, non éliminatoires et peu nombreuses, requièrent des bibliothèques tierces. 
+
+     Il s'agit de fonctionnalités destinées à des logiciels Windows externes ou à la gestion de bas niveau des ports série.
+
+     Pour l'instant, les fonctionnalités de GHTopo concernées sont les suivantes:
+
+     1. L'export de polygonales au format d'import de tracé de Carto Exploreur. Utilise une distribution opérationnelle de l'outil CONVERS écrit par Eric DAVID.
+
+     2. L'utilitaire de dessin sur traceurs à plumes. Utilise la librairie RSCOM.DLL
+
+     Contrairement à de nombreux logiciels qui s'arrêtent lorsqu'une librairie manque, GHTopo ne désactive que les fonctionnalités dont la librairie est inopérante.
+     
+     Au lancement, GHTopo vérifie la simple présence des librairies sans contrôler leur validité. En cas d'erreur à ce stade, GHTopo le signale mais ne désactive pas les fonctionnalités correspondantes. En effet, il est possible de remplacer une DLL en pleine utilisation de GHTopo.
+
+     Lors de l'appel des outils concernés, les librairies sont démarrées au moment de l'utilisation (ex: export vers Carto Exploreur, tracé d'un plan). En cas d'erreur, GHTopo signale l'échec mais continue à fonctionner.
+     
+     On rappelle que GHTopo n'utilise pas la base de registre et que ses fichiers de configuration optionnels sont reconstruits s'ils sont erronés.
+   </Texte>
+</Section>
+<Section>
+  <Index>100</Index>
+  <Topics>CALCULETTE</Topics>
+  <Title>Calculette et Evaluateur d'expressions de GHTopo</Title>
+  <Texte>
+     Dans GHTopo, comme dans tout travail informatique, il est souvent nécessaire de faire quelques calculs: ajout de deux valeurs, inversion d'une visée, etc ... On se rue alors sur la calculatrice de bureau qui est généralement sous une pile de dossiers. Quant à celle de Windows ou Linux, elle est sous une pile de fenêtres et/ou nécessite une sélection pénible dans les menus.
+
+     Pour le prix d'un appel de fonction, GHTopo contient une calculette simple mais très efficace. Elle utilise l'évaluateur de formules interne du logiciel.
+
+     La calculette comporte une zone d'édition dans laquelle on entre le calcul à effectuer (une expression mathématique). Le bouton Calculer évalue l'expression selon les règles mathématiques et retourne le résultat.
+
+
+     GHTopo utilise un évaluateur d'expressions dont le code sous licence libre a été trouvé sur le Web.
+
+     
+     L'évaluateur reçoit une expression texte et retourne un nombre en cas de succès et un message d'erreur dans le cas contraire.
+
+     Il respecte les règles de calcul usuelles (priorité des opérateurs, parenthèses, fonctions)                
+
+     Opérateurs: +, -, *, /. x puissance y s'écrit x^y, avec x et y réels.
+
+     Les fonctions supportées sont les suivantes (x est un nombre ou une sous-expression renvoyant un nombre)
+
+
+     FRAC(x)     Partie fractionnaire de x
+
+     ENT(x)     Partie entière de x
+
+     ABS(x)    Valeur absolue de x
+
+     RAC(x)    Racine carrée de x
+
+     CAR(x)    Carré de x
+
+     HASARD    Nombre réel aléatoire entre 0 et 1
+
+     PI      3.141592654...
+ 
+     SIN(X), COS(X), TAN(X)     Lignes trigonométriques de x exprimé en radians
+
+     ARCSIN(x), ARCCOS(x), ARCTAN(x)   Leurs réciproques 
+ 
+     SH(X), CH(X), TH(X)     Lignes trigonométriques hyperboliques de x 
+     
+     ARGSH(x), ARGCH(x), ARGTH(x)   Leurs réciproques
+
+     LN(x)    Logarithme népérien de x
+     
+     LOG(x)   Logarithme décimal de x
+
+     EXP(x)   Exponentielle de x
+
+     
+     Easter-egg:
+
+     Faire le calcul suivant: 99-944
+  </Texte>
+</Section>  
+<Section>
+  <Index>190</Index>
+  <Topics>VISEES_ANTENNES</Topics>
+  <Title>Visées en antenne</Title>
+  <Texte>
+    Les visées en antenne sont des visées spéciales qui servent uniquement au dessin des contours. Ces visées sont indépendantes et sont stockées dans une liste différente des séries.
+	
+	Les données de ces visées sont identiques aux visées ordinaires, mais sans les largeurs ni les hauteurs, sans objet ici.
+	
+	
+	CREATION D'UNE VISEE EN ANTENNE:
+	
+	Renseigner le formulaire puis activer le bouton [Ajouter]. La visée nouvellement créée est ajoutée dans la liste
+	
+	
+	MODIFICATION D'UNE VISEE EN ANTENNE:
+	
+	Sélectionner une visée, puis modifier les valeurs dans le formulaire. Valider par [Modifier].
+	
+	
+	SUPPRESSION:
+	
+	Sélectionner une visée puis [Supprimer]. Confirmer l'opération.
+  </Texte>
+</Section>  
+<Section>
+  <Index>200</Index>
+  <Topics>SEARCH_PT</Topics>
+  <Title>Recherche de point topo</Title>
+  <Texte>
+     2 possibilités:
+
+     
+     - Recherche par série / station
+
+     - Recherche par code littéral attribué à la station (colonne 1 des tableaux)
+
+
+  </Texte>
+</Section>
+
+
+

@@ -1,0 +1,61 @@
+object dlgSelectTypeVisee: TdlgSelectTypeVisee
+  Left = 397
+  Height = 278
+  Top = 238
+  Width = 372
+  BorderStyle = bsDialog
+  Caption = 'dlgSelectTypeVisee'
+  ClientHeight = 278
+  ClientWidth = 372
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnCreate = FormCreate
+  LCLVersion = '0.9.30.4'
+  object BitBtn1: TBitBtn
+    Left = 185
+    Height = 31
+    Top = 241
+    Width = 87
+    Anchors = [akRight, akBottom]
+    Caption = '&OK'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object BitBtn2: TBitBtn
+    Left = 281
+    Height = 31
+    Top = 241
+    Width = 87
+    Anchors = [akRight, akBottom]
+    Cancel = True
+    Caption = 'Annuler'
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 8
+    Height = 226
+    Top = 8
+    Width = 360
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoFill = True
+    Caption = 'RadioGroup1'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    TabOrder = 2
+  end
+end

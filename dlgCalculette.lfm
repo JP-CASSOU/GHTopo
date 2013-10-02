@@ -1,0 +1,733 @@
+object frmCalculette: TfrmCalculette
+  Left = 427
+  Height = 732
+  Top = 161
+  Width = 946
+  Caption = 'frmCalculette'
+  ClientHeight = 732
+  ClientWidth = 946
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.0.1.3'
+  object BitBtn1: TBitBtn
+    Left = 753
+    Height = 26
+    Top = 704
+    Width = 91
+    Anchors = [akRight, akBottom]
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object BitBtn2: TBitBtn
+    Left = 852
+    Height = 26
+    Top = 704
+    Width = 91
+    Anchors = [akRight, akBottom]
+    Cancel = True
+    DefaultCaption = True
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object PageControl1: TPageControl
+    Left = 4
+    Height = 698
+    Top = 4
+    Width = 940
+    ActivePage = tabShtConvertisseur
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabIndex = 1
+    TabOrder = 2
+    object tabShtCalculatrice: TTabSheet
+      Caption = 'tabShtCalculatrice'
+      ClientHeight = 428
+      ClientWidth = 861
+      object Label1: TLabel
+        Left = 4
+        Height = 17
+        Top = -1
+        Width = 70
+        Caption = 'Expression'
+        ParentColor = False
+      end
+      object editExpression: TEdit
+        Left = 4
+        Height = 24
+        Top = 19
+        Width = 802
+        Anchors = [akTop, akLeft, akRight]
+        OnEnter = editExpressionEnter
+        OnKeyPress = editExpressionKeyPress
+        TabOrder = 0
+      end
+      object btnCalcul: TButton
+        Left = 809
+        Height = 25
+        Top = 19
+        Width = 48
+        Anchors = [akTop, akRight]
+        Caption = 'EXE'
+        Default = True
+        OnClick = btnCalculClick
+        TabOrder = 1
+      end
+      object GroupBox1: TGroupBox
+        Left = 4
+        Height = 376
+        Top = 47
+        Width = 853
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        Caption = 'Functions'
+        ClientHeight = 358
+        ClientWidth = 849
+        TabOrder = 2
+        object lsbListeFunctions: TListBox
+          Left = 0
+          Height = 358
+          Top = 0
+          Width = 849
+          Align = alClient
+          ItemHeight = 0
+          OnDblClick = lsbListeFunctionsDblClick
+          TabOrder = 0
+        end
+      end
+    end
+    object tabShtConvertisseur: TTabSheet
+      Caption = 'tabShtConvertisseur'
+      ClientHeight = 669
+      ClientWidth = 932
+      object grbxConversionsIsolees: TGroupBox
+        Left = 2
+        Height = 98
+        Top = 59
+        Width = 925
+        Anchors = [akTop, akLeft, akRight]
+        Caption = 'grbxConversionsIsolees'
+        ClientHeight = 80
+        ClientWidth = 921
+        TabOrder = 0
+        object Label3: TLabel
+          Left = 170
+          Height = 17
+          Top = 1
+          Width = 50
+          AutoSize = False
+          Caption = 'X (m)'
+          ParentColor = False
+          OnClick = Label3Click
+        end
+        object lbValeursEntree: TLabel
+          Left = 5
+          Height = 17
+          Top = 20
+          Width = 102
+          Caption = 'lbValeursEntree'
+          ParentColor = False
+        end
+        object lbValeursCalculees: TLabel
+          Left = 5
+          Height = 17
+          Top = 49
+          Width = 123
+          Caption = 'lbValeursCalculees'
+          ParentColor = False
+        end
+        object Label4: TLabel
+          Left = 302
+          Height = 17
+          Top = 1
+          Width = 46
+          AutoSize = False
+          Caption = 'Y (m)'
+          ParentColor = False
+          OnClick = Label4Click
+        end
+        object editX_Source1JPC: TCurrencyEdit
+          Left = 170
+          Height = 24
+          Top = 21
+          Width = 124
+          Alignment = taRightJustify
+          DecimalPlaces = 8
+          DisplayFormat = '0.00000000'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 0
+          OnChange = editX_SourceChange
+        end
+        object editY_Source1JPC: TCurrencyEdit
+          Left = 301
+          Height = 24
+          Top = 21
+          Width = 124
+          Alignment = taRightJustify
+          DecimalPlaces = 8
+          DisplayFormat = '0.00000000'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 1
+          Value = 0
+        end
+        object editY_Cible1JPC: TCurrencyEdit
+          Left = 301
+          Height = 24
+          Top = 49
+          Width = 124
+          Alignment = taRightJustify
+          Color = 10944511
+          DecimalPlaces = 8
+          DisplayFormat = '0.00000000'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+        end
+        object editX_Cible1JPC: TCurrencyEdit
+          Left = 170
+          Height = 24
+          Top = 50
+          Width = 124
+          Alignment = taRightJustify
+          Color = 10944511
+          DecimalPlaces = 8
+          DisplayFormat = '0.00000000'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 3
+          Value = 0
+        end
+        object btnConversionJPC: TButton
+          Left = 433
+          Height = 25
+          Top = 20
+          Width = 139
+          Caption = 'btnConversionJPC'
+          OnClick = btnConversionJPCClick
+          TabOrder = 4
+        end
+      end
+      object grbxConversionsEnRafale: TGroupBox
+        Left = 2
+        Height = 504
+        Top = 160
+        Width = 925
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        Caption = 'grbxConversionsEnRafale'
+        ClientHeight = 486
+        ClientWidth = 921
+        TabOrder = 1
+        object grdDonnees: TStringGrid
+          Left = 5
+          Height = 442
+          Top = 39
+          Width = 677
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabOrder = 0
+          TitleFont.CharSet = ANSI_CHARSET
+          TitleFont.Color = clBlack
+          TitleFont.Height = -13
+          TitleFont.Name = 'Arial'
+          TitleFont.Pitch = fpVariable
+          TitleFont.Quality = fqDraft
+          TitleFont.Style = [fsBold]
+        end
+        object GroupBox2: TGroupBox
+          Left = 689
+          Height = 480
+          Top = -1
+          Width = 227
+          Anchors = [akTop, akRight, akBottom]
+          Caption = 'GroupBox2'
+          ClientHeight = 462
+          ClientWidth = 223
+          TabOrder = 1
+          object chkPremLigneIsTitres: TCheckBox
+            Left = 5
+            Height = 20
+            Top = 8
+            Width = 160
+            Caption = 'Première ligne = titres'
+            Checked = True
+            State = cbChecked
+            TabOrder = 0
+          end
+          object cmbColXSource: TComboBox
+            Left = 80
+            Height = 24
+            Top = 156
+            Width = 139
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 16
+            OnChange = cmbColXSourceChange
+            Style = csDropDownList
+            TabOrder = 1
+          end
+          object cmbColYSource: TComboBox
+            Left = 80
+            Height = 24
+            Top = 184
+            Width = 139
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 16
+            OnChange = cmbColYSourceChange
+            Style = csDropDownList
+            TabOrder = 2
+          end
+          object Label6: TLabel
+            Left = 5
+            Height = 17
+            Top = 156
+            Width = 63
+            Caption = 'X Source:'
+            ParentColor = False
+          end
+          object Label7: TLabel
+            Left = 5
+            Height = 17
+            Top = 184
+            Width = 62
+            Caption = 'Y Source:'
+            ParentColor = False
+          end
+          object Label8: TLabel
+            Left = 5
+            Height = 17
+            Top = 232
+            Width = 51
+            Caption = 'X Cible:'
+            ParentColor = False
+          end
+          object cmbColXCible: TComboBox
+            Left = 80
+            Height = 24
+            Top = 232
+            Width = 139
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 16
+            OnChange = cmbColXCibleChange
+            Style = csDropDownList
+            TabOrder = 3
+          end
+          object Label9: TLabel
+            Left = 5
+            Height = 17
+            Top = 260
+            Width = 50
+            Caption = 'Y Cible:'
+            ParentColor = False
+          end
+          object cmbColYCible: TComboBox
+            Left = 80
+            Height = 24
+            Top = 260
+            Width = 139
+            Anchors = [akTop, akLeft, akRight]
+            ItemHeight = 16
+            OnChange = cmbColYCibleChange
+            Style = csDropDownList
+            TabOrder = 4
+          end
+          object btnConversionEnRafale: TButton
+            Left = 2
+            Height = 25
+            Top = 368
+            Width = 219
+            Anchors = [akLeft, akRight, akBottom]
+            Caption = 'Convertir les coordonnées'
+            OnClick = btnConversionEnRafaleClick
+            TabOrder = 5
+          end
+          object Label10: TLabel
+            Left = 5
+            Height = 17
+            Top = 88
+            Width = 60
+            Caption = 'Colonnes'
+            ParentColor = False
+          end
+          object btnCopierTableau: TButton
+            Left = 2
+            Height = 25
+            Top = 396
+            Width = 219
+            Anchors = [akLeft, akBottom]
+            Caption = 'Copier le tableau'
+            OnClick = btnCopierTableauClick
+            TabOrder = 6
+          end
+          object btnExportCarto: TButton
+            Left = 2
+            Height = 25
+            Top = 432
+            Width = 219
+            Anchors = [akLeft, akBottom]
+            Caption = 'Exporter vers GPX'
+            OnClick = btnExportCartoClick
+            TabOrder = 7
+          end
+          object cmbColLabels: TComboBox
+            Left = 80
+            Height = 24
+            Top = 124
+            Width = 139
+            ItemHeight = 16
+            OnChange = cmbColLabelsChange
+            Style = csDropDownList
+            TabOrder = 8
+          end
+          object Label11: TLabel
+            Left = 5
+            Height = 17
+            Top = 124
+            Width = 67
+            Caption = 'Etiquettes:'
+            ParentColor = False
+          end
+          object chkAutoIncrement: TCheckBox
+            Left = 5
+            Height = 20
+            Top = 28
+            Width = 170
+            Caption = 'Labels autoincrémentés'
+            Checked = True
+            State = cbChecked
+            TabOrder = 9
+          end
+        end
+        object Button1: TButton
+          Left = 519
+          Height = 25
+          Top = -1
+          Width = 163
+          Anchors = [akTop, akRight]
+          Caption = 'Coller'
+          OnClick = Button1Click
+          TabOrder = 2
+        end
+        object lbHintGrdConversions: TStaticText
+          Left = 5
+          Height = 40
+          Top = -1
+          Width = 510
+          Anchors = [akTop, akLeft, akRight]
+          BorderStyle = sbsSingle
+          Color = 7733247
+          ParentColor = False
+          TabOrder = 3
+          Transparent = False
+        end
+      end
+      object lbSystSource: TLabel
+        Left = 2
+        Height = 17
+        Top = 3
+        Width = 160
+        AutoSize = False
+        Caption = 'lbSystSource'
+        ParentColor = False
+      end
+      object lbSystCible: TLabel
+        Left = 2
+        Height = 17
+        Top = 31
+        Width = 160
+        AutoSize = False
+        Caption = 'lbSystCible'
+        ParentColor = False
+      end
+      object cmbSystSourceJPC: TComboBox
+        Left = 173
+        Height = 24
+        Top = 3
+        Width = 676
+        Anchors = [akTop, akLeft, akRight]
+        ItemHeight = 16
+        Style = csDropDownList
+        TabOrder = 2
+      end
+      object cmbSystCibleJPC: TComboBox
+        Left = 173
+        Height = 24
+        Top = 31
+        Width = 676
+        Anchors = [akTop, akLeft, akRight]
+        ItemHeight = 16
+        Style = csDropDownList
+        TabOrder = 3
+      end
+    end
+    object tabShtDeclimag: TTabSheet
+      Caption = 'tabShtDeclimag'
+      ClientHeight = 428
+      ClientWidth = 861
+      object GroupBox3: TGroupBox
+        Left = 5
+        Height = 76
+        Top = 3
+        Width = 851
+        Anchors = [akTop, akLeft, akRight]
+        Caption = 'GroupBox3'
+        ClientHeight = 58
+        ClientWidth = 847
+        TabOrder = 0
+        object Long4: TLabel
+          Left = 6
+          Height = 17
+          Top = 28
+          Width = 30
+          Caption = 'Date'
+          ParentColor = False
+        end
+        object editDateDeclimag: TDateEdit
+          Left = 82
+          Height = 24
+          Top = 28
+          Width = 104
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          OKCaption = 'OK'
+          CancelCaption = 'Cancel'
+          DefaultToday = True
+          DateOrder = doNone
+          ButtonWidth = 23
+          CharCase = ecNormal
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00D69E
+            72C4D3996EF4D19668FFCE9263FFCB8E5EFFC98A5BFFC78756FFC38452FFC384
+            52FFC38452FFC38452FFC38452FFC38452FFBB7742B0FFFFFF00FFFFFF00D7A1
+            75FFF8F2EDFFF7F0EAFFF6EDE6FFF4EAE2FFF3E7DEFFF1E4DBFFF0E2D8FFEAD6
+            C8FFF2E5DCFFFAF4F1FFF9F3F0FFFAF5F2FFC58A5DFDFFFFFF00FFFFFF00D9A4
+            7AFFF9F3EEFFEBD2BEFFFFFFFFFFEBD3BFFFFFFFFFFFEBD3C0FFFFFFFFFFEAC7
+            ADFFECD9CDFFF1E4DBFFF9F3F0FFF9F2EFFFC68C5FFFFFFFFF00FFFFFF00DDA8
+            7EFFF9F3EFFFEBD0BAFFEBD0BBFF75B57AFF75B57AFF75B57AFFEBD1BDFFEACD
+            B5FFFAF4F0FFEBD9CCFFF1E4DBFFFAF4F1FFC68A5CFFFFFFFF00FFFFFF00DFAA
+            82FFF9F3EFFFEACEB7FFFFFFFFFF75B57AFF94D49BFF74B579FFFFFFFFFFEACF
+            BAFFFBF6F2FFFAF3F0FFEBD8CBFFF2E6DDFFC88D5FFFFFFFFF00FFFFFF00E1AE
+            87FFFAF4F0FFEACBB2FFEACCB3FF75B57AFF74B579FF73B478FFEACEB7FF70B3
+            75FF6FB274FF6EB172FFE8C8AEFFEAD7C9FFC48654FFFFFFFF00FFFFFF00E3B1
+            8CFFFAF6F1FFEAC9AEFFFFFFFFFFEAC9B0FFFFFFFFFFE9CBB3FFFFFFFFFF6FB1
+            73FF8ED295FF6BAF6FFFFFFFFFFFF1E5DBFFC68655FFFFFFFF00FFFFFF00E5B4
+            8FFFFAF6F2FFE9C6AAFFE9C6ACFFEAC7ACFFE9C7ADFFE9C9AEFFE9C9B0FF6CB0
+            71FF6AAF6EFF68AD6DFFE8CCB5FFF2E7DEFFC88A59FFFFFFFF00FFFFFF00E7B7
+            94FFFBF7F4FFE9C3A6FFFFFFFFFFE8C4A9FFFFFFFFFFE9C6AAFFFFFFFFFFE8C7
+            ACFFFFFFFFFFE8C8B0FFFFFFFFFFF7F1EBFFCB8F5FFFFFFFFF00FFFFFF00E9BA
+            98FFFBF7F4FF65A4FFFF64A3FFFF62A2FFFF61A1FFFF5F9FFFFF5C9DFFFF5A9A
+            FFFF5798FFFF5495FFFF5294FFFFFBF7F4FFCE9364FFFFFFFF00FFFFFF00EBBD
+            9BFFFBF7F4FF64A4FFFF79BDFFFF75BBFFFF71B9FFFF6DB8FFFF68B3FFFF61B0
+            FFFF5AABFFFF54A7FFFF3B7DFFFFFBF7F4FFD1976AFFFFFFFF00FFFFFF00ECBF
+            9EFFFBF7F4FF65A4FFFF64A3FFFF60A0FFFF5D9EFFFF5899FFFF5496FFFF4D90
+            FFFF478BFFFF4284FFFF3D7FFFFFFBF7F4FFD49B6FFFFFFFFF00FFFFFF00EEC1
+            A1EBFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7
+            F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFD7A074F8FFFFFF00FFFFFF00EFC2
+            A37EEFC1A2E3EDC09FFFEBBE9DFFEBBC9AFFE9BA96FFE7B793FFE6B590FFE4B2
+            8CFFE2AF88FFE0AC84FFDDA980FFDCA57DFFDAA37ACAFFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+          }
+          NumGlyphs = 0
+          MaxLength = 0
+          TabOrder = 0
+        end
+        object editAltitude: TCurrencyEdit
+          Left = 446
+          Height = 24
+          Top = 0
+          Width = 76
+          Alignment = taRightJustify
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 1
+          Value = 0
+        end
+        object Long2: TLabel
+          Left = 358
+          Height = 17
+          Top = 0
+          Width = 50
+          Caption = 'Altitude'
+          ParentColor = False
+        end
+        object Long1: TLabel
+          Left = 190
+          Height = 17
+          Top = 0
+          Width = 53
+          Caption = 'Latitude'
+          ParentColor = False
+        end
+        object editLatitude: TCurrencyEdit
+          Left = 250
+          Height = 24
+          Top = 0
+          Width = 100
+          Alignment = taRightJustify
+          DecimalPlaces = 8
+          DisplayFormat = '0.00000000'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 0
+        end
+        object editLongitude: TCurrencyEdit
+          Left = 82
+          Height = 24
+          Top = 0
+          Width = 100
+          Alignment = taRightJustify
+          DecimalPlaces = 8
+          DisplayFormat = '0.00000000'
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 3
+          Value = 0
+          OnChange = editX_SourceChange
+        end
+        object Long: TLabel
+          Left = 6
+          Height = 17
+          Top = 0
+          Width = 65
+          Caption = 'Longitude'
+          ParentColor = False
+        end
+        object btnCalculDeclimag: TButton
+          Left = 218
+          Height = 25
+          Top = 28
+          Width = 126
+          Caption = 'btnCalculDeclimag'
+          OnClick = btnCalculDeclimagClick
+          TabOrder = 4
+        end
+        object Long3: TLabel
+          Left = 358
+          Height = 17
+          Top = 28
+          Width = 75
+          Caption = 'Declinaison'
+          ParentColor = False
+        end
+        object editDeclinaison: TCurrencyEdit
+          Left = 446
+          Height = 24
+          Top = 29
+          Width = 128
+          Alignment = taRightJustify
+          Color = clYellow
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 5
+          TabStop = False
+          Value = 0
+        end
+      end
+      object GroupBox4: TGroupBox
+        Left = 4
+        Height = 334
+        Top = 88
+        Width = 852
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        Caption = 'GroupBox4'
+        ClientHeight = 316
+        ClientWidth = 848
+        TabOrder = 1
+        object grdDeclinaisons: TStringGrid
+          Left = 5
+          Height = 309
+          Top = 3
+          Width = 628
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          TabOrder = 0
+          TitleFont.CharSet = ANSI_CHARSET
+          TitleFont.Color = clBlack
+          TitleFont.Height = -13
+          TitleFont.Name = 'Arial'
+          TitleFont.Pitch = fpVariable
+          TitleFont.Quality = fqDraft
+          TitleFont.Style = [fsBold]
+        end
+        object editAnneeDepart: TCurrencyEdit
+          Left = 756
+          Height = 24
+          Top = 3
+          Width = 88
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          Anchors = [akTop, akRight]
+          MaxValue = 2015
+          MinValue = 1985
+          TabOrder = 1
+          Value = 1985
+        end
+        object editAnneeArrivee: TCurrencyEdit
+          Left = 756
+          Height = 24
+          Top = 31
+          Width = 88
+          Alignment = taRightJustify
+          DecimalPlaces = 0
+          DisplayFormat = '0'
+          Anchors = [akTop, akRight]
+          MaxValue = 2015
+          MinValue = 1985
+          TabOrder = 2
+          Value = 2015
+        end
+        object Label2: TLabel
+          Left = 644
+          Height = 17
+          Top = 3
+          Width = 107
+          Anchors = [akTop, akRight]
+          Caption = 'Année de départ'
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 644
+          Height = 17
+          Top = 31
+          Width = 102
+          Anchors = [akTop, akRight]
+          Caption = 'Année d''arrivée'
+          ParentColor = False
+        end
+        object btnTableDeclimagAnnuelle: TButton
+          Left = 639
+          Height = 25
+          Top = 59
+          Width = 205
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'Déclinaisons annuelles'
+          OnClick = btnTableDeclimagAnnuelleClick
+          TabOrder = 3
+        end
+        object Button2: TButton
+          Left = 639
+          Height = 25
+          Top = 85
+          Width = 205
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'Copier le tableau'
+          OnClick = Button2Click
+          TabOrder = 4
+        end
+      end
+    end
+  end
+end

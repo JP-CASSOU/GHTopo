@@ -1,0 +1,47 @@
+-20	31/07/2013	18:01:44	D:\0_Logiciels_JPC\GHTopoFreePascal_20130718_Win_Linux\Grottes_de_Villeseque.xtb
+-19	Grottes de Villeseque
+-18	
+
+#### Main coordinates system
+#### *** Temporarly disabled ***
+
+#### -10	0	0	EPSG	LT93
+
+#### Antenna-shots list
+
+
+#### Networks list
+
+
+#### Entrances list
+
+-6	1	Entree principale
+-5	1	0.00	0.00	0.00	1	0	
+
+#### Trips list
+
+-2	1	15	2	2011	CDS33	CDS33	0	0.00	0	30	De l'entrée à la rivière
+
+#### Instruments codes list
+
+-1	1	360.00	360.00	0.01	1.00	1.00	0.01	0.00	Topo du 13/02/2011	0
+
+
+#### Series and stations
+
+# 1	-1	1	0	1	21	42	3	0	Grande Fosse au niveau du cadre de la grille		0	1.02
+
+1	-1	1	0	1	12	12	0	0	Acces a la riviere dfgqsdghdqsfkjghjqsdjkqsdjk		0	1.02	
+1	0	1	1	0.00	0.00	0.00	0.00	0.00	0.00	0.00	Station 1/0
+1	1	1	1	2.98	226.00	-13.00	0.84	0.59	0.00	0.50	Chenal arrivee d'eau. au pied de l'escalier en pierre
+1	2	1	1	2.79	222.00	-6.00	0.52	0.36	0.66	0.50	En 1 entree
+1	3	1	1	7.81	198.00	-3.00	0.33	0.36	0.61	0.50	
+1	4	1	1	1.68	198.00	-18.00	0.31	0.32	0.10	0.50	4 est au dessus du puits
+1	5	1	1	3.91	198.00	-90.00	0.49	0.21	0.19	3.91	Le puits. 5 est au sol
+1	6	1	1	0.50	198.00	90.00	0.95	0.63	0.91	0.50	Elevation de + 50cm	6
+1	7	1	1	4.03	231.00	-23.00	0.95	0.63	3.60	0.50	
+1	8	1	1	3.61	322.00	-4.00	0.86	1.16	0.60	0.50	7 est a l'entree de la chatiere
+1	9	1	1	0.50	322.00	90.00	0.86	1.16	0.60	0.00	Elevation de + 50 cm pour faciliter la visee
+1	10	1	1	4.84	167.00	-16.00	1.39	0.55	0.54	0.50	10 est a la riviere rive droite
+1	11	1	1	2.26	287.00	2.00	2.66	0.53	0.26	0.00	11 est a l'entree de la salle
+1	12	1	1	10.63	266.00	0.00	0.98	0.84	0.39	0.50	La salle

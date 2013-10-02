@@ -1,0 +1,151 @@
+object DialogVTopo: TDialogVTopo
+  Left = 588
+  Height = 295
+  Top = 267
+  Width = 245
+  ActiveControl = editMainEntrance
+  Caption = 'Export VTopo'
+  ClientHeight = 295
+  ClientWidth = 245
+  LCLVersion = '1.0.1.3'
+  object Label1: TLabel
+    Left = 4
+    Height = 14
+    Top = 48
+    Width = 29
+    Caption = 'Prefix'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 4
+    Height = 14
+    Top = 72
+    Width = 18
+    Caption = 'X ='
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 4
+    Height = 14
+    Top = 96
+    Width = 18
+    Caption = 'Y ='
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 4
+    Height = 14
+    Top = 120
+    Width = 18
+    Caption = 'Z ='
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 4
+    Height = 14
+    Top = 24
+    Width = 33
+    Caption = 'Entree'
+    ParentColor = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 20
+    Height = 22
+    Top = 180
+    Width = 91
+    Anchors = [akRight, akBottom]
+    Caption = '&OK'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    TabOrder = 0
+  end
+  object BitBtn2: TBitBtn
+    Left = 115
+    Height = 22
+    Top = 180
+    Width = 91
+    Anchors = [akRight, akBottom]
+    Cancel = True
+    Caption = 'Annuler'
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object lbFileName: TStaticText
+    Left = 4
+    Height = 16
+    Top = 4
+    Width = 240
+    Anchors = [akTop, akLeft, akRight]
+    BorderStyle = sbsSunken
+    Caption = 'lbFileName'
+    TabOrder = 2
+  end
+  object editStPrefix: TEdit
+    Left = 48
+    Height = 21
+    Top = 48
+    Width = 80
+    TabOrder = 3
+  end
+  object editXCoord: TEdit
+    Left = 48
+    Height = 21
+    Top = 72
+    Width = 100
+    TabOrder = 4
+    Text = '0.00'
+  end
+  object editYCoord: TEdit
+    Left = 48
+    Height = 21
+    Top = 96
+    Width = 100
+    TabOrder = 5
+    Text = '0.00'
+  end
+  object editZCoord: TEdit
+    Left = 48
+    Height = 21
+    Top = 120
+    Width = 80
+    TabOrder = 6
+    Text = '0.00'
+  end
+  object editMainEntrance: TEdit
+    Left = 48
+    Height = 21
+    Top = 24
+    Width = 196
+    TabOrder = 7
+  end
+  object lbProcess: TStaticText
+    Left = 4
+    Height = 17
+    Top = 208
+    Width = 240
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    BorderStyle = sbsSunken
+    Caption = 'lbProcess'
+    TabOrder = 8
+  end
+  object ProgressBar: TProgressBar
+    Left = 4
+    Height = 20
+    Top = 228
+    Width = 240
+    Smooth = True
+    TabOrder = 9
+  end
+  object chkNotUseIDs: TCheckBox
+    Left = 48
+    Height = 17
+    Top = 148
+    Width = 126
+    Caption = 'ID litteraux desactives'
+    TabOrder = 10
+  end
+end

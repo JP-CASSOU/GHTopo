@@ -1,0 +1,250 @@
+object CdrExpe: TCdrExpe
+  Left = 0
+  Height = 200
+  Top = 0
+  Width = 497
+  ClientHeight = 200
+  ClientWidth = 497
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnEnter = FrameEnter
+  ParentFont = False
+  TabOrder = 0
+  DesignLeft = 485
+  DesignTop = 362
+  object lblSeance: TLabel
+    Left = 8
+    Height = 17
+    Top = 8
+    Width = 65
+    Caption = 'lblSeance'
+    ParentColor = False
+  end
+  object lblDate: TLabel
+    Left = 324
+    Height = 17
+    Top = 8
+    Width = 46
+    Anchors = [akTop, akRight]
+    Caption = 'lblDate'
+    ParentColor = False
+  end
+  object lblSpeleometre: TLabel
+    Left = 8
+    Height = 17
+    Top = 39
+    Width = 99
+    Caption = 'lblSpeleometre'
+    ParentColor = False
+  end
+  object lblSpeleographe: TLabel
+    Left = 8
+    Height = 17
+    Top = 68
+    Width = 107
+    Caption = 'lblSpeleographe'
+    ParentColor = False
+  end
+  object lblInclin: TLabel
+    Left = 268
+    Height = 17
+    Top = 127
+    Width = 104
+    AutoSize = False
+    Caption = 'lblInclin'
+    ParentColor = False
+  end
+  object lblDeclimag: TLabel
+    Left = 8
+    Height = 17
+    Top = 97
+    Width = 77
+    Caption = 'lblDeclimag'
+    ParentColor = False
+  end
+  object lblColor: TLabel
+    Left = 8
+    Height = 17
+    Top = 123
+    Width = 51
+    Caption = 'lblColor'
+    ParentColor = False
+  end
+  object lblObs: TLabel
+    Left = 8
+    Height = 17
+    Top = 156
+    Width = 41
+    Caption = 'lblObs'
+    ParentColor = False
+  end
+  object editNoExpe: TCurrencyEdit
+    Left = 184
+    Height = 24
+    Top = 8
+    Width = 80
+    Alignment = taRightJustify
+    DecimalPlaces = 0
+    DisplayFormat = '0'
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 0
+    Value = 0
+  end
+  object editDay: TCurrencyEdit
+    Left = 374
+    Height = 24
+    Top = 8
+    Width = 32
+    Alignment = taRightJustify
+    DecimalPlaces = 0
+    DisplayFormat = '00'
+    Anchors = [akTop, akRight]
+    MaxValue = 31
+    MinValue = 1
+    TabOrder = 1
+    Value = 1
+  end
+  object editMonth: TCurrencyEdit
+    Left = 410
+    Height = 24
+    Top = 8
+    Width = 32
+    Alignment = taRightJustify
+    DecimalPlaces = 0
+    DisplayFormat = '00'
+    Anchors = [akTop, akRight]
+    MaxValue = 12
+    MinValue = 1
+    TabOrder = 2
+    Value = 1
+  end
+  object editYear: TCurrencyEdit
+    Left = 446
+    Height = 24
+    Top = 8
+    Width = 44
+    Alignment = taRightJustify
+    DecimalPlaces = 0
+    DisplayFormat = '0000'
+    Anchors = [akTop, akRight]
+    MaxValue = 2100
+    MinValue = 0
+    TabOrder = 3
+    Value = 1
+  end
+  object editSpeleometre: TEdit
+    Left = 184
+    Height = 24
+    Top = 39
+    Width = 132
+    TabOrder = 4
+  end
+  object editSpeleographe: TEdit
+    Left = 184
+    Height = 24
+    Top = 68
+    Width = 132
+    TabOrder = 5
+  end
+  object edit100Declimag: TCurrencyEdit
+    Left = 128
+    Height = 24
+    Top = 97
+    Width = 84
+    Alignment = taRightJustify
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 6
+    Value = 0
+  end
+  object editInclinaison: TCurrencyEdit
+    Left = 378
+    Height = 24
+    Top = 127
+    Width = 112
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 11
+    Value = 0
+  end
+  object editComment: TMemo
+    Left = 148
+    Height = 39
+    Top = 156
+    Width = 344
+    Anchors = [akTop, akLeft, akRight]
+    Lines.Strings = (
+      'editComment'
+    )
+    TabOrder = 12
+  end
+  object lbColorSeance: TStaticText
+    Left = 148
+    Height = 24
+    Top = 127
+    Width = 46
+    BorderStyle = sbsSingle
+    Caption = '0'
+    Color = clActiveCaption
+    OnClick = lbColorSeanceClick
+    ParentColor = False
+    TabOrder = 9
+    Transparent = False
+  end
+  object cmbModeDecl: TComboBox
+    Left = 378
+    Height = 24
+    Top = 96
+    Width = 112
+    Anchors = [akTop, akRight]
+    ItemHeight = 16
+    ItemIndex = 0
+    Items.Strings = (
+      'Manuelle'
+      'Automatique'
+    )
+    OnChange = cmbModeDeclChange
+    Style = csDropDownList
+    TabOrder = 8
+    Text = 'Manuelle'
+  end
+  object editCouleur: TCurrencyEdit
+    Left = 200
+    Height = 24
+    Top = 127
+    Width = 48
+    Alignment = taRightJustify
+    DecimalPlaces = 0
+    DisplayFormat = '0'
+    MaxValue = 255
+    MinValue = 0
+    TabOrder = 10
+    Value = 0
+    OnKeyPress = editCouleurKeyPress
+  end
+  object btnCalcDeclimag: TButton
+    Left = 264
+    Height = 25
+    Top = 96
+    Width = 112
+    Caption = 'btnCalcDeclimag'
+    OnClick = btnCalcDeclimagClick
+    TabOrder = 7
+  end
+  object Label1: TLabel
+    Left = 216
+    Height = 17
+    Top = 100
+    Width = 29
+    Caption = 'GRA'
+    ParentColor = False
+  end
+end

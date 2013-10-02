@@ -1,0 +1,112 @@
+object dlgAbout: TdlgAbout
+  Left = 489
+  Height = 336
+  Top = 350
+  Width = 632
+  Caption = 'dlgAbout'
+  ClientHeight = 336
+  ClientWidth = 632
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.0.1.3'
+  object PageControl1: TPageControl
+    Left = 4
+    Height = 292
+    Top = 4
+    Width = 623
+    ActivePage = TabSheet1
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabIndex = 0
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'A propos'
+      ClientHeight = 263
+      ClientWidth = 615
+      object lbGHTopoName: TLabel
+        Left = 4
+        Height = 33
+        Top = 3
+        Width = 212
+        Caption = 'lbGHTopoName'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -27
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object lbVersion: TLabel
+        Left = 4
+        Height = 23
+        Top = 43
+        Width = 90
+        Caption = 'lbVersion'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object lbAuthor: TLabel
+        Left = 4
+        Height = 17
+        Top = 75
+        Width = 55
+        Caption = 'lbAuthor'
+        ParentColor = False
+      end
+      object lbLicence: TLabel
+        Left = 4
+        Height = 17
+        Top = 99
+        Width = 63
+        Caption = 'lbLicence'
+        ParentColor = False
+      end
+      object lbPlateforme: TLabel
+        Left = 4
+        Height = 17
+        Top = 123
+        Width = 83
+        Caption = 'lbPlateforme'
+        ParentColor = False
+      end
+      object lsbResolutionEcrans: TListBox
+        Left = 4
+        Height = 64
+        Top = 143
+        Width = 608
+        Anchors = [akTop, akLeft, akRight]
+        ItemHeight = 0
+        TabOrder = 0
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Système d''aide'
+    end
+  end
+  object BitBtn1: TBitBtn
+    Left = 527
+    Height = 30
+    Top = 300
+    Width = 100
+    Anchors = [akRight, akBottom]
+    Caption = '&Fermer'
+    Kind = bkClose
+    TabOrder = 1
+  end
+end

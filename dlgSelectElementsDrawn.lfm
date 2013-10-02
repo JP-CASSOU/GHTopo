@@ -1,0 +1,181 @@
+object frmSelectElementsDrawn: TfrmSelectElementsDrawn
+  Left = 617
+  Height = 297
+  Top = 294
+  Width = 220
+  ActiveControl = chkQuadrilles
+  Caption = 'frmSelectElementsDrawn'
+  ClientHeight = 297
+  ClientWidth = 220
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnShow = FormShow
+  LCLVersion = '0.9.31'
+  object Label1: TLabel
+    Left = 66
+    Height = 15
+    Top = 53
+    Width = 38
+    Caption = 'Couleur'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 6
+    Height = 15
+    Top = 4
+    Width = 81
+    Caption = 'Couleur de fond:'
+    ParentColor = False
+  end
+  object chkPolygonales: TCheckBox
+    Left = 5
+    Height = 18
+    Top = 76
+    Width = 76
+    Caption = 'Polygonales'
+    TabOrder = 0
+  end
+  object chkStations: TCheckBox
+    Left = 5
+    Height = 18
+    Top = 96
+    Width = 57
+    Caption = 'Stations'
+    TabOrder = 1
+  end
+  object chkIDStations: TCheckBox
+    Left = 5
+    Height = 18
+    Top = 116
+    Width = 66
+    Caption = 'IDStations'
+    TabOrder = 2
+  end
+  object chkCotation: TCheckBox
+    Left = 5
+    Height = 18
+    Top = 136
+    Width = 57
+    Caption = 'Cotation'
+    TabOrder = 3
+  end
+  object chkQuadrilles: TCheckBox
+    Left = 5
+    Height = 18
+    Top = 28
+    Width = 99
+    Caption = 'Quadrillage: Esp:'
+    TabOrder = 4
+  end
+  object chkRemplissage: TCheckBox
+    Left = 5
+    Height = 18
+    Top = 196
+    Width = 79
+    Caption = 'Remplissage'
+    TabOrder = 5
+  end
+  object chkSections: TCheckBox
+    Left = 6
+    Height = 18
+    Top = 176
+    Width = 60
+    Caption = 'Sections'
+    TabOrder = 6
+  end
+  object chkParois: TCheckBox
+    Left = 5
+    Height = 18
+    Top = 156
+    Width = 48
+    Caption = 'Parois'
+    TabOrder = 7
+  end
+  object chkEntrances: TCheckBox
+    Left = 5
+    Height = 18
+    Top = 216
+    Width = 55
+    Caption = 'Entrées'
+    TabOrder = 8
+  end
+  object BitBtn1: TBitBtn
+    Left = 5
+    Height = 30
+    Top = 261
+    Width = 75
+    Anchors = [akLeft, akBottom]
+    Caption = '&OK'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    TabOrder = 9
+  end
+  object BitBtn2: TBitBtn
+    Left = 91
+    Height = 30
+    Top = 261
+    Width = 75
+    Anchors = [akLeft, akBottom]
+    Cancel = True
+    Caption = 'Annuler'
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 10
+  end
+  object btnQdrColor: TStaticText
+    Left = 116
+    Height = 17
+    Top = 53
+    Width = 65
+    BorderStyle = sbsSingle
+    Color = clGradientActiveCaption
+    OnClick = btnQdrColorClick
+    ParentColor = False
+    TabOrder = 11
+    Transparent = False
+  end
+  object btnBGColor: TStaticText
+    Left = 116
+    Height = 17
+    Top = 4
+    Width = 65
+    BorderStyle = sbsSingle
+    Color = clGradientActiveCaption
+    OnClick = btnBGColorClick
+    ParentColor = False
+    TabOrder = 12
+    Transparent = False
+  end
+  object editQdrSpc: TComboBox
+    Left = 116
+    Height = 22
+    Top = 28
+    Width = 100
+    ItemHeight = 14
+    Items.Strings = (
+      '10'
+      '20'
+      '25'
+      '40'
+      '50'
+      '100'
+      '200'
+      '250'
+      '400'
+      '500'
+      '1000'
+      '2000'
+      '4000'
+      '5000'
+      '10000'
+    )
+    TabOrder = 13
+    Text = 'editQdrSpc'
+  end
+end

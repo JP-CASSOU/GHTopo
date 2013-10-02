@@ -1,0 +1,247 @@
+object CdrCode: TCdrCode
+  Left = 0
+  Height = 200
+  Top = 0
+  Width = 619
+  ClientHeight = 200
+  ClientWidth = 619
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnEnter = FrameEnter
+  ParentFont = False
+  TabOrder = 0
+  DesignLeft = 532
+  DesignTop = 204
+  object lblNCode: TLabel
+    Left = 4
+    Height = 17
+    Top = 4
+    Width = 59
+    Caption = 'lblNCode'
+    ParentColor = False
+  end
+  object lblCompas: TLabel
+    Left = 4
+    Height = 17
+    Top = 32
+    Width = 68
+    Caption = 'lblCompas'
+    ParentColor = False
+  end
+  object cmbUB: TComboBox
+    Left = 212
+    Height = 24
+    Top = 32
+    Width = 140
+    ItemHeight = 16
+    OnChange = cmbUBChange
+    Style = csDropDownList
+    TabOrder = 1
+  end
+  object lblClino: TLabel
+    Left = 4
+    Height = 17
+    Top = 60
+    Width = 50
+    Caption = 'lblClino'
+    ParentColor = False
+  end
+  object cmbUC: TComboBox
+    Left = 212
+    Height = 24
+    Top = 60
+    Width = 140
+    ItemHeight = 16
+    OnChange = cmbUCChange
+    Style = csDropDownList
+    TabOrder = 2
+  end
+  object lbViseeInvDir: TLabel
+    Left = 4
+    Height = 17
+    Top = 88
+    Width = 85
+    Caption = 'lbViseeInvDir'
+    ParentColor = False
+  end
+  object cmbAzimutDirecte: TComboBox
+    Left = 212
+    Height = 24
+    Top = 88
+    Width = 140
+    ItemHeight = 16
+    Style = csDropDownList
+    TabOrder = 3
+  end
+  object cmbPenteDirecte: TComboBox
+    Left = 359
+    Height = 24
+    Top = 88
+    Width = 85
+    ItemHeight = 16
+    Style = csDropDownList
+    TabOrder = 4
+  end
+  object cmbPosZero: TComboBox
+    Left = 452
+    Height = 24
+    Top = 88
+    Width = 116
+    ItemHeight = 16
+    Style = csDropDownList
+    TabOrder = 5
+  end
+  object lblLength: TLabel
+    Left = 4
+    Height = 17
+    Top = 116
+    Width = 61
+    Caption = 'lblLength'
+    ParentColor = False
+  end
+  object lblZero: TLabel
+    Left = 452
+    Height = 17
+    Top = 72
+    Width = 45
+    Caption = 'lblZero'
+    ParentColor = False
+  end
+  object lblLimit: TLabel
+    Left = 316
+    Height = 17
+    Top = 120
+    Width = 49
+    Caption = 'lblLimit'
+    ParentColor = False
+  end
+  object lblPrecision: TLabel
+    Left = 4
+    Height = 17
+    Top = 144
+    Width = 76
+    Caption = 'lblPrecision'
+    ParentColor = False
+  end
+  object lblObs: TLabel
+    Left = 4
+    Height = 17
+    Top = 172
+    Width = 41
+    Caption = 'lblObs'
+    ParentColor = False
+  end
+  object editCommentaires: TEdit
+    Left = 212
+    Height = 24
+    Top = 172
+    Width = 320
+    TabOrder = 11
+    Text = 'editCommentaires'
+  end
+  object lbCodeComp: TStaticText
+    Left = 359
+    Height = 21
+    Top = 32
+    Width = 41
+    BorderStyle = sbsSunken
+    TabOrder = 12
+  end
+  object lbCodeIncl: TStaticText
+    Left = 359
+    Height = 21
+    Top = 60
+    Width = 41
+    BorderStyle = sbsSunken
+    TabOrder = 13
+  end
+  object editNoCode: TCurrencyEdit
+    Left = 212
+    Height = 24
+    Top = 4
+    Width = 80
+    Alignment = taRightJustify
+    DecimalPlaces = 0
+    DisplayFormat = '0'
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 0
+    Value = 0
+  end
+  object lbErrAz: TStaticText
+    Left = 403
+    Height = 21
+    Top = 32
+    Width = 41
+    BorderStyle = sbsSunken
+    TabOrder = 14
+  end
+  object lbErrInc: TStaticText
+    Left = 403
+    Height = 21
+    Top = 60
+    Width = 41
+    BorderStyle = sbsSunken
+    TabOrder = 15
+  end
+  object editFactLong: TCurrencyEdit
+    Left = 212
+    Height = 24
+    Top = 116
+    Width = 64
+    Alignment = taRightJustify
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 6
+    Value = 0
+  end
+  object editPsiL: TCurrencyEdit
+    Left = 212
+    Height = 24
+    Top = 144
+    Width = 64
+    Alignment = taRightJustify
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 8
+    Value = 0
+  end
+  object editPsiAz: TCurrencyEdit
+    Left = 282
+    Height = 24
+    Top = 144
+    Width = 64
+    Alignment = taRightJustify
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 9
+    Value = 0
+  end
+  object editPsiP: TCurrencyEdit
+    Left = 350
+    Height = 24
+    Top = 144
+    Width = 64
+    Alignment = taRightJustify
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 10
+    Value = 0
+  end
+  object editAngleLimite: TCurrencyEdit
+    Left = 452
+    Height = 24
+    Top = 116
+    Width = 64
+    Alignment = taRightJustify
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 7
+    Value = 0
+  end
+end

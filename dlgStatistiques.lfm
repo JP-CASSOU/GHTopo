@@ -1,0 +1,139 @@
+object dlgStats: TdlgStats
+  Left = 384
+  Height = 580
+  Top = 147
+  Width = 809
+  Caption = 'dlgStats'
+  ClientHeight = 580
+  ClientWidth = 809
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '1.0.1.3'
+  object PageControl1: TPageControl
+    Left = 4
+    Height = 540
+    Top = 4
+    Width = 800
+    ActivePage = TabSheet4
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabIndex = 3
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Histogramme d''altitudes'
+      ClientHeight = 511
+      ClientWidth = 792
+      inline CdrHistoAltitudes1: TCdrHistoAltitudes
+        Left = 4
+        Height = 481
+        Top = 7
+        Width = 650
+        ClientHeight = 481
+        ClientWidth = 650
+        inherited Panel1: TPanel
+          Height = 441
+          Width = 642
+          ClientHeight = 441
+          ClientWidth = 642
+          inherited imgHistoAltitudes: TImage
+            Height = 439
+            Width = 640
+          end
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Histogramme des directions'
+      ClientHeight = 511
+      ClientWidth = 792
+      inline CdrHistogrammes1: TCdrHistogrammes
+        Left = 8
+        Top = 15
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Tableaux'
+      ClientHeight = 511
+      ClientWidth = 792
+      object cmbAffichageTableaux: TComboBox
+        Left = 4
+        Height = 24
+        Top = 3
+        Width = 260
+        ItemHeight = 16
+        ItemIndex = 0
+        Items.Strings = (
+          'Par dates'
+          'Par réseaux'
+          'Par couleurs'
+        )
+        OnChange = cmbAffichageTableauxChange
+        Style = csDropDownList
+        TabOrder = 0
+        Text = 'Par dates'
+      end
+      object grdSyntheseSpeleometrique: TStringGrid
+        Left = 5
+        Height = 477
+        Top = 31
+        Width = 781
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        FixedCols = 0
+        TabOrder = 1
+        TitleFont.CharSet = ANSI_CHARSET
+        TitleFont.Color = clBlack
+        TitleFont.Height = -13
+        TitleFont.Name = 'Arial'
+        TitleFont.Pitch = fpVariable
+        TitleFont.Quality = fqDraft
+        TitleFont.Style = [fsBold]
+      end
+      object lbNbItems: TLabel
+        Left = 268
+        Height = 17
+        Top = 3
+        Width = 64
+        Caption = 'lbNbItems'
+        ParentColor = False
+      end
+      object btnCopyTableau: TButton
+        Left = 648
+        Height = 25
+        Top = 3
+        Width = 139
+        Anchors = [akTop, akRight]
+        Caption = 'btnCopyTableau'
+        OnClick = btnCopyTableauClick
+        TabOrder = 2
+      end
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'Synthèse'
+      ClientHeight = 511
+      ClientWidth = 792
+      object memoSynthese: TMemo
+        Left = 4
+        Height = 494
+        Top = 7
+        Width = 784
+        TabOrder = 0
+      end
+    end
+  end
+  object BitBtn1: TBitBtn
+    Left = 689
+    Height = 30
+    Top = 548
+    Width = 115
+    Anchors = [akRight, akBottom]
+    Caption = '&Fermer'
+    Kind = bkClose
+    TabOrder = 1
+  end
+end
